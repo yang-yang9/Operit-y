@@ -61,7 +61,7 @@ var TABS = [
 var mermaidRenderedSet = new Set();
 
 function fixMermaidSvgColors(panelId) {
-  var panel = document.getElementById('panel-' + panelId);
+  var panel = document.getElementById('panel-' + panelId) || document.getElementById(panelId);
   if (!panel) return;
   panel.querySelectorAll('svg text').forEach(function(t) {
     var fill = t.getAttribute('fill') || getComputedStyle(t).fill;
@@ -196,6 +196,53 @@ function filterScreens(query) {
   if (noResults) noResults.style.display = anyVisible ? 'none' : 'block';
 }
 
+/* ===== Page Detail Navigation ===== */
+var savedMapScrollY = 0;
+var detailMermaidRendered = new Set();
+
+function showPageDetail(detailId, title) {
+  var mapView = document.getElementById('pageMapView');
+  var detailView = document.getElementById('pageDetailView');
+  if (!mapView || !detailView) return;
+
+  savedMapScrollY = window.scrollY;
+
+  mapView.classList.add('hidden');
+  detailView.classList.add('active');
+
+  detailView.querySelectorAll('.detail-content').forEach(function(c) { c.style.display = 'none'; });
+  var target = document.getElementById('detail-' + detailId);
+  if (target) target.style.display = 'block';
+
+  var crumbTitle = document.getElementById('detailCrumbTitle');
+  if (crumbTitle) crumbTitle.textContent = title || detailId;
+
+  window.scrollTo(0, 0);
+
+  if (target && !detailMermaidRendered.has(detailId)) {
+    var mermaidEls = target.querySelectorAll('.mermaid');
+    if (mermaidEls.length > 0) {
+      detailMermaidRendered.add(detailId);
+      requestAnimationFrame(function() {
+        mermaid.run({ nodes: Array.from(mermaidEls) }).then(function() {
+          setTimeout(function() { fixMermaidSvgColors('detail-' + detailId); }, 200);
+        });
+      });
+    }
+  }
+}
+
+function hidePageDetail() {
+  var mapView = document.getElementById('pageMapView');
+  var detailView = document.getElementById('pageDetailView');
+  if (!mapView || !detailView) return;
+
+  detailView.classList.remove('active');
+  mapView.classList.remove('hidden');
+
+  window.scrollTo(0, savedMapScrollY);
+}
+
 /* ===== DOM-Ready Init ===== */
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('mainTabBar').addEventListener('click', function(e) {
@@ -246,6 +293,15 @@ document.addEventListener('DOMContentLoaded', function() {
     navigator.clipboard.writeText(clsContent).then(function() {
       tipBtn.textContent = '✓ 已复制';
       setTimeout(function() { tipBtn.textContent = '复制'; }, 1000);
+    });
+  });
+
+  document.querySelectorAll('.detail-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var detailId = this.dataset.detail;
+      var title = this.dataset.title || this.closest('.t-group-head').querySelector('.n-name').textContent;
+      showPageDetail(detailId, title);
     });
   });
 
