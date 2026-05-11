@@ -196,6 +196,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics.android)
     // Vendored binary dependencies live in app/libs, including ffmpeg-kit and its Java-side deps.
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar", "*.jar"))))
+    // FFmpegKit - community maintained fork on Maven Central (original arthenica repo retired)
+    // Same Java package: com.arthenica.ffmpegkit, with 16KB page size support for Android 15+
+    implementation("com.moizhassan.ffmpeg:ffmpeg-kit-16kb:6.0.0")
     implementation(libs.androidx.runtime.android)
     implementation(libs.androidx.ui.text.android)
     implementation(libs.androidx.animation.android)
