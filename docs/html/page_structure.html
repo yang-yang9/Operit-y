@@ -239,7 +239,81 @@
   .seq-loop-wrap.react { border-color: #f0883e60; background: #f0883e08; }
   .seq-loop-wrap .seq-loop-tag { position: absolute; top: -1px; left: -1px; font-size: 9px; font-weight: 700; background: var(--blue); color: var(--bg); padding: 2px 8px; border-radius: 6px 0 6px 0; letter-spacing: 0.5px; }
   .seq-loop-wrap.react .seq-loop-tag { background: var(--orange); }
+
+  /* Mermaid container — 融入网页暗色主题 */
+  .mermaid-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; overflow-x: auto; }
+  .mermaid-wrap .mermaid { display: flex; justify-content: center; }
+  .mermaid-wrap .mermaid svg { max-width: 100%; height: auto; }
+  /* 强制修复 Mermaid 状态图节点文字颜色 */
+  .mermaid-wrap .mermaid .statediagram-state rect.divider { stroke: #30363d !important; }
+  .mermaid-wrap .mermaid .state-title-text,
+  .mermaid-wrap .mermaid [class*="statediagram"] text,
+  .mermaid-wrap .mermaid .stateGroup text,
+  .mermaid-wrap .mermaid g.stateGroup text { fill: #e6edf3 !important; }
+  .mermaid-wrap .mermaid .node rect,
+  .mermaid-wrap .mermaid .stateGroup rect { fill: #21262d !important; stroke: #30363d !important; }
+  .mermaid-wrap .mermaid .cluster rect { fill: #0d1117 !important; stroke: #30363d !important; }
+  .mermaid-wrap .mermaid .cluster text { fill: #8b949e !important; }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'base',
+    themeVariables: {
+      darkMode: true,
+      background: '#161b22',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      fontSize: '13px',
+
+      /* 节点 — 使用网页 --bg-node #21262d 底 + --border #30363d 边 */
+      primaryColor: '#21262d',
+      primaryTextColor: '#e6edf3',
+      primaryBorderColor: '#30363d',
+      secondaryColor: '#21262d',
+      secondaryTextColor: '#e6edf3',
+      secondaryBorderColor: '#30363d',
+      tertiaryColor: '#21262d',
+      tertiaryTextColor: '#e6edf3',
+      tertiaryBorderColor: '#30363d',
+
+      /* 连线 — 使用网页 --text-dim */
+      lineColor: '#8b949e',
+
+      /* 标注/备注 */
+      noteBkgColor: '#1c2129',
+      noteTextColor: '#e6edf3',
+      noteBorderColor: '#30363d',
+
+      /* 节点通用 */
+      mainBkg: '#21262d',
+      nodeBorder: '#30363d',
+      nodeTextColor: '#e6edf3',
+
+      /* subgraph 分组框 — 比卡片背景稍深 */
+      clusterBkg: '#0d1117',
+      clusterBorder: '#30363d',
+      titleColor: '#8b949e',
+
+      /* 边标签背景 — 与容器背景一致避免遮挡 */
+      edgeLabelBackground: '#161b22',
+
+      /* 状态图 */
+      labelColor: '#e6edf3',
+      stateBkg: '#21262d',
+      stateBorder: '#30363d',
+      compositeBackground: '#0d1117',
+      compositeBorder: '#30363d',
+      compositeTitleBackground: '#21262d',
+      innerEndBackground: '#30363d',
+      transitionColor: '#8b949e',
+      transitionLabelColor: '#8b949e',
+      specialStateColor: '#8b949e'
+    },
+    flowchart: { curve: 'basis', padding: 20, htmlLabels: true },
+    state: { padding: 12 }
+  });
+</script>
 </head>
 <body>
 
@@ -254,6 +328,7 @@
   <div class="tab-bar" id="mainTabBar">
     <button class="tab-btn active" onclick="switchTab('pages',this)">📱 页面结构</button>
     <button class="tab-btn" onclick="switchTab('flow',this)">🔗 请求调用链</button>
+    <button class="tab-btn" onclick="switchTab('assembly',this)">🏗 屏幕装配流程</button>
   </div>
 </div>
 
@@ -1441,12 +1516,395 @@ MCP 服务  → PackageManager (MCP)</div>
 
 </div><!-- end panel-flow -->
 
+<!-- ===== TAB 3: 屏幕装配流程 ===== -->
+<div id="panel-assembly" class="tab-panel">
+
+<div class="stats">
+  <div class="stat-card"><div class="num">5</div><div class="label">装配层级</div></div>
+  <div class="stat-card"><div class="num">2</div><div class="label">布局模式</div></div>
+  <div class="stat-card"><div class="num">12</div><div class="label">一级屏幕</div></div>
+  <div class="stat-card"><div class="num">4</div><div class="label">二级屏幕</div></div>
+  <div class="stat-card"><div class="num">3</div><div class="label">导航分组</div></div>
+  <div class="stat-card"><div class="num">8</div><div class="label">核心文件</div></div>
+</div>
+
+<!-- ===== ARCHITECTURE OVERVIEW ===== -->
+<div class="section">
+  <div class="section-head blue">📐 架构概览</div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;font-size:13px;color:var(--text-dim);line-height:1.8;">
+    Operit 采用 <strong style="color:var(--blue)">单一 Activity + 多 Composable</strong> 架构，使用自定义导航栈（非 Jetpack Navigation），支持手机和平板两种响应式布局。从 <code style="color:var(--cyan)">MainActivity.onCreate</code> 入口，经 <code style="color:var(--cyan)">OperitApp</code> 全局状态管理，到 <code style="color:var(--cyan)">PhoneLayout</code> / <code style="color:var(--cyan)">TabletLayout</code> 布局选择，再到 <code style="color:var(--cyan)">AppContent</code> 的 Scaffold 容器，最终由 <code style="color:var(--cyan)">Screen.Content()</code> 渲染具体业务页面。
+  </div>
+</div>
+
+<!-- ===== ASSEMBLY FLOW MERMAID ===== -->
+<div class="section">
+  <div class="section-head green">🔗 装配流程图</div>
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+graph TD
+    subgraph Activity层
+        A["MainActivity.onCreate"]
+        A --> B["setContent { OperitTheme { OperitApp(...) } }"]
+    end
+
+    subgraph OperitApp 根组件
+        B --> C{"screenWidthDp >= 600?"}
+        B --> STATE["状态管理\n• currentScreen\n• selectedItem\n• backStack\n• topBarActions"]
+        B --> NAV["导航函数\n• navigateTo()\n• goBack()"]
+        B --> SIDE["副作用 LaunchedEffect\n• 快捷方式处理\n• 网络轮询\n• 公告拉取\n• MCP插件同步"]
+    end
+
+    subgraph 布局选择
+        C -->|"是 平板"| D["TabletLayout"]
+        C -->|"否 手机"| E["PhoneLayout"]
+    end
+
+    subgraph TabletLayout
+        D --> D1["Box (fillMaxSize)"]
+        D1 --> D2["Surface (侧边栏)\n宽度动画: 64dp ↔ 280dp"]
+        D2 --> D2A{"isExpanded?"}
+        D2A -->|"是"| D3["DrawerContent\n完整导航菜单"]
+        D2A -->|"否"| D4["CollapsedDrawerContent\n仅图标"]
+        D1 --> D5["Box (内容区)\noffset = sidebarWidth"]
+        D5 --> F["AppContent"]
+    end
+
+    subgraph PhoneLayout
+        E --> E1["Box (fillMaxSize)\n支持拖拽手势"]
+        E1 --> E2["Box (主内容)\ntranslationX 偏移动画"]
+        E2 --> F
+        E1 --> E3["Surface (模态抽屉)\ndrawerWidth = 75%屏幕"]
+        E3 --> E4["DrawerContent\n完整导航菜单"]
+        E1 --> E5["Box (遮罩层)\n点击关闭抽屉"]
+    end
+
+    subgraph AppContent 内容容器
+        F --> G["Scaffold"]
+        G --> G1["topBar: TopAppBar\n← 返回按钮 | 标题 | actions →"]
+        G --> G2["content: Box"]
+        G2 --> G3["背景图片 (可选)"]
+        G2 --> H["currentScreen.Content(...)"]
+    end
+
+    subgraph Screen.Content 屏幕渲染
+        H --> S1["Screen.AiChat → AIChatScreen"]
+        H --> S2["Screen.Settings → SettingsScreen"]
+        H --> S3["Screen.Packages → PackageManagerScreen"]
+        H --> S4["Screen.Toolbox → ToolboxScreen"]
+        H --> S5["Screen.TokenConfig (二级) → TokenConfigScreen"]
+        H --> S6["... 其他 Screen"]
+    end
+
+    subgraph 覆盖层
+        B --> OV["RemoteAnnouncementDialog\n(远程公告弹窗)"]
+    end
+    </pre>
+  </div>
+</div>
+
+<!-- ===== ASSEMBLY DETAIL TABLE ===== -->
+<div class="section">
+  <div class="section-head gray">📋 装配层级详解</div>
+  <table class="act-table">
+    <thead>
+      <tr><th>层级</th><th>组件</th><th>职责</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="tag" style="background:var(--blue-bg);color:var(--blue);">1. Activity</span></td>
+        <td class="mono">MainActivity</td>
+        <td>生命周期管理、权限检查、通过 <code>setContent</code> 启动 Compose</td>
+      </tr>
+      <tr>
+        <td><span class="tag" style="background:var(--green-bg);color:var(--green);">2. OperitApp</span></td>
+        <td class="mono">OperitApp</td>
+        <td>全局状态管理（currentScreen / backStack / topBarActions）、设备检测、布局分叉、导航逻辑</td>
+      </tr>
+      <tr>
+        <td><span class="tag" style="background:var(--purple-bg);color:var(--purple);">3. Layout</span></td>
+        <td class="mono">TabletLayout / PhoneLayout</td>
+        <td>侧边栏/抽屉 + 内容区的排列方式</td>
+      </tr>
+      <tr>
+        <td><span class="tag" style="background:var(--orange-bg);color:var(--orange);">4. AppContent</span></td>
+        <td class="mono">AppContent</td>
+        <td>Scaffold（TopAppBar + 内容区）、屏幕缓存</td>
+      </tr>
+      <tr>
+        <td><span class="tag" style="background:#39d2c020;color:var(--cyan);">5. Screen</span></td>
+        <td class="mono">Screen.Content()</td>
+        <td>每个 Screen 子类渲染对应的具体业务页面</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== OperitApp ROOT COMPONENT ===== -->
+<div class="section">
+  <div class="section-head blue">🧩 OperitApp 根组件</div>
+  <div class="key-nodes-grid">
+    <div class="key-node-card">
+      <div class="kn-icon">📊</div>
+      <div class="kn-title" style="color:var(--blue)">状态管理</div>
+      <div class="kn-code">• currentScreen   — 当前显示屏幕
+• selectedItem    — 侧边栏选中项
+• backStack       — 页面导航回退栈
+• topBarActions   — TopAppBar 动作按钮</div>
+    </div>
+    <div class="key-node-card">
+      <div class="kn-icon">🧭</div>
+      <div class="kn-title" style="color:var(--green)">导航函数</div>
+      <div class="kn-code">• navigateTo()  — 跳转到目标页面
+  一级页面: 清空栈底, 压入 AiChat
+  二级页面: 直接压栈
+• goBack()      — 弹栈返回
+  兜底: 栈空时返回 AiChat</div>
+    </div>
+    <div class="key-node-card">
+      <div class="kn-icon">⚡</div>
+      <div class="kn-title" style="color:var(--purple)">副作用 LaunchedEffect</div>
+      <div class="kn-code">• 快捷方式处理 (App Shortcuts)
+• 网络轮询 (NetworkPolling)
+• 公告拉取 (RemoteAnnouncement)
+• MCP 插件同步 (PackageSync)</div>
+    </div>
+    <div class="key-node-card">
+      <div class="kn-icon">🎨</div>
+      <div class="kn-title" style="color:var(--orange)">覆盖层</div>
+      <div class="kn-body">
+        <code style="color:var(--cyan);font-size:12px;">RemoteAnnouncementDialog</code> — 远程公告弹窗，在 OperitApp 根组件中直接渲染，覆盖在所有内容之上。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LAYOUT COMPARISON ===== -->
+<div class="section">
+  <div class="section-head purple">📱💻 布局对比</div>
+  <div class="arch-grid">
+    <!-- Phone -->
+    <div class="arch-box">
+      <div class="arch-title">📱 手机布局 <span style="font-size:11px;font-weight:400;color:var(--text-dimmer)">screenWidthDp &lt; 600 · PhoneLayout</span></div>
+      <div style="padding:8px 0;">
+        <div style="font-size:12px;color:var(--text-dim);line-height:1.8;">
+          <div style="margin-bottom:6px;">
+            <strong style="color:var(--text)">Box</strong> <span style="color:var(--text-dimmer)">(fillMaxSize · 支持拖拽手势)</span>
+          </div>
+          <div style="padding-left:16px;border-left:2px solid var(--border);">
+            <div style="margin-bottom:4px;">├─ <strong style="color:var(--blue)">Box (主内容)</strong> <span style="color:var(--text-dimmer)">translationX 偏移动画</span></div>
+            <div style="padding-left:20px;margin-bottom:4px;color:var(--text-dimmer);">└─ <code style="color:var(--cyan)">AppContent</code> → Scaffold → Screen.Content</div>
+            <div style="margin-bottom:4px;">├─ <strong style="color:var(--green)">Surface (模态抽屉)</strong> <span style="color:var(--text-dimmer)">drawerWidth = 75%屏幕</span></div>
+            <div style="padding-left:20px;margin-bottom:4px;color:var(--text-dimmer);">└─ <code style="color:var(--cyan)">DrawerContent</code> 完整导航菜单</div>
+            <div>└─ <strong style="color:var(--orange)">Box (遮罩层)</strong> <span style="color:var(--text-dimmer)">点击关闭抽屉</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tablet -->
+    <div class="arch-box">
+      <div class="arch-title">💻 平板布局 <span style="font-size:11px;font-weight:400;color:var(--text-dimmer)">screenWidthDp ≥ 600 · TabletLayout</span></div>
+      <div style="padding:8px 0;">
+        <div style="font-size:12px;color:var(--text-dim);line-height:1.8;">
+          <div style="margin-bottom:6px;">
+            <strong style="color:var(--text)">Box</strong> <span style="color:var(--text-dimmer)">(fillMaxSize)</span>
+          </div>
+          <div style="padding-left:16px;border-left:2px solid var(--border);">
+            <div style="margin-bottom:4px;">├─ <strong style="color:var(--green)">Surface (侧边栏)</strong> <span style="color:var(--text-dimmer)">宽度动画: 64dp ↔ 280dp</span></div>
+            <div style="padding-left:20px;margin-bottom:2px;color:var(--text-dimmer);">├─ 展开: <code style="color:var(--cyan)">DrawerContent</code> 完整导航菜单</div>
+            <div style="padding-left:20px;margin-bottom:4px;color:var(--text-dimmer);">└─ 收起: <code style="color:var(--cyan)">CollapsedDrawerContent</code> 仅图标</div>
+            <div>└─ <strong style="color:var(--blue)">Box (内容区)</strong> <span style="color:var(--text-dimmer)">offset = sidebarWidth</span></div>
+            <div style="padding-left:20px;color:var(--text-dimmer);">└─ <code style="color:var(--cyan)">AppContent</code> → Scaffold → Screen.Content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== KEY BRANCH POINTS ===== -->
+<div class="section">
+  <div class="section-head orange">🔀 关键分支点</div>
+  <table class="act-table">
+    <thead>
+      <tr><th>分支</th><th>条件</th><th>结果</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>布局选择</strong></td>
+        <td class="mono">screenWidthDp &gt;= 600</td>
+        <td>平板: <code style="color:var(--cyan)">TabletLayout</code> / 手机: <code style="color:var(--cyan)">PhoneLayout</code></td>
+      </tr>
+      <tr>
+        <td><strong>侧边栏形态</strong></td>
+        <td class="mono">isTabletSidebarExpanded</td>
+        <td>展开: <code style="color:var(--cyan)">DrawerContent</code> / 收起: <code style="color:var(--cyan)">CollapsedDrawerContent</code></td>
+      </tr>
+      <tr>
+        <td><strong>返回按钮显示</strong></td>
+        <td class="mono">currentScreen.isSecondaryScreen</td>
+        <td>二级页面显示返回箭头</td>
+      </tr>
+      <tr>
+        <td><strong>TopBar Actions</strong></td>
+        <td>由子屏幕通过 <code style="color:var(--cyan)">LocalTopBarActions</code> 注入</td>
+        <td>AiChat/TokenConfig 有自定义按钮，其余页面清空</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== DRAWER CONTENT NAV MENU ===== -->
+<div class="section">
+  <div class="section-head green">🗂 导航菜单结构 (DrawerContent)</div>
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px;font-size:12px;line-height:2.0;">
+    <div style="color:var(--text);font-weight:700;margin-bottom:8px;font-size:13px;">Column <span style="color:var(--text-dimmer);font-weight:400">(可滚动)</span></div>
+    <div style="padding-left:16px;border-left:2px solid var(--border);">
+      <div style="color:var(--text-dim);">├─ <strong style="color:var(--text)">App 标题</strong> ("Operit") + 网络状态</div>
+      <div style="margin-top:8px;">
+        <div style="color:var(--blue);font-weight:600;">├─ NavGroup: AI 功能</div>
+        <div style="padding-left:20px;color:var(--text-dim);">
+          <div>├─ 💬 AiChat</div>
+          <div>├─ 🛠 AssistantConfig</div>
+          <div>├─ 📦 Packages</div>
+          <div>└─ 🧠 MemoryBase</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="color:var(--green);font-weight:600;">├─ NavGroup: 工具</div>
+        <div style="padding-left:20px;color:var(--text-dim);">
+          <div>├─ 🧰 Toolbox</div>
+          <div>├─ ⚡ ShizukuCommands</div>
+          <div>└─ 🔄 Workflow</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <div style="color:var(--purple);font-weight:600;">└─ NavGroup: 系统</div>
+        <div style="padding-left:20px;color:var(--text-dim);">
+          <div>├─ ⚙️ Settings</div>
+          <div>├─ ❓ Help</div>
+          <div>├─ ℹ️ About</div>
+          <div>└─ 📋 UpdateHistory</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAVIGATION STATE MACHINE MERMAID ===== -->
+<div class="section">
+  <div class="section-head purple">🔁 导航状态机</div>
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+graph TD
+    START(( )) -->|"启动默认"| AiChat
+
+    subgraph 一级屏幕
+        AiChat["💬 AiChat\n(根页面)"]
+        Settings["⚙️ Settings"]
+        Packages["📦 Packages"]
+        Toolbox["🧰 Toolbox"]
+        Help["❓ Help"]
+        About["ℹ️ About"]
+    end
+
+    subgraph 二级屏幕
+        TokenConfig["TokenConfig\n(令牌配置)"]
+        ModelConfig["ModelConfig\n(模型配置)"]
+        ThemeSettings["ThemeSettings\n(主题设置)"]
+        MCPMarket["MCPMarket\n(MCP 市场)"]
+    end
+
+    AiChat -->|"navigateTo\n(压 AiChat 入栈底)"| Settings
+    AiChat -->|"navigateTo\n(压 AiChat 入栈底)"| Packages
+    Settings -.->|"goBack (弹栈)"| AiChat
+
+    AiChat -->|"navigateTo\n(二级, 压栈)"| TokenConfig
+    TokenConfig -.->|"goBack (弹栈)"| AiChat
+
+    Settings -->|"navigateTo\n(二级, 压栈)"| ModelConfig
+    ModelConfig -.->|"goBack (弹栈)"| Settings
+
+    NOTE["📌 AiChat 是根页面\n所有一级页面返回兜底到 AiChat"]
+
+    style START fill:#8b949e,stroke:#8b949e,color:#8b949e
+    style AiChat fill:#1f6feb,stroke:#58a6ff,color:#fff
+    style NOTE fill:none,stroke:#30363d,color:#8b949e
+    </pre>
+  </div>
+</div>
+
+<!-- ===== CORE FILES ===== -->
+<div class="section">
+  <div class="section-head gray">📁 核心文件清单</div>
+  <table class="act-table">
+    <thead>
+      <tr><th>文件</th><th>路径</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>MainActivity</strong></td><td class="mono">ui/main/MainActivity.kt</td></tr>
+      <tr><td><strong>OperitApp</strong></td><td class="mono">ui/main/OperitApp.kt</td></tr>
+      <tr><td><strong>PhoneLayout</strong></td><td class="mono">ui/main/layout/PhoneLayout.kt</td></tr>
+      <tr><td><strong>TabletLayout</strong></td><td class="mono">ui/main/layout/TabletLayout.kt</td></tr>
+      <tr><td><strong>AppContent</strong></td><td class="mono">ui/main/components/AppContent.kt</td></tr>
+      <tr><td><strong>DrawerContent</strong></td><td class="mono">ui/main/components/DrawerContent.kt</td></tr>
+      <tr><td><strong>OperitScreens</strong></td><td class="mono">ui/main/screens/OperitScreens.kt</td></tr>
+      <tr><td><strong>NavItem</strong></td><td class="mono">ui/common/NavItem.kt</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer">
+  Auto-generated from source · Operit App 屏幕装配流程 · 基于 docs/project_overview/02_屏幕装配流程图.md
+</div>
+
+</div><!-- end panel-assembly -->
+
 <script>
+var mermaidRendered = false;
+function fixMermaidSvgColors() {
+  var panel = document.getElementById('panel-assembly');
+  if (!panel) return;
+  // 修复所有 SVG text 元素的 fill 颜色
+  panel.querySelectorAll('svg text').forEach(function(t) {
+    var fill = t.getAttribute('fill') || getComputedStyle(t).fill;
+    // 如果文字颜色太暗（接近黑色），强制改为浅色
+    if (!fill || fill === 'black' || fill === '#000' || fill === '#000000' || fill === 'rgb(0, 0, 0)'
+        || fill === '#333' || fill === '#333333') {
+      t.setAttribute('fill', '#e6edf3');
+      t.style.fill = '#e6edf3';
+    }
+  });
+  // 修复 text 内的 tspan
+  panel.querySelectorAll('svg tspan').forEach(function(ts) {
+    var fill = ts.getAttribute('fill') || '';
+    if (!fill || fill === 'black' || fill === '#000' || fill === '#000000' || fill === 'rgb(0, 0, 0)'
+        || fill === '#333' || fill === '#333333') {
+      ts.setAttribute('fill', '#e6edf3');
+      ts.style.fill = '#e6edf3';
+    }
+  });
+  // 修复 foreignObject 内的 div/span 文字颜色
+  panel.querySelectorAll('svg foreignObject div, svg foreignObject span').forEach(function(el) {
+    var color = getComputedStyle(el).color;
+    if (color === 'rgb(0, 0, 0)' || color === 'rgb(51, 51, 51)') {
+      el.style.color = '#e6edf3';
+    }
+  });
+}
+
 function switchTab(tabId, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('panel-' + tabId).classList.add('active');
   btn.classList.add('active');
+  if (tabId === 'assembly' && !mermaidRendered) {
+    mermaidRendered = true;
+    requestAnimationFrame(function() {
+      mermaid.run({ querySelector: '#panel-assembly .mermaid' }).then(function() {
+        setTimeout(fixMermaidSvgColors, 200);
+      });
+    });
+  }
 }
 
 function toggleGroup(head) {
