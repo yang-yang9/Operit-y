@@ -54,6 +54,7 @@ mermaid.initialize({
    If the tab contains Mermaid diagrams, set mermaid:true and mermaidSelector. */
 var TABS = [
   { id: 'roadmap',  mermaid: true, mermaidSelector: '#panel-roadmap .mermaid' },
+  { id: 'tutorials', mermaid: true, mermaidSelector: '#panel-tutorials .mermaid' },
   { id: 'pages',    mermaid: false },
   { id: 'flow',     mermaid: false },
   { id: 'assembly', mermaid: true, mermaidSelector: '#panel-assembly .mermaid' },
@@ -66,6 +67,24 @@ var mermaidRenderedSet = new Set();
 var tabContents = {};
 function registerTabContent(id, html) {
   tabContents[id] = html;
+}
+
+var tutorialSections = [];
+function registerTutorialSection(id, title, html) {
+  tutorialSections.push({ id: id, title: title, html: html });
+}
+function buildTutorialContent() {
+  if (tutorialSections.length === 0) return '';
+  var nav = '<div class="tutorial-nav">';
+  tutorialSections.forEach(function(s) {
+    nav += '<button class="tutorial-nav-btn" onclick="document.getElementById(\'tut-' + s.id + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">' + s.title + '</button>';
+  });
+  nav += '</div>';
+  var body = '';
+  tutorialSections.forEach(function(s) {
+    body += '<div id="tut-' + s.id + '" style="scroll-margin-top:100px;">' + s.html + '</div>';
+  });
+  return nav + body;
 }
 
 function fixMermaidSvgColors(panelId) {
@@ -102,9 +121,14 @@ function switchTab(tabId, btn) {
   btn.classList.add('active');
 
   var panel = document.getElementById('panel-' + tabId);
-  if (tabContents[tabId] && !panel.dataset.loaded) {
-    panel.innerHTML = tabContents[tabId];
-    panel.dataset.loaded = '1';
+  if (!panel.dataset.loaded) {
+    if (tabId === 'tutorials') {
+      panel.innerHTML = buildTutorialContent();
+      panel.dataset.loaded = '1';
+    } else if (tabContents[tabId]) {
+      panel.innerHTML = tabContents[tabId];
+      panel.dataset.loaded = '1';
+    }
   }
 
   var tabDef = TABS.find(function(t) { return t.id === tabId; });
