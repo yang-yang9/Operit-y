@@ -54,6 +54,8 @@
 <script src="details/settings-context-permission.js"></script>
 <script src="details/settings-backup-history.js"></script>
 <script src="details/settings-token-mnn-github.js"></script>
+<script src="details/runtime-boot.js"></script>
+<script src="details/runtime-chat.js"></script>
 </head>
 <body>
 
@@ -69,6 +71,8 @@
     <button class="tab-btn active" data-tab="pages">📱 页面结构</button>
     <button class="tab-btn" data-tab="flow">🔗 请求调用链</button>
     <button class="tab-btn" data-tab="assembly">🏗 屏幕装配流程</button>
+    <button class="tab-btn" data-tab="runtime-boot">🚀 冷启动全链路</button>
+    <button class="tab-btn" data-tab="runtime-chat">💬 对话生命周期</button>
   </div>
 </div>
 
@@ -1762,6 +1766,14 @@ graph TD
 </div>
 
 </div><!-- end panel-assembly -->
+
+<!-- ===== TAB 4: 冷启动全链路 ===== -->
+<div id="panel-runtime-boot" class="tab-panel">
+</div><!-- end panel-runtime-boot -->
+
+<!-- ===== TAB 5: 对话生命周期 ===== -->
+<div id="panel-runtime-chat" class="tab-panel">
+</div><!-- end panel-runtime-chat -->
 
 <!--
   ============================================================

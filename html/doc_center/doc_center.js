@@ -55,10 +55,17 @@ mermaid.initialize({
 var TABS = [
   { id: 'pages',    mermaid: false },
   { id: 'flow',     mermaid: false },
-  { id: 'assembly', mermaid: true, mermaidSelector: '#panel-assembly .mermaid' }
+  { id: 'assembly', mermaid: true, mermaidSelector: '#panel-assembly .mermaid' },
+  { id: 'runtime-boot', mermaid: true, mermaidSelector: '#panel-runtime-boot .mermaid' },
+  { id: 'runtime-chat', mermaid: true, mermaidSelector: '#panel-runtime-chat .mermaid' }
 ];
 
 var mermaidRenderedSet = new Set();
+
+var tabContents = {};
+function registerTabContent(id, html) {
+  tabContents[id] = html;
+}
 
 function fixMermaidSvgColors(panelId) {
   var panel = document.getElementById('panel-' + panelId) || document.getElementById(panelId);
@@ -92,6 +99,12 @@ function switchTab(tabId, btn) {
   document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
   document.getElementById('panel-' + tabId).classList.add('active');
   btn.classList.add('active');
+
+  var panel = document.getElementById('panel-' + tabId);
+  if (tabContents[tabId] && !panel.dataset.loaded) {
+    panel.innerHTML = tabContents[tabId];
+    panel.dataset.loaded = '1';
+  }
 
   var tabDef = TABS.find(function(t) { return t.id === tabId; });
   if (tabDef && tabDef.mermaid && !mermaidRenderedSet.has(tabId)) {
