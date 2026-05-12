@@ -199,6 +199,11 @@ function filterScreens(query) {
 /* ===== Page Detail Navigation ===== */
 var savedMapScrollY = 0;
 var detailMermaidRendered = new Set();
+var detailContents = {};
+
+function registerDetail(id, html) {
+  detailContents[id] = html;
+}
 
 function showPageDetail(detailId, title) {
   var mapView = document.getElementById('pageMapView');
@@ -212,14 +217,24 @@ function showPageDetail(detailId, title) {
 
   detailView.querySelectorAll('.detail-content').forEach(function(c) { c.style.display = 'none'; });
   var target = document.getElementById('detail-' + detailId);
-  if (target) target.style.display = 'block';
+  if (!target) return;
+  target.style.display = 'block';
 
   var crumbTitle = document.getElementById('detailCrumbTitle');
   if (crumbTitle) crumbTitle.textContent = title || detailId;
 
   window.scrollTo(0, 0);
 
-  if (target && !detailMermaidRendered.has(detailId)) {
+  if (detailContents[detailId] && !target.dataset.loaded) {
+    target.innerHTML = detailContents[detailId];
+    target.dataset.loaded = '1';
+  }
+
+  renderDetailMermaid(detailId, target);
+}
+
+function renderDetailMermaid(detailId, target) {
+  if (!detailMermaidRendered.has(detailId)) {
     var mermaidEls = target.querySelectorAll('.mermaid');
     if (mermaidEls.length > 0) {
       detailMermaidRendered.add(detailId);
