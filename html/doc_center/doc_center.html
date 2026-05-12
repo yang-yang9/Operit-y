@@ -16,6 +16,12 @@
 <script src="details/shizukucommands.js"></script>
 <script src="details/settings.js"></script>
 <script src="details/help-about-updatehistory.js"></script>
+<script src="details/filemanager.js"></script>
+<script src="details/terminal.js"></script>
+<script src="details/skillmarket.js"></script>
+<script src="details/mcpmarket.js"></script>
+<script src="details/shellexecutor.js"></script>
+<script src="details/uidebugger.js"></script>
 </head>
 <body>
 
@@ -312,7 +318,7 @@
             </div>
 
             <div class="t-sub-cat">MCP 分支</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 市场</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPMarket → MCPMarketScreen</span></span>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 市场</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPMarket → MCPMarketScreen</span><span class="detail-link" data-detail="mcpmarket" data-title="MCP 市场">查看页面结构 →</span></span>
               <div class="t-sub-tree">
                 <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 发布</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPPublish → MCPPublishScreen</span></span></div>
                 <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 管理</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPManage → MCPManageScreen</span></span>
@@ -325,7 +331,7 @@
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 插件详情</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPPluginDetail → MCPPluginDetailScreen</span></span></div>
 
             <div class="t-sub-cat">Skill 分支</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>Skill 市场</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.SkillMarket → SkillMarketScreen</span></span>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>Skill 市场</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.SkillMarket → SkillMarketScreen</span><span class="detail-link" data-detail="skillmarket" data-title="Skill 市场">查看页面结构 →</span></span>
               <div class="t-sub-tree">
                 <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>Skill 管理</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.SkillManage → SkillManageScreen</span></span>
                   <div class="t-sub-tree">
@@ -386,18 +392,18 @@
           </div>
           <div class="t-children">
             <div class="t-sub-cat">文件管理</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>文件管理器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.FileManager → FileManagerToolScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>文件管理器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.FileManager → FileManagerToolScreen</span><span class="detail-link" data-detail="filemanager" data-title="文件管理器">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">开发工具</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>终端</span><span class="n-type nav">NavHost</span><span class="n-cls">Screen.Terminal → TerminalToolScreen</span></span>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>终端</span><span class="n-type nav">NavHost</span><span class="n-cls">Screen.Terminal → TerminalToolScreen</span><span class="detail-link" data-detail="terminal" data-title="终端">查看页面结构 →</span></span>
               <div class="t-sub-tree">
                 <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--cyan)"></span><span class="n-name" data-searchable>终端首页</span><span class="n-type tab">路由</span><span class="n-cls">TerminalScreen</span></span></div>
                 <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--cyan)"></span><span class="n-name" data-searchable>终端设置</span><span class="n-type tab">路由</span><span class="n-cls">Screen.TerminalSetup</span></span></div>
                 <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--cyan)"></span><span class="n-name" data-searchable>终端自动配置</span><span class="n-type tab">路由</span><span class="n-cls">Screen.TerminalAutoConfig → TerminalAutoConfigToolScreen</span></span></div>
               </div>
             </div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>UI 调试器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.UIDebugger → UIDebuggerToolScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>Shell 执行器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.ShellExecutor → ShellExecutorToolScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>UI 调试器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.UIDebugger → UIDebuggerToolScreen</span><span class="detail-link" data-detail="uidebugger" data-title="UI 调试器">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>Shell 执行器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.ShellExecutor → ShellExecutorToolScreen</span><span class="detail-link" data-detail="shellexecutor" data-title="Shell 执行器">查看页面结构 →</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>Logcat 日志</span><span class="n-type sub">工具</span><span class="n-cls">Screen.Logcat → LogcatToolScreen</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>SQL 查看器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.SqlViewer → SqlViewerToolScreen</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>FFmpeg 工具箱</span><span class="n-type sub">工具</span><span class="n-cls">Screen.FFmpegToolbox → FFmpegToolboxScreen</span></span></div>
@@ -787,6 +793,30 @@
   <!-- ==================== Help / About / UpdateHistory ==================== -->
   <div id="detail-help-about-updatehistory" class="detail-content" style="display:none;">
   </div><!-- end detail-help-about-updatehistory -->
+
+  <!-- ==================== FileManager ==================== -->
+  <div id="detail-filemanager" class="detail-content" style="display:none;">
+  </div><!-- end detail-filemanager -->
+
+  <!-- ==================== Terminal ==================== -->
+  <div id="detail-terminal" class="detail-content" style="display:none;">
+  </div><!-- end detail-terminal -->
+
+  <!-- ==================== SkillMarket ==================== -->
+  <div id="detail-skillmarket" class="detail-content" style="display:none;">
+  </div><!-- end detail-skillmarket -->
+
+  <!-- ==================== MCPMarket ==================== -->
+  <div id="detail-mcpmarket" class="detail-content" style="display:none;">
+  </div><!-- end detail-mcpmarket -->
+
+  <!-- ==================== ShellExecutor ==================== -->
+  <div id="detail-shellexecutor" class="detail-content" style="display:none;">
+  </div><!-- end detail-shellexecutor -->
+
+  <!-- ==================== UIDebugger ==================== -->
+  <div id="detail-uidebugger" class="detail-content" style="display:none;">
+  </div><!-- end detail-uidebugger -->
 
 </div><!-- end pageDetailView -->
 
