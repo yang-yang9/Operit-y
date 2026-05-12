@@ -277,6 +277,7 @@
             <span class="n-name" data-searchable>助理配置</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.AssistantConfig → AssistantConfigScreen</span>
+            <span class="detail-link" data-detail="assistantconfig" data-title="助理配置">查看页面结构 →</span>
           </div>
           <div class="t-children collapsed">
             <div style="padding:8px 12px;font-size:12px;color:var(--text-dim);">独立配置页 · 头像预览(DragonBones/WEBP/MP4/glTF/FBX/MMD) · 唤醒词 · 语音自动附加 · 不活跃超时</div>
@@ -291,6 +292,7 @@
             <span class="n-name" data-searchable>包管理器</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.Packages → PackageManagerScreen</span>
+            <span class="detail-link" data-detail="packages" data-title="包管理器">查看页面结构 →</span>
             <span class="g-badge">11 子项</span>
           </div>
           <div class="t-children">
@@ -339,6 +341,7 @@
             <span class="n-name" data-searchable>记忆库</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.MemoryBase → MemoryScreen</span>
+            <span class="detail-link" data-detail="memorybase" data-title="记忆库">查看页面结构 →</span>
             <span class="g-badge">5 弹窗</span>
           </div>
           <div class="t-children collapsed">
@@ -369,6 +372,7 @@
             <span class="n-name" data-searchable>工具箱</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.Toolbox → ToolboxScreen</span>
+            <span class="detail-link" data-detail="toolbox" data-title="工具箱">查看页面结构 →</span>
             <span class="g-badge">18 静态 + 动态</span>
           </div>
           <div class="t-children">
@@ -416,6 +420,7 @@
             <span class="n-name" data-searchable>Shizuku 命令</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.ShizukuCommands → ShizukuDemoScreen</span>
+            <span class="detail-link" data-detail="shizukucommands" data-title="Shizuku 命令">查看页面结构 →</span>
           </div>
           <div class="t-children collapsed">
             <div style="padding:8px 12px;font-size:12px;color:var(--text-dim);">Shizuku ADB 命令演示页，无子页面</div>
@@ -430,6 +435,7 @@
             <span class="n-name" data-searchable>工作流</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.Workflow → WorkflowListScreen</span>
+            <span class="detail-link" data-detail="workflow" data-title="工作流">查看页面结构 →</span>
             <span class="g-badge">1 子项</span>
           </div>
           <div class="t-children">
@@ -455,6 +461,7 @@
             <span class="n-name" data-searchable>设置</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.Settings → SettingsScreen</span>
+            <span class="detail-link" data-detail="settings" data-title="设置">查看页面结构 →</span>
             <span class="g-badge">22 子页</span>
           </div>
           <div class="t-children">
@@ -516,6 +523,7 @@
             <span class="n-name" data-searchable>帮助</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.Help → HelpScreen</span>
+            <span class="detail-link" data-detail="help-about-updatehistory" data-title="帮助 / 关于 / 更新历史">查看页面结构 →</span>
           </div>
           <div class="t-children collapsed">
             <div style="padding:8px 12px;font-size:12px;color:var(--text-dim);">帮助与引导页，无子页面</div>
@@ -530,6 +538,7 @@
             <span class="n-name" data-searchable>关于</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.About → AboutScreen</span>
+            <span class="detail-link" data-detail="help-about-updatehistory" data-title="帮助 / 关于 / 更新历史">查看页面结构 →</span>
           </div>
           <div class="t-children">
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>更新历史</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.UpdateHistory → UpdateScreen</span></span></div>
@@ -544,6 +553,7 @@
             <span class="n-name" data-searchable>更新历史</span>
             <span class="n-type page">主页面</span>
             <span class="n-cls">Screen.UpdateHistory → UpdateScreen</span>
+            <span class="detail-link" data-detail="help-about-updatehistory" data-title="帮助 / 关于 / 更新历史">查看页面结构 →</span>
           </div>
           <div class="t-children collapsed">
             <div style="padding:8px 12px;font-size:12px;color:var(--text-dim);">独立入口，与关于页共享</div>
@@ -1231,6 +1241,3198 @@ Web工作区 / AI电脑:
     </div>
 
   </div><!-- end detail-aichat -->
+
+  <!-- ==================== AssistantConfig Detail ==================== -->
+  <div id="detail-assistantconfig" class="detail-content" style="display:none;">
+
+    <div class="hero" style="padding: 16px 0 8px;">
+      <h1 style="font-size: 24px;">🛠 Screen.AssistantConfig 页面结构</h1>
+      <p class="sub">AssistantConfigScreen · Avatar 配置 + 语音唤醒 · 双状态源架构</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card"><div class="num">2</div><div class="label">Tab 页面</div></div>
+      <div class="stat-card"><div class="num">2</div><div class="label">状态源</div></div>
+      <div class="stat-card"><div class="num">5</div><div class="label">模型格式</div></div>
+      <div class="stat-card"><div class="num">7</div><div class="label">对话框</div></div>
+      <div class="stat-card"><div class="num">4</div><div class="label">附件类型</div></div>
+      <div class="stat-card"><div class="num">6</div><div class="label">核心文件</div></div>
+    </div>
+
+    <!-- ===== 入口链路 ===== -->
+    <div class="section">
+      <div class="section-head blue">🔗 入口链路 <span class="count">从 Activity 到 AssistantConfigScreen</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="step-num">L1</div><div class="step-name">MainActivity</div><div class="step-cond">NavItem.AssistantConfig</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L2</div><div class="step-name">OperitApp</div><div class="step-cond">导航状态管理</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L3</div><div class="step-name">AppContent</div><div class="step-cond">TopAppBar + Crossfade</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step final"><div class="step-num">L4</div><div class="step-name">AssistantConfigScreen</div><div class="step-cond">Screen.AssistantConfig.Content()</div></div>
+      </div>
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">📋</div>
+          <div class="kn-title green">导航属性</div>
+          <div class="kn-code">路由: "assistant_config"
+图标: Icons.Default.Tune
+导航组: AI Features
+叶子节点: 是（无子页面跳转）
+Crossfade: 不参与</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔧</div>
+          <div class="kn-title blue">双状态源架构</div>
+          <div class="kn-body">Avatar 相关状态走 <strong>ViewModel/AvatarRepository</strong>，语音唤醒相关状态直接读写 <strong>WakeWordPreferences DataStore</strong>，绕过 ViewModel。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 组件树 ===== -->
+    <div class="section">
+      <div class="section-head green">🌲 组件树 <span class="count">CustomScaffold + TabRow + 双 Tab 内容</span></div>
+
+      <div class="mermaid">
+graph TD
+    ROOT["AssistantConfigScreen&lt;br/&gt;(CustomScaffold + SnackbarHost)"]
+
+    ROOT --> MAIN_BOX["Box (fillMaxSize)"]
+    ROOT --> LOADING_OVERLAY["Box (加载遮罩层)&lt;br/&gt;isLoading || isImporting&lt;br/&gt;surface 70% alpha"]
+
+    MAIN_BOX --> MAIN_COL["Column (fillMaxSize, padding)"]
+
+    MAIN_COL --> TAB_ROW["TabRow (selectedConfigTab)"]
+    TAB_ROW --> TAB_0["Tab(0): Avatar Config"]
+    TAB_ROW --> TAB_1["Tab(1): Voice Wake-up"]
+
+    MAIN_COL --> TAB_CONTENT{"selectedConfigTab"}
+    TAB_CONTENT -->|0| AVATAR_TAB["Avatar 配置区域"]
+    TAB_CONTENT -->|1| VOICE_TAB["语音唤醒配置区域"]
+
+    AVATAR_TAB --> PREVIEW_BOX["Box (220dp, 可折叠)&lt;br/&gt;AvatarPreviewSection"]
+    AVATAR_TAB --> COLLAPSE_BTN["Row (折叠切换按钮)&lt;br/&gt;ExpandMore / ExpandLess"]
+    AVATAR_TAB --> AVATAR_SCROLL["Box (weight=1f, verticalScroll)&lt;br/&gt;AvatarConfigSection"]
+
+    PREVIEW_BOX --> PREVIEW_SURFACE["Surface (圆角12dp, 渐变边框)"]
+    PREVIEW_SURFACE --> AVATAR_VIEW["AvatarView&lt;br/&gt;(model + controller)"]
+
+    AVATAR_SCROLL --> VOICE_CALL_TOGGLE["Row: 语音通话显示Avatar开关"]
+    AVATAR_SCROLL --> MOOD_SECTION["MoodTriggerMappingSection&lt;br/&gt;(心情触发动画映射)"]
+    AVATAR_SCROLL --> MODEL_SELECTOR["Row: ModelSelector + 导入按钮"]
+    AVATAR_SCROLL --> SLIDERS["Scale/TranslateX/Y Sliders&lt;br/&gt;+ 类型特定相机参数"]
+    AVATAR_SCROLL --> IMPORT_GUIDE["HowToImportSection (可折叠)"]
+    AVATAR_SCROLL --> ALL_GUIDE["AllAvatarImportGuideSection (可折叠)"]
+
+    VOICE_TAB --> VOICE_SCROLL["Box (weight=1f, verticalScroll)"]
+    VOICE_SCROLL --> VOICE_COL["Column (surfaceVariant bg, 圆角10dp)"]
+    VOICE_COL --> WAKE_MODE["ExposedDropdownMenu: 唤醒模式选择"]
+    VOICE_COL --> PERSONAL_CFG["PersonalTemplate配置按钮区"]
+    VOICE_COL --> LISTEN_SWITCH["CompactSwitchRow: 始终监听"]
+    VOICE_COL --> WAKE_PHRASE["OutlinedTextField: 唤醒词"]
+    VOICE_COL --> REGEX_SWITCH["CompactSwitchRow: 正则模式"]
+    VOICE_COL --> TIMEOUT_INPUT["OutlinedTextField: 超时时间"]
+    VOICE_COL --> GREETING_SWITCH["CompactSwitchRow: 问候语开关"]
+    VOICE_COL --> GREETING_INPUT["OutlinedTextField: 问候语"]
+    VOICE_COL --> NEW_CHAT_SWITCH["CompactSwitchRow: 唤醒创建新聊天"]
+    VOICE_COL --> CHAT_GROUP_INPUT["OutlinedTextField: 自动分组"]
+    VOICE_COL --> DIVIDER["HorizontalDivider"]
+    VOICE_COL --> ATTACH_LABEL["Text: 语音关键词附件"]
+    VOICE_COL --> ATTACH_SWITCH["CompactSwitchRow: 附件启用"]
+    VOICE_COL --> ATTACH_GRID["VoiceAutoAttachGrid&lt;br/&gt;(LazyVerticalGrid, Adaptive 96dp)"]
+      </div>
+
+      <details style="margin-top:12px;">
+        <summary style="font-size:12px;color:var(--text-dim);cursor:pointer;user-select:none;">📝 文本版组件树</summary>
+        <div class="comp-tree" style="margin-top:8px;">
+<span class="ct-root">AssistantConfigScreen (CustomScaffold + SnackbarHost)</span>
+<div class="ct-indent">
+├─ <span class="ct-branch">Box (fillMaxSize)</span>
+│   └─ <span class="ct-branch">Column (fillMaxSize, padding)</span>
+│       ├─ <span class="ct-branch">TabRow (selectedConfigTab)</span>
+│       │   ├─ Tab(0): Avatar Config
+│       │   └─ Tab(1): Voice Wake-up
+│       └─ <span class="ct-cond">selectedConfigTab ?</span>
+│           ├─ <span class="ct-cond">0 →</span> <span class="ct-branch">Avatar 配置区域</span>
+│           │   ├─ <span class="ct-branch">AvatarPreviewSection</span> <span class="ct-dim">(220dp, 可折叠)</span>
+│           │   ├─ <span class="ct-dim">折叠切换按钮</span>
+│           │   └─ <span class="ct-branch">AvatarConfigSection</span> <span class="ct-dim">(verticalScroll)</span>
+│           │       ├─ <span class="ct-dim">语音通话Avatar开关</span>
+│           │       ├─ <span class="ct-branch">MoodTriggerMappingSection</span>
+│           │       ├─ <span class="ct-branch">ModelSelector + 导入按钮</span>
+│           │       ├─ <span class="ct-dim">Scale/位移/相机参数滑块</span>
+│           │       └─ <span class="ct-dim">导入指南 (可折叠)</span>
+│           └─ <span class="ct-cond">1 →</span> <span class="ct-branch">语音唤醒配置区域</span> <span class="ct-dim">(verticalScroll)</span>
+│               ├─ <span class="ct-dim">唤醒模式选择</span>
+│               ├─ <span class="ct-dim">始终监听 / 唤醒词 / 正则</span>
+│               ├─ <span class="ct-dim">超时 / 问候语 / 新聊天</span>
+│               └─ <span class="ct-branch">VoiceAutoAttachGrid</span>
+└─ <span class="ct-overlay">Box (加载遮罩层)</span> <span class="ct-dim">isLoading || isImporting · 70% alpha</span>
+</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- ===== 状态管理 ===== -->
+    <div class="section">
+      <div class="section-head orange">🔀 状态管理 <span class="count">ViewModel + DataStore + Local Remember</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🧠</div>
+          <div class="kn-title orange">AssistantConfigViewModel</div>
+          <div class="kn-body">通过自定义 <code style="color:var(--cyan)">Factory(context)</code> 构建，内部组合 AvatarRepository 的四个 Flow。</div>
+          <div class="kn-code">UiState 字段:
+isLoading          — 全局加载（删除/重命名）
+isImporting        — 导入特有加载
+avatarConfigs      — 所有已注册 Avatar 模型
+currentAvatarConfig — 当前选中 Avatar 配置
+currentAvatarModel  — 当前选中 Avatar 运行时模型
+config             — 缩放/位移/自定义设置
+isVoiceCallAvatarEnabled — 语音通话显示
+emotionAnimationMapping  — 情绪→动画映射
+moodAnimationMapping     — 触发键→动画映射
+customMoodDefinitions    — 自定义心情类型
+errorMessage / operationSuccess — 反馈
+scrollPosition — 持久化滚动位置</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">💾</div>
+          <div class="kn-title cyan">WakeWordPreferences (DataStore)</div>
+          <div class="kn-body">语音唤醒相关状态直接读写 DataStore，绕过 ViewModel。</div>
+          <div class="kn-code">wakeListeningEnabled    — always_listening_enabled
+wakePhrase             — wake_phrase
+wakePhraseRegexEnabled — wake_phrase_regex_enabled
+wakeRecognitionMode    — wake_recognition_mode
+personalWakeTemplates  — personal_wake_templates_json
+inactivityTimeoutSeconds — voice_call_inactivity_timeout
+wakeGreetingEnabled    — wake_greeting_enabled
+wakeGreetingText       — wake_greeting_text
+wakeCreateNewChatOnWakeEnabled — wake_create_new_chat
+autoNewChatGroup       — auto_new_chat_group
+voiceAutoAttachEnabled — voice_auto_attach_enabled
+voiceAutoAttachItems   — voice_auto_attach_items_json</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📌</div>
+          <div class="kn-title purple">本地 Remember 状态</div>
+          <div class="kn-code">selectedConfigTab (rememberSaveable)
+  — Tab 索引 (0=Avatar, 1=Voice)
+isAvatarPreviewCollapsed (rememberSaveable)
+  — 折叠/展开 Avatar 预览
+personalWakeConfigDialogVisible
+  — 个人唤醒模板配置弹窗
+wakePhraseInput / inactivityTimeoutInput
+wakeGreetingTextInput / autoNewChatGroupInput
+  — 输入防抖镜像
+scrollState — 位置通过 ViewModel 持久化
+snackbarHostState — Snackbar 协调</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Avatar Tab 详解 ===== -->
+    <div class="section">
+      <div class="section-head purple">🎨 Avatar 配置 Tab 详解 <span class="count">预览 + 模型选择 + 参数调整 + 心情映射</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">👤</div>
+          <div class="kn-title blue">AvatarPreviewSection</div>
+          <div class="kn-body">Avatar 实时预览区域，高度 220dp，可折叠</div>
+          <div class="kn-code">Surface (RoundedCorner=12dp, 渐变边框)
+└─ Box (fillMaxSize)
+   ├─ [有模型 + 有控制器] AvatarView
+   ├─ [有模型 + 无控制器] Text("不支持的模型类型")
+   └─ [无模型] Text("暂无模型" / "请选择模型")</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🎯</div>
+          <div class="kn-title green">ModelSelector</div>
+          <div class="kn-body">模型选择下拉框，内嵌重命名和删除操作</div>
+          <div class="kn-code">ExposedDropdownMenuBox
+├─ OutlinedTextField (当前模型名, readOnly)
+└─ ExposedDropdownMenu
+   └─ [forEach model] DropdownMenuItem
+       ├─ Text(model.name)
+       └─ Row [操作按钮]
+           ├─ IconButton(Edit) → 重命名 Dialog
+           └─ IconButton(Delete) → 删除确认 Dialog</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">😄</div>
+          <div class="kn-title orange">MoodTriggerMappingSection</div>
+          <div class="kn-body">心情触发动画映射，包含内置和自定义心情</div>
+          <div class="kn-code">内置心情定义列表 → MoodMappingCard
+  ├─ 触发键 + 提示词
+  ├─ AnimationSelectionField (Dropdown)
+  └─ Preview / Clear 按钮
+
+自定义心情类型 → MoodMappingCard
+  └─ 编辑 / 删除按钮</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🎚️</div>
+          <div class="kn-title cyan">参数滑块组</div>
+          <div class="kn-body">通用参数 + 按模型类型的相机参数</div>
+          <div class="kn-code">通用:
+Scale (0.1~2.0) / TranslateX (-500~500) / TranslateY (-500~500)
+
+按模型类型:
+MMD:  cameraPitch, initialRotationY, cameraDistanceScale, cameraTargetHeight
+GLTF: cameraPitch, cameraYaw, cameraDistanceScale, cameraTargetHeight
+FBX:  cameraPitch, cameraYaw, cameraDistanceScale, cameraTargetHeight</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 语音唤醒 Tab 详解 ===== -->
+    <div class="section">
+      <div class="section-head cyan">🎙 语音唤醒 Tab 详解 <span class="count">唤醒模式 + 关键词附件网格</span></div>
+
+      <div class="key-nodes-grid" style="margin-bottom:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">📡</div>
+          <div class="kn-title blue">唤醒模式</div>
+          <div class="kn-code">STT (WakeRecognitionMode.STT)
+  — 语音转文字匹配唤醒词
+
+PERSONAL_TEMPLATE
+  — 个人声纹模板匹配</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📎</div>
+          <div class="kn-title green">VoiceAutoAttachGrid</div>
+          <div class="kn-body">LazyVerticalGrid (Adaptive 96dp, maxHeight=200dp)</div>
+          <div class="kn-code">forEach item → VoiceAutoAttachTile
+  └─ ElevatedCard (clickable → 编辑弹窗)
+      ├─ Icon (类型图标, 22dp)
+      ├─ Text (标题)
+      └─ Text (关键词/描述)
+
+[有缺失类型时] VoiceAutoAttachAddTile
+  └─ OutlinedCard → Icon(Add) + Text("Add")</div>
+        </div>
+      </div>
+
+      <table class="act-table">
+        <thead><tr><th>附件类型</th><th>图标</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">SCREEN_OCR</td><td>ScreenshotMonitor</td><td>屏幕OCR内容</td></tr>
+          <tr><td class="mono">NOTIFICATIONS</td><td>Notifications</td><td>通知内容</td></tr>
+          <tr><td class="mono">LOCATION</td><td>LocationOn</td><td>位置信息</td></tr>
+          <tr><td class="mono">TIME</td><td>Schedule</td><td>时间信息</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 对话框清单 ===== -->
+    <div class="section">
+      <div class="section-head purple">📋 对话框清单 <span class="count">7</span></div>
+      <table class="act-table">
+        <thead><tr><th>对话框</th><th>触发条件</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">Personal Wake Config</td><td>Tab1 "Configure" 按钮</td><td>3步语音录制注册个人唤醒模板</td></tr>
+          <tr><td class="mono">Delete Avatar</td><td>ModelSelector 删除图标</td><td>确认删除 Avatar 模型</td></tr>
+          <tr><td class="mono">Rename Avatar</td><td>ModelSelector 编辑图标</td><td>输入新名称重命名 Avatar</td></tr>
+          <tr><td class="mono">Create Mood Type</td><td>MoodSection "Add" 按钮</td><td>输入 key + promptHint 创建自定义心情</td></tr>
+          <tr><td class="mono">Edit Mood Type</td><td>自定义 MoodCard 编辑图标</td><td>编辑已有心情类型</td></tr>
+          <tr><td class="mono">Edit Voice Attach Item</td><td>点击 VoiceAutoAttachTile</td><td>启用/禁用 + 编辑关键词 + 删除</td></tr>
+          <tr><td class="mono">Add Voice Attach Type</td><td>点击 AddTile</td><td>从缺失类型中选择添加</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 交互映射 ===== -->
+    <div class="section">
+      <div class="section-head orange">⚡ 用户交互 → 动作映射</div>
+      <table class="act-table">
+        <thead><tr><th>交互</th><th>执行动作</th></tr></thead>
+        <tbody>
+          <tr><td>Tab 切换</td><td class="mono">更新 selectedConfigTab</td></tr>
+          <tr><td>折叠/展开预览</td><td class="mono">切换 isAvatarPreviewCollapsed</td></tr>
+          <tr><td>ModelSelector 选中</td><td class="mono">viewModel.switchAvatar(modelId)</td></tr>
+          <tr><td>导入按钮点击</td><td class="mono">系统文件选择器 → viewModel.importAvatarFromZip(uri)</td></tr>
+          <tr><td>Scale/位移滑块</td><td class="mono">viewModel.updateScale/X/Y → repository.updateAvatarSettings()</td></tr>
+          <tr><td>相机参数滑块</td><td class="mono">viewModel.updateCustomSetting(key, value)</td></tr>
+          <tr><td>语音通话Avatar开关</td><td class="mono">viewModel.updateVoiceCallAvatarEnabled(bool)</td></tr>
+          <tr><td>心情动画下拉选择</td><td class="mono">viewModel.updateMoodAnimationMapping(key, name)</td></tr>
+          <tr><td>Preview 按钮</td><td class="mono">avatarController.playTrigger() / playAnimation()</td></tr>
+          <tr><td>Clear 按钮</td><td class="mono">viewModel.updateMoodAnimationMapping(key, null)</td></tr>
+          <tr><td>始终监听开关</td><td class="mono">检查权限 → wakePrefs.saveAlwaysListeningEnabled()</td></tr>
+          <tr><td>唤醒词输入</td><td class="mono">每次击键 → wakePrefs.saveWakePhrase()</td></tr>
+          <tr><td>超时时间输入</td><td class="mono">纯数字过滤 (1~600) → 实时保存</td></tr>
+          <tr><td>录制步骤</td><td class="mono">PersonalWakeEnrollment.recordOneTemplate(context)</td></tr>
+          <tr><td>附件 Tile 点击</td><td class="mono">编辑弹窗 → wakePrefs.saveVoiceAutoAttachItems()</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 数据模型 ===== -->
+    <div class="section">
+      <div class="section-head gray">📦 数据模型 <span class="count">9 个核心模型</span></div>
+      <table class="act-table">
+        <thead><tr><th>模型</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">AvatarConfig</td><td>Avatar 元数据：id, name, type, emotion/mood mapping, custom mood definitions</td></tr>
+          <tr><td class="mono">AvatarModel</td><td>运行时模型：id, type (DRAGONBONES/MMD/GLTF/FBX/MP4_LOOP)</td></tr>
+          <tr><td class="mono">AvatarInstanceSettings</td><td>显示设置：scale, translateX, translateY, customSettings</td></tr>
+          <tr><td class="mono">AvatarCustomMoodDefinition</td><td>自定义心情：key (规范化), promptHint</td></tr>
+          <tr><td class="mono">AvatarEmotion</td><td>情绪枚举：IDLE, LISTENING, THINKING, HAPPY, SAD, CONFUSED, SURPRISED</td></tr>
+          <tr><td class="mono">WakeRecognitionMode</td><td>唤醒模式枚举：STT, PERSONAL_TEMPLATE</td></tr>
+          <tr><td class="mono">PersonalWakeTemplate</td><td>声纹模板：features (Float 列表)</td></tr>
+          <tr><td class="mono">VoiceAutoAttachType</td><td>附件类型枚举：SCREEN_OCR, NOTIFICATIONS, LOCATION, TIME</td></tr>
+          <tr><td class="mono">VoiceAutoAttachItem</td><td>附件条目：id, type, enabled, keywords, params</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 架构要点 ===== -->
+    <div class="section">
+      <div class="section-head blue">🏗 架构要点</div>
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🔄</div>
+          <div class="kn-title orange">双状态源</div>
+          <div class="kn-body">Avatar 相关状态走 ViewModel/AvatarRepository 流，语音唤醒相关状态直接读写 <code style="color:var(--cyan)">WakeWordPreferences</code> DataStore，绕过 ViewModel。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🎮</div>
+          <div class="kn-title blue">共享 AvatarController</div>
+          <div class="kn-body">屏幕根部创建单一 AvatarController 实例，同时供 AvatarPreviewSection（渲染）和 AvatarConfigSection（轮询可用动画、触发预览播放）使用。动画列表通过 300ms 轮询获取。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📍</div>
+          <div class="kn-title green">滚动位置持久化</div>
+          <div class="kn-body"><code style="color:var(--cyan)">scrollState</code> 初始值从 <code style="color:var(--cyan)">uiState.scrollPosition</code> 读取，通过 <code style="color:var(--cyan)">snapshotFlow</code> 持续同步回 ViewModel。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⏳</div>
+          <div class="kn-title purple">加载遮罩</div>
+          <div class="kn-body">全屏 Box 覆盖层，70% alpha，区分 "导入模型中..." 和 "处理中..." 两种文案。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 核心文件 ===== -->
+    <div class="section">
+      <div class="section-head blue">📁 核心文件清单 <span class="count">6 文件</span></div>
+      <table class="act-table">
+        <thead><tr><th>文件</th><th>路径 (相对 ui/features/assistant/)</th><th>职责</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AssistantConfigScreen</strong></td><td class="mono">screens/AssistantConfigScreen.kt</td><td>页面入口，Tab 切换，状态收集</td></tr>
+          <tr><td><strong>AvatarConfigSection</strong></td><td class="mono">components/AvatarConfigSection.kt</td><td>Avatar Tab 内容 + 模型选择 + 参数调整</td></tr>
+          <tr><td><strong>AvatarPreviewSection</strong></td><td class="mono">components/AvatarPreviewSection.kt</td><td>3D/2D Avatar 实时预览</td></tr>
+          <tr><td><strong>HowToImportSection</strong></td><td class="mono">components/HowToImportSection.kt</td><td>可折叠导入帮助指南</td></tr>
+          <tr><td><strong>VoiceAutoAttachComponents</strong></td><td class="mono">components/VoiceAutoAttachComponents.kt</td><td>CompactSwitchRow + 语音附件网格</td></tr>
+          <tr><td><strong>AssistantConfigViewModel</strong></td><td class="mono">viewmodel/AssistantConfigViewModel.kt</td><td>ViewModel + UiState 数据类</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      基于 docs/project_overview/04_Screen.AssistantConfig页面结构.md · AssistantConfigScreen 组件结构
+    </div>
+
+  </div><!-- end detail-assistantconfig -->
+
+  <!-- ==================== MemoryBase Detail ==================== -->
+  <div id="detail-memorybase" class="detail-content" style="display:none;">
+
+    <div class="hero" style="padding: 16px 0 8px;">
+      <h1 style="font-size: 24px;">🧠 Screen.MemoryBase 页面结构</h1>
+      <p class="sub">MemoryScreen · 力导向图可视化 · 记忆 CRUD · 三种交互模式</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card"><div class="num">3</div><div class="label">交互模式</div></div>
+      <div class="stat-card"><div class="num">8</div><div class="label">力模型</div></div>
+      <div class="stat-card"><div class="num">13</div><div class="label">对话框</div></div>
+      <div class="stat-card"><div class="num">5</div><div class="label">FAB 按钮</div></div>
+      <div class="stat-card"><div class="num">4</div><div class="label">实体模型</div></div>
+      <div class="stat-card"><div class="num">10</div><div class="label">核心文件</div></div>
+    </div>
+
+    <!-- ===== 入口链路 ===== -->
+    <div class="section">
+      <div class="section-head blue">🔗 入口链路 <span class="count">从 Activity 到 MemoryScreen</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="step-num">L1</div><div class="step-name">MainActivity</div><div class="step-cond">NavItem.MemoryBase</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L2</div><div class="step-name">OperitApp</div><div class="step-cond">导航状态管理</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L3</div><div class="step-name">AppContent</div><div class="step-cond">TopAppBar + Crossfade</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step final"><div class="step-num">L4</div><div class="step-name">MemoryScreen</div><div class="step-cond">Screen.MemoryBase.Content()</div></div>
+      </div>
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">📋</div>
+          <div class="kn-title green">导航属性</div>
+          <div class="kn-code">路由: "memory_base"
+图标: Icons.Default.History
+导航组: AI Features
+叶子节点: 是（无子页面跳转）
+Crossfade: 参与 (默认 true)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔧</div>
+          <div class="kn-title blue">Profile 隔离架构</div>
+          <div class="kn-body">ViewModel 以 <code style="color:var(--cyan)">selectedProfileId</code> 为 key 构建，切换 Profile 时整个 ViewModel 重建，每个 Profile 有独立的记忆图。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 组件树 ===== -->
+    <div class="section">
+      <div class="section-head green">🌲 组件树 <span class="count">FAB 列 + 主内容 + 文件夹导航 + 对话框层</span></div>
+
+      <div class="mermaid">
+graph TD
+    ROOT["MemoryScreen&lt;br/&gt;(CustomScaffold)"]
+
+    ROOT --> FAB_COL["FAB Column (右下角)"]
+    ROOT --> CONTENT_BOX["Box (fillMaxSize)"]
+    ROOT --> FOLDER_NAV["AnimatedVisibility&lt;br/&gt;FolderNavigator (左侧滑入)"]
+    ROOT --> DIALOGS["Dialog Layer (互斥条件)"]
+
+    FAB_COL --> FAB_DEL["FAB: Delete Selected&lt;br/&gt;(仅框选模式, 红色)"]
+    FAB_COL --> FAB_BOX["FAB: Toggle Box Selection"]
+    FAB_COL --> FAB_LINK["FAB: Toggle Linking Mode"]
+    FAB_COL --> FAB_UPLOAD["FAB: Upload/Import File"]
+    FAB_COL --> FAB_ADD["FAB: Add Memory (+)"]
+
+    CONTENT_BOX --> MAIN_COL["Column (fillMaxSize)"]
+    MAIN_COL --> SEARCH_BAR["MemorySearchBar&lt;br/&gt;Row: 文件夹按钮 + 搜索框 + 设置按钮"]
+    MAIN_COL --> GRAPH_BOX["Box (weight=1f)"]
+    GRAPH_BOX --> GRAPH["GraphVisualizer&lt;br/&gt;(Canvas 力导向图)"]
+    GRAPH_BOX --> LOADING["CircularProgressIndicator&lt;br/&gt;(isLoading时显示)"]
+
+    FOLDER_NAV --> FOLDER_SURFACE["Surface (250dp, fillMaxHeight)"]
+    FOLDER_SURFACE --> FOLDER_HEADER["Row: 标题 + 关闭按钮"]
+    FOLDER_SURFACE --> PROFILE_SEL["ProfileSelector (下拉选择)"]
+    FOLDER_SURFACE --> FOLDER_ACTIONS["Row: Refresh + CreateFolder"]
+    FOLDER_SURFACE --> FOLDER_ALL["FolderItem: All (根目录)"]
+    FOLDER_SURFACE --> FOLDER_LIST["LazyColumn: FolderItem (递归)"]
+
+    DIALOGS --> DLG_SEARCH_SETTINGS["MemorySearchSettingsDialog"]
+    DIALOGS --> DLG_SEARCH_SIM["MemorySearchSimulationDialog"]
+    DIALOGS --> DLG_DOC_VIEW["DocumentViewDialog"]
+    DIALOGS --> DLG_MEM_INFO["MemoryInfoDialog"]
+    DIALOGS --> DLG_EDGE_INFO["EdgeInfoDialog"]
+    DIALOGS --> DLG_LINK["LinkMemoryDialog"]
+    DIALOGS --> DLG_EDIT_MEM["EditMemoryDialog"]
+    DIALOGS --> DLG_EDIT_EDGE["EditEdgeDialog"]
+    DIALOGS --> DLG_BATCH_DEL["BatchDeleteConfirmDialog"]
+      </div>
+
+      <details style="margin-top:12px;">
+        <summary style="font-size:12px;color:var(--text-dim);cursor:pointer;user-select:none;">📝 文本版组件树</summary>
+        <div class="comp-tree" style="margin-top:8px;">
+<span class="ct-root">MemoryScreen (CustomScaffold)</span>
+<div class="ct-indent">
+├─ <span class="ct-branch">FAB Column (右下角)</span>
+│   ├─ <span class="ct-dim">FAB: Delete Selected (仅框选模式, 红色)</span>
+│   ├─ <span class="ct-dim">FAB: Toggle Box Selection</span>
+│   ├─ <span class="ct-dim">FAB: Toggle Linking Mode</span>
+│   ├─ <span class="ct-dim">FAB: Upload/Import File</span>
+│   └─ <span class="ct-dim">FAB: Add Memory (+)</span>
+├─ <span class="ct-branch">Box (fillMaxSize)</span>
+│   └─ <span class="ct-branch">Column</span>
+│       ├─ <span class="ct-branch">MemorySearchBar</span> <span class="ct-dim">(文件夹按钮 + 搜索框 + 设置按钮)</span>
+│       └─ <span class="ct-branch">Box (weight=1f)</span>
+│           ├─ <span class="ct-branch">GraphVisualizer</span> <span class="ct-dim">(Canvas 力导向图)</span>
+│           └─ <span class="ct-dim">CircularProgressIndicator (isLoading)</span>
+├─ <span class="ct-overlay">AnimatedVisibility → FolderNavigator</span> <span class="ct-dim">(左侧滑入 250dp)</span>
+└─ <span class="ct-dialog">Dialog Layer</span>
+    ├─ <span class="ct-dialog">MemorySearchSettingsDialog</span>
+    ├─ <span class="ct-dialog">MemorySearchSimulationDialog</span>
+    ├─ <span class="ct-dialog">DocumentViewDialog</span>
+    ├─ <span class="ct-dialog">MemoryInfoDialog / EdgeInfoDialog</span>
+    ├─ <span class="ct-dialog">LinkMemoryDialog / EditMemoryDialog / EditEdgeDialog</span>
+    └─ <span class="ct-dialog">BatchDeleteConfirmDialog</span>
+</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- ===== 状态管理 ===== -->
+    <div class="section">
+      <div class="section-head orange">🔀 状态管理 <span class="count">MemoryViewModel (Profile 隔离) + Local Remember</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🧠</div>
+          <div class="kn-title orange">MemoryUiState 核心字段</div>
+          <div class="kn-code">memories          — 平铺记忆列表
+graph             — 当前节点+边图数据
+selectedMemory    — 选中的记忆
+selectedNodeId    — 选中节点 UUID
+isLoading         — 加载指示器
+searchQuery       — 搜索栏文本
+error             — 错误消息
+editingMemory     — 正在编辑的记忆
+isEditing         — 编辑弹窗可见
+isLinkingMode     — 连接模式
+linkingNodeIds    — 待连接节点 (最多2个)
+selectedEdge      — 选中的边
+isBoxSelectionMode — 框选模式
+boxSelectedNodeIds — 框选中的节点集合
+folderPaths       — 所有文件夹路径
+selectedFolderPath — 当前文件夹过滤
+searchConfig      — 搜索权重配置
+cloudEmbeddingConfig — 云端嵌入配置
+isEmbeddingRebuildRunning — 索引重建中
+message           — Toast 消息</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📌</div>
+          <div class="kn-title purple">本地 Remember 状态</div>
+          <div class="kn-code">profileList (StateFlow)
+  — 所有 Profile ID
+activeProfileId (StateFlow)
+  — 当前活跃 Profile
+profileNameMap (SnapshotStateMap)
+  — id → 名称映射
+selectedProfileId
+  — 本地选中 Profile（同步活跃）
+showFolderNavigator
+  — 文件夹导航侧栏可见性
+
+FolderExpandedState
+  — rememberLocal 序列化持久化
+  — 记录展开的文件夹路径集合</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== GraphVisualizer 详解 ===== -->
+    <div class="section">
+      <div class="section-head purple">🕸 GraphVisualizer 详解 <span class="count">力导向图可视化引擎</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🎨</div>
+          <div class="kn-title blue">渲染机制</div>
+          <div class="kn-code">BoxWithConstraints → Canvas (fillMaxSize)
+├── 节点 (Node)
+│   ├── 圆角矩形卡片 + 阴影
+│   ├── 标签文字 (居中)
+│   └── 状态高亮
+│       ├── 选中: secondary 边框
+│       ├── 连接候选: error 边框 + 额外描边
+│       └── 框选中: tertiary 外圈高亮
+├── 边 (Edge)
+│   ├── 同文件夹: 实线 (粗细按 weight)
+│   ├── 跨文件夹: 虚线 (isCrossFolderLink)
+│   ├── 选中: error 颜色
+│   └── 标签: 中点绘制，随缩放
+└── 框选矩形 (半透明, 仅框选模式)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚙️</div>
+          <div class="kn-title green">布局算法</div>
+          <div class="kn-body">力导向布局运行在 <code style="color:var(--cyan)">Dispatchers.Default</code>，16ms 迭代间隔：</div>
+          <div class="kn-code">1. 斥力（节点间）
+2. 弹簧引力（边连接的节点间）
+3. 聚类内聚力
+4. 聚类间斥力
+5. 重力（向中心）
+6. 节点-边避让
+7. 空间网格分区 (O(n) 邻居查找)
+8. 温度冷却策略
++ 增量更新检测（变化分数阈值）</div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">手势交互矩阵</div>
+        <table class="act-table">
+          <thead><tr><th>手势</th><th>正常模式</th><th>连接模式</th><th>框选模式</th></tr></thead>
+          <tbody>
+            <tr><td>捏合/双指拖拽</td><td>缩放 (0.2x~5x) + 平移</td><td>缩放 + 平移</td><td>缩放 + 平移</td></tr>
+            <tr><td>点击节点</td><td>打开 MemoryInfo/DocumentView</td><td>加入 linkingNodeIds</td><td>切换节点选中状态</td></tr>
+            <tr><td>点击边</td><td>打开 EdgeInfoDialog</td><td>—</td><td>—</td></tr>
+            <tr><td>拖拽</td><td>—</td><td>—</td><td>绘制选择矩形 → 批量选中</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title cyan">性能优化</div>
+          <div class="kn-code">视锥剔除
+  — 仅渲染屏幕可见范围内的节点和边
+
+增量布局
+  — 检测图变化分数，小变化不重置布局
+
+不卸载组件
+  — isLoading 时 GraphVisualizer 不卸载
+  — 避免布局状态丢失</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 交互模式状态机 ===== -->
+    <div class="section">
+      <div class="section-head cyan">🔄 交互模式状态机 <span class="count">三种互斥交互模式</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">👆</div>
+          <div class="kn-title blue">正常模式 (默认)</div>
+          <div class="kn-code">点击节点 → MemoryInfoDialog / DocumentViewDialog
+点击边   → EdgeInfoDialog
+
+开启连接模式 → 清空 linkingNodeIds + boxSelectedNodeIds
+开启框选模式 → 清空 linkingNodeIds</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔗</div>
+          <div class="kn-title green">连接模式 (isLinkingMode)</div>
+          <div class="kn-code">点击节点1 → linkingNodeIds = [node1]
+点击节点2 → linkingNodeIds = [node1, node2]
+          → 弹出 LinkMemoryDialog
+
+创建连接后 → 自动回到正常模式
+关闭连接模式 → 正常模式</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⬜</div>
+          <div class="kn-title orange">框选模式 (isBoxSelectionMode)</div>
+          <div class="kn-code">拖拽   → 绘制选择矩形
+释放   → 添加相交节点到 boxSelectedNodeIds
+点击   → 切换单个节点选中
+
+FAB 删除 → BatchDeleteConfirmDialog
+确认删除 → 正常模式 (清空选中)
+关闭框选 → 正常模式 (清空选中)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FolderNavigator ===== -->
+    <div class="section">
+      <div class="section-head green">📂 FolderNavigator 详解 <span class="count">左侧滑入文件夹管理面板</span></div>
+
+      <div class="key-nodes-grid" style="margin-bottom:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">📁</div>
+          <div class="kn-title blue">面板结构</div>
+          <div class="kn-code">AnimatedVisibility (slideIn/slideOut)
+└─ Surface (250dp, fillMaxHeight)
+   ├─ Row [文件夹图标 + "Folders" + 关闭按钮]
+   ├─ HorizontalDivider
+   ├─ ProfileSelector (OutlinedButton + Dropdown)
+   ├─ Row [Refresh + CreateFolder]
+   ├─ FolderItem ["All" 根目录项]
+   └─ LazyColumn
+       └─ FolderItem (递归渲染)
+           ├─ 展开箭头(动画旋转90°)
+           ├─ 文件夹图标 + 名称
+           ├─ 点击 → selectFolder(path)
+           └─ 长按 → FolderContextMenu</div>
+        </div>
+      </div>
+
+      <table class="act-table">
+        <thead><tr><th>操作</th><th>触发</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td>创建</td><td>CreateFolder 按钮</td><td class="mono">viewModel.createFolder(path)</td></tr>
+          <tr><td>重命名</td><td>长按 → 上下文菜单</td><td class="mono">viewModel.renameFolder(old, new)</td></tr>
+          <tr><td>删除</td><td>长按 → 上下文菜单</td><td class="mono">viewModel.deleteFolder(path)</td></tr>
+          <tr><td>选择</td><td>点击文件夹项</td><td class="mono">viewModel.selectFolder(path) → 按文件夹过滤图</td></tr>
+          <tr><td>刷新</td><td>Refresh 按钮</td><td class="mono">viewModel.refreshFolderList()</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 对话框清单 ===== -->
+    <div class="section">
+      <div class="section-head purple">📋 对话框清单 <span class="count">13</span></div>
+      <table class="act-table">
+        <thead><tr><th>对话框</th><th>触发条件</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">MemorySearchSettingsDialog</td><td>搜索栏设置图标</td><td>搜索权重滑块 + 云嵌入配置 + 嵌入统计 + 重建索引</td></tr>
+          <tr><td class="mono">MemorySearchSimulationDialog</td><td>搜索设置内"模拟"按钮</td><td>搜索调试：输入查询 → 显示评分详情</td></tr>
+          <tr><td class="mono">DocumentViewDialog</td><td>点击文档类型节点</td><td>文档标题 + 分块编辑 + 文档内搜索</td></tr>
+          <tr><td class="mono">MemoryInfoDialog</td><td>点击普通记忆节点</td><td>只读记忆详情 + 编辑/删除按钮</td></tr>
+          <tr><td class="mono">EdgeInfoDialog</td><td>点击边</td><td>边的源/目标/类型/权重 + 编辑/删除</td></tr>
+          <tr><td class="mono">LinkMemoryDialog</td><td>连接模式选中2个节点</td><td>输入类型/权重/描述 → 创建关系</td></tr>
+          <tr><td class="mono">EditMemoryDialog</td><td>FAB "+" 或 Info 内"编辑"</td><td>全屏弹窗：标题/内容/文件夹/标签/滑块</td></tr>
+          <tr><td class="mono">EditEdgeDialog</td><td>EdgeInfo 内"编辑"</td><td>编辑边的类型/权重/描述</td></tr>
+          <tr><td class="mono">BatchDeleteConfirmDialog</td><td>框选模式 FAB 删除</td><td>确认删除 N 个记忆节点</td></tr>
+          <tr><td class="mono">FolderCreateDialog</td><td>导航栏创建按钮</td><td>输入新文件夹路径</td></tr>
+          <tr><td class="mono">FolderRenameDialog</td><td>文件夹长按菜单</td><td>输入新名称</td></tr>
+          <tr><td class="mono">FolderDeleteDialog</td><td>文件夹长按菜单</td><td>确认删除文件夹</td></tr>
+          <tr><td class="mono">FolderContextMenu</td><td>文件夹项长按</td><td>重命名/删除选项</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== CRUD 操作流程 ===== -->
+    <div class="section">
+      <div class="section-head orange">⚡ CRUD 操作流程</div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">📥</div>
+          <div class="kn-title blue">加载</div>
+          <div class="kn-code">isCurrentScreen && selectedProfileId 变化
+→ viewModel.loadMemoryGraph()
+  → selectedFolderPath == "" ?
+    repository.getMemoryGraph() :
+    repository.getGraphForFolder(path)
+  → 更新 uiState.graph
+→ viewModel.loadFolderPaths()</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔍</div>
+          <div class="kn-title green">搜索</div>
+          <div class="kn-code">用户输入 + IME Search
+→ viewModel.searchMemories()
+  → repository.searchMemories(
+      query, scoreMode,
+      keywordWeight, vectorWeight, edgeWeight)
+  → repository.getGraphForMemories(results)
+  → 更新 graph (空查询加载全量)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">➕</div>
+          <div class="kn-title orange">创建记忆</div>
+          <div class="kn-code">FAB "+" → viewModel.startEditing(null)
+→ EditMemoryDialog
+→ Save → viewModel.createMemory(
+    title, content, contentType)
+  → repository.createMemory(
+      ..., folderPath=currentFolder)
+  → 刷新图+文件夹</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📄</div>
+          <div class="kn-title cyan">文档导入</div>
+          <div class="kn-body">双通道：文本直读 vs 二进制走 AI 工具</div>
+          <div class="kn-code">FAB Upload → OpenDocument(text/*, pdf, doc, docx)
+→ 文本: BufferedReader.readText()
+→ 二进制: cacheDir → AIToolHandler
+          read_file_full → 清理临时文件
+→ viewModel.importDocument() → 刷新</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔗</div>
+          <div class="kn-title purple">连接记忆</div>
+          <div class="kn-code">连接模式 → 选节点1 → 选节点2
+→ LinkMemoryDialog(type, weight, desc)
+→ viewModel.linkMemories(
+    sourceUuid, targetUuid,
+    type, weight, desc)
+  → repository.linkMemories(...)
+  → 退出连接模式 → 刷新</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🗑️</div>
+          <div class="kn-title red" style="color:var(--red)">批量删除</div>
+          <div class="kn-code">框选模式 → 拖拽/点击选中节点
+→ FAB Delete → BatchDeleteConfirmDialog
+→ viewModel.deleteSelectedNodes()
+  → repository.deleteMemoriesByUuids(Set)
+  → 退出框选 → 刷新</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 数据模型 ===== -->
+    <div class="section">
+      <div class="section-head gray">📦 数据模型</div>
+
+      <div class="key-nodes-grid" style="margin-bottom:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">🕸</div>
+          <div class="kn-title blue">图模型 (UI 层)</div>
+          <div class="kn-code">Graph(nodes: List&lt;Node&gt;, edges: List&lt;Edge&gt;)
+
+Node(id, label, color, metadata)
+
+Edge(id, sourceId, targetId, label,
+     weight, metadata, isCrossFolderLink)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔍</div>
+          <div class="kn-title green">搜索配置</div>
+          <div class="kn-code">MemorySearchConfig
+  scoreMode: BALANCED / KEYWORD_FIRST / SEMANTIC_FIRST
+  keywordWeight / vectorWeight / edgeWeight
+
+CloudEmbeddingConfig
+  enabled, endpoint, apiKey, model
+
+EmbeddingDimensionUsage — 嵌入维度统计
+EmbeddingRebuildProgress — 重建进度</div>
+        </div>
+      </div>
+
+      <table class="act-table">
+        <thead><tr><th>实体 (ObjectBox)</th><th>关键字段</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">Memory</td><td>id, uuid, title, content, contentType, source, credibility, importance, documentPath, isDocumentNode, folderPath, embedding, tags, properties, links</td></tr>
+          <tr><td class="mono">DocumentChunk</td><td>id, content, chunkIndex, embedding, memory(ToOne)</td></tr>
+          <tr><td class="mono">MemoryTag</td><td>id, name, parent(ToOne), memories(ToMany)</td></tr>
+          <tr><td class="mono">MemoryLink</td><td>id, type, weight, description, source(ToOne), target(ToOne)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 架构要点 ===== -->
+    <div class="section">
+      <div class="section-head blue">🏗 架构要点</div>
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">👤</div>
+          <div class="kn-title orange">Profile 隔离</div>
+          <div class="kn-body">ViewModel 以 <code style="color:var(--cyan)">selectedProfileId</code> 为 key 构建，切换 Profile 时整个 ViewModel 重建，每个 Profile 有独立的记忆图。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🕸️</div>
+          <div class="kn-title blue">力导向图引擎</div>
+          <div class="kn-body">自实现力导向布局，运行在 <code style="color:var(--cyan)">Dispatchers.Default</code>，空间网格分区加速 + 增量更新检测 + 温度冷却策略，16ms 迭代实现平滑动画。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📂</div>
+          <div class="kn-title green">文件夹展开持久化</div>
+          <div class="kn-body">通过 <code style="color:var(--cyan)">rememberLocal</code> + 序列化持久化 <code style="color:var(--cyan)">FolderExpandedState</code>，记录展开的文件夹路径集合。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📄</div>
+          <div class="kn-title purple">文档导入双通道</div>
+          <div class="kn-body">文本文件直接 <code style="color:var(--cyan)">BufferedReader.readText()</code>；二进制文件（PDF/Word）通过 AI 工具 <code style="color:var(--cyan)">read_file_full</code> 提取内容。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔍</div>
+          <div class="kn-title cyan">搜索系统</div>
+          <div class="kn-body">支持关键词搜索、向量语义搜索、边关系传播三种模式的加权组合，可选云端嵌入服务。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title yellow" style="color:var(--yellow)">性能三板斧</div>
+          <div class="kn-body">视锥剔除（仅渲染可见区域）+ 增量布局（小变化不重置）+ GraphVisualizer loading 时不卸载（避免布局重置）。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 核心文件 ===== -->
+    <div class="section">
+      <div class="section-head blue">📁 核心文件清单 <span class="count">10 文件</span></div>
+      <table class="act-table">
+        <thead><tr><th>文件</th><th>路径 (相对 ui/features/memory/)</th><th>职责</th></tr></thead>
+        <tbody>
+          <tr><td><strong>MemoryScreen</strong></td><td class="mono">screens/MemoryScreen.kt</td><td>页面入口，FAB 编排，状态收集</td></tr>
+          <tr><td><strong>GraphVisualizer</strong></td><td class="mono">graph/GraphVisualizer.kt</td><td>力导向图 Canvas 渲染引擎</td></tr>
+          <tr><td><strong>FolderNavigator</strong></td><td class="mono">components/FolderNavigator.kt</td><td>文件夹侧栏导航</td></tr>
+          <tr><td><strong>EditMemoryDialog</strong></td><td class="mono">components/EditMemoryDialog.kt</td><td>记忆创建/编辑全屏弹窗</td></tr>
+          <tr><td><strong>DocumentViewDialog</strong></td><td class="mono">components/DocumentViewDialog.kt</td><td>文档查看/编辑弹窗</td></tr>
+          <tr><td><strong>MemorySearchSettingsDialog</strong></td><td class="mono">components/MemorySearchSettingsDialog.kt</td><td>搜索设置弹窗</td></tr>
+          <tr><td><strong>MemorySearchSimulationDialog</strong></td><td class="mono">components/MemorySearchSimulationDialog.kt</td><td>搜索调试弹窗</td></tr>
+          <tr><td><strong>MemoryDialogs</strong></td><td class="mono">components/MemoryDialogs.kt</td><td>Info/Edge/Link/EditEdge/BatchDelete 弹窗</td></tr>
+          <tr><td><strong>MemoryViewModel</strong></td><td class="mono">viewmodel/MemoryViewModel.kt</td><td>业务逻辑 ViewModel</td></tr>
+          <tr><td><strong>GraphModels</strong></td><td class="mono">graph/model/GraphModels.kt</td><td>Graph/Node/Edge UI 模型</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      基于 docs/project_overview/05_Screen.MemoryBase页面结构.md · MemoryScreen 组件结构
+    </div>
+
+  </div><!-- end detail-memorybase -->
+
+  <!-- ==================== Packages Detail ==================== -->
+  <div id="detail-packages" class="detail-content" style="display:none;">
+
+    <div class="hero" style="padding: 16px 0 8px;">
+      <h1 style="font-size: 24px;">📦 Screen.Packages 页面结构</h1>
+      <p class="sub">PackageManagerScreen · 三 Tab 入口 · 工具包 / 技能 / MCP 插件管理</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card"><div class="num">3</div><div class="label">Tab 页面</div></div>
+      <div class="stat-card"><div class="num">10+</div><div class="label">子页面</div></div>
+      <div class="stat-card"><div class="num">20</div><div class="label">对话框</div></div>
+      <div class="stat-card"><div class="num">3</div><div class="label">ViewModel</div></div>
+      <div class="stat-card"><div class="num">4</div><div class="label">数据体系</div></div>
+      <div class="stat-card"><div class="num">17</div><div class="label">核心文件</div></div>
+    </div>
+
+    <!-- ===== 入口链路 ===== -->
+    <div class="section">
+      <div class="section-head blue">🔗 入口链路 <span class="count">从 Activity 到 PackageManagerScreen</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="step-num">L1</div><div class="step-name">MainActivity</div><div class="step-cond">NavItem.Packages</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L2</div><div class="step-name">OperitApp</div><div class="step-cond">导航状态管理</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L3</div><div class="step-name">AppContent</div><div class="step-cond">TopAppBar + Crossfade</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step final"><div class="step-num">L4</div><div class="step-name">PackageManagerScreen</div><div class="step-cond">Screen.Packages.Content()</div></div>
+      </div>
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">📋</div>
+          <div class="kn-title green">导航属性</div>
+          <div class="kn-code">路由: NavItem.Packages
+图标: Icons.Default.Extension
+导航组: AI Features
+叶子节点: 否（有多个子页面）
+Crossfade: 参与 (默认)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔧</div>
+          <div class="kn-title blue">架构特点</div>
+          <div class="kn-body">入口页 <strong>无 ViewModel</strong>，直接使用 <code style="color:var(--cyan)">PackageManager</code> 单例操作数据。SKILLS 和 MCP Tab 各自内嵌独立子屏幕，拥有独立的状态管理。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 页面导航关系 ===== -->
+    <div class="section">
+      <div class="section-head orange">🗺 页面导航关系 <span class="count">Skill + MCP 两条子页面链路</span></div>
+
+      <div class="mermaid">
+graph TD
+    PKG["Screen.Packages&lt;br/&gt;(PackageManagerScreen)"]
+
+    PKG -->|SKILLS Tab → 市场| SK_MKT["Screen.SkillMarket&lt;br/&gt;(SkillMarketScreen)"]
+    PKG -->|MCP Tab → 市场| MCP_MKT["Screen.MCPMarket&lt;br/&gt;(MCPMarketScreen)"]
+    PKG -->|ToolPkg UI 模块| TOOLPKG["Screen.ToolPkgPluginConfig&lt;br/&gt;(ToolPkgComposeDslToolScreen)"]
+
+    SK_MKT --> SK_PUB["Screen.SkillPublish&lt;br/&gt;(SkillPublishScreen)"]
+    SK_MKT --> SK_MGR["Screen.SkillManage&lt;br/&gt;(SkillManageScreen)"]
+    SK_MKT --> SK_DTL["Screen.SkillDetail(issue)&lt;br/&gt;(SkillDetailScreen)"]
+    SK_MGR --> SK_EDT["Screen.SkillEdit(issue)&lt;br/&gt;(SkillPublishScreen 复用)"]
+
+    MCP_MKT --> MCP_PUB["Screen.MCPPublish&lt;br/&gt;(MCPPublishScreen)"]
+    MCP_MKT --> MCP_MGR["Screen.MCPManage&lt;br/&gt;(MCPManageScreen)"]
+    MCP_MKT --> MCP_DTL["Screen.MCPPluginDetail(issue)&lt;br/&gt;(MCPPluginDetailScreen)"]
+    MCP_MGR --> MCP_EDT["Screen.MCPEditPlugin(issue)&lt;br/&gt;(MCPPublishScreen 复用)"]
+      </div>
+
+      <div style="font-size:12px;color:var(--text-dim);margin-top:12px;text-align:center;">
+        所有子页面通过 <code style="color:var(--cyan)">parentScreen</code> 指定返回目标，<code style="color:var(--cyan)">navItem</code> 统一为 NavItem.Packages 保持侧栏高亮
+      </div>
+    </div>
+
+    <!-- ===== 组件树 ===== -->
+    <div class="section">
+      <div class="section-head green">🌲 组件树 <span class="count">三 Tab 切换 + 内嵌子屏幕</span></div>
+
+      <div class="mermaid">
+graph TD
+    ROOT["PackageManagerScreen&lt;br/&gt;(CustomScaffold + SnackbarHost)"]
+
+    ROOT --> FAB["FAB Column (仅PACKAGES Tab)"]
+    ROOT --> CONTENT["Column (fillMaxSize)"]
+    ROOT --> PKG_DIALOGS["对话框层"]
+
+    FAB --> FAB_ERR["SmallFAB: 错误指示器 (红色)"]
+    FAB --> FAB_ENV["SmallFAB: 环境变量设置"]
+    FAB --> FAB_ADD["FAB: 导入包 (+)"]
+
+    CONTENT --> TAB_ROW["TabRow (3 个 Tab)"]
+    TAB_ROW --> TAB_PKG["Tab: PACKAGES (Extension)"]
+    TAB_ROW --> TAB_SKILL["Tab: SKILLS (Build)"]
+    TAB_ROW --> TAB_MCP["Tab: MCP (Cloud)"]
+
+    CONTENT --> TAB_CONTENT{"selectedTab"}
+    TAB_CONTENT -->|PACKAGES| PKG_LIST["Box → Surface → LazyColumn&lt;br/&gt;(按类别分组)"]
+    TAB_CONTENT -->|SKILLS| SKILL_CFG["SkillConfigScreen&lt;br/&gt;(内嵌子屏幕)"]
+    TAB_CONTENT -->|MCP| MCP_CFG["MCPConfigScreen&lt;br/&gt;(内嵌子屏幕)"]
+
+    PKG_LIST --> PKG_ITEM["PackageListItemWithTag&lt;br/&gt;(类别标签 + 图标 + 名称 + Switch)"]
+
+    SKILL_CFG --> SKILL_HEADER["Card: 标题 + 刷新 + 目录"]
+    SKILL_CFG --> SKILL_LIST["LazyColumn → SkillListItem"]
+    SKILL_CFG --> SKILL_FABS["FAB Column: 错误 + 市场 + 添加"]
+
+    MCP_CFG --> MCP_STATUS["Card: 状态头 (标题 + 状态点 + 计数)"]
+    MCP_CFG --> MCP_LIST["LazyColumn → PluginListItem"]
+    MCP_CFG --> MCP_FABS["FAB Column: 启动 + 市场 + 导入"]
+
+    PKG_DIALOGS --> DLG_DETAIL["PackageDetailsDialog"]
+    PKG_DIALOGS --> DLG_SCRIPT["ScriptExecutionDialog"]
+    PKG_DIALOGS --> DLG_ENV["PackageEnvironmentVariablesDialog"]
+    PKG_DIALOGS --> DLG_ERRORS["PackageLoadErrorsDialog"]
+      </div>
+
+      <details style="margin-top:12px;">
+        <summary style="font-size:12px;color:var(--text-dim);cursor:pointer;user-select:none;">📝 文本版组件树</summary>
+        <div class="comp-tree" style="margin-top:8px;">
+<span class="ct-root">PackageManagerScreen (CustomScaffold + SnackbarHost)</span>
+<div class="ct-indent">
+├─ <span class="ct-branch">FAB Column (仅 PACKAGES Tab)</span>
+│   ├─ <span class="ct-dim">SmallFAB: 错误指示器 (红色)</span>
+│   ├─ <span class="ct-dim">SmallFAB: 环境变量设置</span>
+│   └─ <span class="ct-dim">FAB: 导入包 (+)</span>
+├─ <span class="ct-branch">Column (fillMaxSize)</span>
+│   ├─ <span class="ct-branch">TabRow (3 个 Tab)</span>
+│   │   ├─ Tab: PACKAGES (Extension)
+│   │   ├─ Tab: SKILLS (Build)
+│   │   └─ Tab: MCP (Cloud)
+│   └─ <span class="ct-cond">selectedTab ?</span>
+│       ├─ <span class="ct-cond">PACKAGES →</span> <span class="ct-branch">LazyColumn (按类别分组)</span>
+│       │   └─ <span class="ct-dim">PackageListItemWithTag (标签 + 图标 + 名称 + Switch)</span>
+│       ├─ <span class="ct-cond">SKILLS →</span> <span class="ct-branch">SkillConfigScreen (内嵌子屏幕)</span>
+│       │   ├─ <span class="ct-dim">Card: 标题 + 刷新 + 目录</span>
+│       │   ├─ <span class="ct-dim">LazyColumn → SkillListItem</span>
+│       │   └─ <span class="ct-dim">FAB Column: 错误 + 市场 + 添加</span>
+│       └─ <span class="ct-cond">MCP →</span> <span class="ct-branch">MCPConfigScreen (内嵌子屏幕)</span>
+│           ├─ <span class="ct-dim">Card: 状态头 (标题 + 状态点 + 计数)</span>
+│           ├─ <span class="ct-dim">LazyColumn → PluginListItem</span>
+│           └─ <span class="ct-dim">FAB Column: 启动 + 市场 + 导入</span>
+└─ <span class="ct-dialog">对话框层</span>
+    ├─ <span class="ct-dialog">PackageDetailsDialog</span>
+    ├─ <span class="ct-dialog">ScriptExecutionDialog</span>
+    ├─ <span class="ct-dialog">PackageEnvironmentVariablesDialog</span>
+    └─ <span class="ct-dialog">PackageLoadErrorsDialog</span>
+</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- ===== 状态管理 ===== -->
+    <div class="section">
+      <div class="section-head orange">🔀 状态管理 <span class="count">入口无 ViewModel + 子屏幕独立管理</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">📦</div>
+          <div class="kn-title orange">PackageManagerScreen (无 ViewModel)</div>
+          <div class="kn-body">直接使用 <code style="color:var(--cyan)">PackageManager</code> 单例，所有状态为局部 <code style="color:var(--cyan)">remember</code>。</div>
+          <div class="kn-code">availablePackages      — 所有可用工具包
+importedPackages       — 已导入包名 (后端真实值)
+visibleImportedPackages — 乐观更新的导入状态
+isLoading / selectedPackage / showDetails
+selectedTab (rememberSaveable)
+  — PACKAGES / SKILLS / MCP
+showEnvDialog / envVariables
+packageLoadErrors / showScriptExecution</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔌</div>
+          <div class="kn-title cyan">MCPConfigScreen (双 ViewModel)</div>
+          <div class="kn-body"><strong>MCPViewModel</strong>: 安装/卸载进度、服务器操作<br><strong>MCPDeployViewModel</strong>: 部署生命周期</div>
+          <div class="kn-code">serverStatusMap — 服务器状态映射
+installProgress — 安装进度
+mcpConfigSnapshot — 配置快照
+deploymentStatus — 部署状态
+pluginToolsMap — 插件工具映射
+
+排序策略: 启用+已加载 → 名称
+首次加载后锁定排序 (lockedPluginOrder)
+防止列表跳动</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title purple">SkillConfigScreen (纯局部状态)</div>
+          <div class="kn-code">skills: Map&lt;String, SkillPackage&gt;
+isLoading / isImporting
+
+导入弹窗状态:
+showImportDialog / importTabIndex
+repoUrlInput / zipUri
+manualSkillId / Description / Content</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PACKAGES Tab ===== -->
+    <div class="section">
+      <div class="section-head blue">📦 PACKAGES Tab 详解 <span class="count">按类别分组 + 乐观更新</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">📋</div>
+          <div class="kn-title blue">列表结构</div>
+          <div class="kn-code">Surface (surfaceVariant) → LazyColumn
+└─ [forEach package, 按 category 排序]
+   PackageListItemWithTag
+   ├─ [首个该类别项] 类别标签
+   │   ├─ ToolPkg: 药丸形 Surface
+   │   └─ 其他: 竖线 + 文本标签
+   └─ Surface (clickable) → Row
+       ├─ Icon (20dp, 按类别)
+       │   Automatic→AutoMode / Experimental→Science
+       │   Draw→Palette / ToolPkg→Apps
+       │   Widget→Widgets / Other→Extension
+       ├─ Column: displayName + description
+       └─ Switch (scale=0.8f)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title green">乐观更新机制</div>
+          <div class="kn-body">Switch 切换时先更新 <code style="color:var(--cyan)">visibleImportedPackages</code> 显示即时反馈，后台异步调用实际操作，失败时回滚 UI 状态。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📄</div>
+          <div class="kn-title orange">PackageDetailsDialog</div>
+          <div class="kn-code">Dialog → Surface (maxHeight=600dp)
+├─ Header: 图标 + 名称 + ID + 标签
+├─ 描述文本
+├─ [ToolPkg 包]
+│   ├─ Card: 版本/资源数/UI模块数
+│   ├─ ToolPkgPluginConfigCard
+│   └─ LazyColumn: 子包列表
+├─ [有 States] ScrollableTabRow + ToolCard
+├─ [普通包] LazyColumn: ToolCard
+└─ ToolCard
+    ├─ 工具名 + 描述 + "Run" 按钮
+    └─ FlowRow: 参数 Chip (最多3个 + "+N")</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SKILLS Tab ===== -->
+    <div class="section">
+      <div class="section-head green">⚡ SKILLS Tab 详解 <span class="count">技能管理 + 3-Tab 导入</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🛠</div>
+          <div class="kn-title green">SkillConfigScreen 结构</div>
+          <div class="kn-code">Box
+├─ Column
+│   ├─ Card: "Skills" 标题 + Refresh + 目录路径
+│   └─ LazyColumn → SkillListItem
+│       └─ Surface (圆角14dp) → Row
+│           ├─ 竖线 (primary 色)
+│           ├─ Build 图标 (28dp)
+│           ├─ Column: 名称 + 描述
+│           └─ Switch (AI 可见性)
+└─ Column (BottomEnd)
+    ├─ SmallFAB: 错误指示器
+    ├─ FAB: Store → SkillMarket
+    └─ FAB: Add → 导入弹窗</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📥</div>
+          <div class="kn-title cyan">导入弹窗 (3 个 Tab)</div>
+          <div class="kn-code"><strong>Repo Tab:</strong>
+URL 输入框 + 跳转市场链接
+→ skillRepository.importSkillFromGitHubRepo(url)
+
+<strong>ZIP Tab:</strong>
+路径框 + 文件选择按钮
+→ 拷贝 cache → importSkillFromZip(file)
+
+<strong>Direct Tab:</strong>
+ID + 描述 + 内容输入 + 附件
+→ importSkillFromDirectInput(...)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MCP Tab ===== -->
+    <div class="section">
+      <div class="section-head purple">🔌 MCP Tab 详解 <span class="count">插件管理 + 部署流程 + 4-Tab 导入</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🔌</div>
+          <div class="kn-title purple">MCPConfigScreen 结构</div>
+          <div class="kn-code">CustomScaffold
+├─ FAB Column
+│   ├─ FAB: 启动插件服务
+│   ├─ FAB: MCP 市场 → MCPMarket
+│   └─ FAB: 导入/连接
+└─ LazyColumn
+    ├─ Card (状态头)
+    │   ├─ "MCP Plugins" 标题
+    │   └─ 状态点 (颜色) + 计数 "N/M"
+    │       全部成功=Green / 部分=Orange
+    │       全部失败=Red / 无启用=Gray
+    └─ PluginListItem
+        ├─ Card: 图标 + 名称 + 状态标签 + Switch
+        │   标签: Official/Remote/Deployed/Invalid
+        ├─ LazyRow: 工具名 Chip (最多5个 + "+N")
+        └─ Row: Deploy/Redeploy + Edit 按钮</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📥</div>
+          <div class="kn-title cyan">导入弹窗 (4 个 Tab)</div>
+          <div class="kn-code"><strong>Repo Tab:</strong>
+GitHub URL 输入
+→ viewModel.installServerWithObject(server)
+
+<strong>ZIP Tab:</strong>
+路径 + 文件选择
+→ viewModel.installServerFromZip(server, zip)
+
+<strong>Remote Tab:</strong>
+Endpoint + 连接类型 + Bearer Token + Headers
+→ viewModel.addRemoteServer(server)
+
+<strong>Config Tab:</strong>
+JSON 多行输入 + 打开文件
+→ mcpLocalServer.mergeConfigFromJson(json)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🚀</div>
+          <div class="kn-title orange">部署流程</div>
+          <div class="kn-code">Deploy 按钮
+→ MCPDeployConfirmDialog
+  ├─ "Confirm"
+  │   → deployViewModel.deployPlugin(pluginId)
+  │   → MCPDeployProgressDialog
+  └─ "Customize"
+      → MCPCommandsEditDialog (编辑启动命令)
+      → deployViewModel.deployPluginWithCommands()
+      → MCPDeployProgressDialog</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 对话框清单 ===== -->
+    <div class="section">
+      <div class="section-head purple">📋 对话框清单 <span class="count">20 (按层分组)</span></div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">PackageManagerScreen 层</div>
+      <table class="act-table" style="margin-bottom:16px;">
+        <thead><tr><th>对话框</th><th>触发条件</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">PackageDetailsDialog</td><td>点击包列表项</td><td>包详情 + 工具列表 + 运行 + 子包管理</td></tr>
+          <tr><td class="mono">ScriptExecutionDialog</td><td>详情内 "Run" 按钮</td><td>工具脚本执行</td></tr>
+          <tr><td class="mono">PackageEnvironmentVariablesDialog</td><td>FAB 设置按钮</td><td>环境变量编辑 (按包分组, stickyHeader)</td></tr>
+          <tr><td class="mono">PackageLoadErrorsDialog</td><td>FAB 错误指示器</td><td>包加载错误列表</td></tr>
+          <tr><td class="mono">ErrorDialog</td><td>导入失败</td><td>通用错误提示</td></tr>
+          <tr><td class="mono">SubpackageToolsDialog</td><td>详情内点击子包</td><td>嵌套弹窗：子包工具列表</td></tr>
+          <tr><td class="mono">删除确认 AlertDialog</td><td>详情内删除按钮</td><td>确认删除包</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">SkillConfigScreen 层</div>
+      <table class="act-table" style="margin-bottom:16px;">
+        <thead><tr><th>对话框</th><th>触发条件</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">导入弹窗 (3-Tab)</td><td>FAB Add</td><td>Repo / ZIP / Direct 导入表单</td></tr>
+          <tr><td class="mono">SkillDetailDialog</td><td>点击技能项</td><td>技能详情 + 目录预览 + Markdown 内容</td></tr>
+          <tr><td class="mono">SkillLoadErrorsDialog</td><td>错误 FAB</td><td>技能加载错误列表</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">MCPConfigScreen 层</div>
+      <table class="act-table">
+        <thead><tr><th>对话框</th><th>触发条件</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">导入弹窗 (4-Tab)</td><td>FAB Import</td><td>Repo / ZIP / Remote / Config 导入</td></tr>
+          <tr><td class="mono">MCPServerDetailsDialog</td><td>点击插件项</td><td>插件元数据详情</td></tr>
+          <tr><td class="mono">MCPPackageDetailsDialog</td><td>点击工具行</td><td>工具列表详情</td></tr>
+          <tr><td class="mono">MCPDeployConfirmDialog</td><td>Deploy 按钮</td><td>部署确认 (Confirm / Customize)</td></tr>
+          <tr><td class="mono">MCPCommandsEditDialog</td><td>Customize 按钮</td><td>编辑部署启动命令</td></tr>
+          <tr><td class="mono">RemoteServerEditDialog</td><td>Edit 按钮 (远程)</td><td>编辑远程服务器配置</td></tr>
+          <tr><td class="mono">MCPDeployProgressDialog</td><td>部署进行中</td><td>部署进度 + 输出日志</td></tr>
+          <tr><td class="mono">MCPInstallProgressDialog</td><td>安装进行中</td><td>安装进度</td></tr>
+          <tr><td class="mono">FilePickerDialog</td><td>ZIP Tab 文件选择</td><td>文件路径选择</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 交互映射 ===== -->
+    <div class="section">
+      <div class="section-head orange">⚡ 用户交互 → 动作映射 <span class="count">按 Tab 分组</span></div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">PACKAGES Tab</div>
+      <table class="act-table" style="margin-bottom:16px;">
+        <thead><tr><th>交互</th><th>执行动作</th></tr></thead>
+        <tbody>
+          <tr><td>包项点击</td><td class="mono">打开 PackageDetailsDialog</td></tr>
+          <tr><td>Switch 切换</td><td class="mono">乐观更新 → packageManager.importPackage/removePackage</td></tr>
+          <tr><td>FAB Add</td><td class="mono">系统文件选择器 → packageManager.importPackageFromExternalStorage</td></tr>
+          <tr><td>FAB Settings</td><td class="mono">打开环境变量弹窗</td></tr>
+          <tr><td>详情内 Run</td><td class="mono">打开 ScriptExecutionDialog</td></tr>
+          <tr><td>详情内 ToolPkg UI</td><td class="mono">跳转 Screen.ToolPkgPluginConfig</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">SKILLS Tab</div>
+      <table class="act-table" style="margin-bottom:16px;">
+        <thead><tr><th>交互</th><th>执行动作</th></tr></thead>
+        <tbody>
+          <tr><td>技能项点击</td><td class="mono">加载详情 → 打开 SkillDetailDialog</td></tr>
+          <tr><td>Switch 切换</td><td class="mono">skillVisibilityPreferences.setSkillVisibleToAi(name, checked)</td></tr>
+          <tr><td>Store FAB</td><td class="mono">跳转 Screen.SkillMarket</td></tr>
+          <tr><td>Add FAB</td><td class="mono">打开 3-Tab 导入弹窗</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">MCP Tab</div>
+      <table class="act-table">
+        <thead><tr><th>交互</th><th>执行动作</th></tr></thead>
+        <tbody>
+          <tr><td>插件项点击</td><td class="mono">打开 MCPServerDetailsDialog</td></tr>
+          <tr><td>工具行点击</td><td class="mono">打开 MCPPackageDetailsDialog</td></tr>
+          <tr><td>Switch 切换</td><td class="mono">mcpLocalServer.setServerEnabled(pluginId, checked)</td></tr>
+          <tr><td>Deploy 按钮</td><td class="mono">打开部署确认 → 部署/自定义命令</td></tr>
+          <tr><td>Edit 按钮 (远程)</td><td class="mono">打开 RemoteServerEditDialog</td></tr>
+          <tr><td>启动 FAB</td><td class="mono">pluginLoadingState.initializeMCPServer(context)</td></tr>
+          <tr><td>Market FAB</td><td class="mono">跳转 Screen.MCPMarket</td></tr>
+          <tr><td>Import FAB</td><td class="mono">打开 4-Tab 导入弹窗</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 数据模型 ===== -->
+    <div class="section">
+      <div class="section-head gray">📦 数据模型 <span class="count">工具包 / 技能 / MCP / 市场 四大体系</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">📦</div>
+          <div class="kn-title blue">工具包系统</div>
+          <div class="kn-code">ToolPackage
+  name, displayName, description
+  category, tools, states, env, isBuiltIn
+
+PackageTool — name, description, script, parameters
+EnvVar — name, description, required, defaultValue
+ToolResult — 脚本执行结果
+ToolPkgContainerDetails — 版本/资源/UI模块/子包</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title green">技能系统</div>
+          <div class="kn-code">SkillPackage
+  name, description, directory, skillFile
+
+SkillDetailDialogData
+  skillContent, directoryPath
+  fileCount, directoryPreview</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔌</div>
+          <div class="kn-title purple">MCP 系统</div>
+          <div class="kn-code">PluginMetadata
+  id, name, description, type(local/remote)
+  endpoint, connectionType, bearerToken
+
+MCPConfig — mcpServers, pluginMetadata
+InstallProgress — sealed: Preparing → Finished
+InstallResult — sealed: Success / Error
+DeploymentStatus — sealed: NotStarted → Error</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🏪</div>
+          <div class="kn-title orange">市场系统 (GitHub Issues)</div>
+          <div class="kn-code">GitHubIssue
+  id, number, title, body, state, labels, user
+
+GitHubComment — 评论内容
+GitHubReaction — content (如 "+1"), user
+
+ViewModel: 350ms 防抖搜索 + 分页 + 缓存</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 架构要点 ===== -->
+    <div class="section">
+      <div class="section-head blue">🏗 架构要点</div>
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🚫</div>
+          <div class="kn-title orange">无 ViewModel 入口</div>
+          <div class="kn-body">PackageManagerScreen 直接使用 <code style="color:var(--cyan)">PackageManager</code> 单例，所有状态为局部 <code style="color:var(--cyan)">remember</code>。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📑</div>
+          <div class="kn-title blue">三 Tab 内嵌子屏幕</div>
+          <div class="kn-body">SKILLS 和 MCP Tab 各内嵌独立 Composable 子屏幕，拥有各自的状态管理和 ViewModel。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title green">乐观更新</div>
+          <div class="kn-body">PACKAGES Tab Switch 先更新 <code style="color:var(--cyan)">visibleImportedPackages</code> 显示即时反馈，后台异步执行，失败时回滚。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔒</div>
+          <div class="kn-title purple">插件排序锁定</div>
+          <div class="kn-body">MCP Tab 首次工具加载成功后锁定排序 (<code style="color:var(--cyan)">lockedPluginOrder</code>)，防止异步状态更新导致列表跳动。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🏪</div>
+          <div class="kn-title cyan">市场 ViewModel 共享</div>
+          <div class="kn-body">Skill/MCP 市场 ViewModel 结构一致：GitHub Issues 数据源 + 350ms 防抖搜索 + 分页加载 + 评论/反应缓存。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">♻️</div>
+          <div class="kn-title yellow" style="color:var(--yellow)">发布/编辑复用</div>
+          <div class="kn-body">SkillPublishScreen 和 MCPPublishScreen 各自通过传入 <code style="color:var(--cyan)">editingIssue</code> 参数复用为编辑页面。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 核心文件 ===== -->
+    <div class="section">
+      <div class="section-head blue">📁 核心文件清单 <span class="count">17 文件</span></div>
+      <table class="act-table">
+        <thead><tr><th>文件</th><th>路径 (相对 ui/features/packages/)</th><th>职责</th></tr></thead>
+        <tbody>
+          <tr><td><strong>PackageManagerScreen</strong></td><td class="mono">screens/PackageManagerScreen.kt</td><td>页面入口，三 Tab 编排</td></tr>
+          <tr><td><strong>SkillConfigScreen</strong></td><td class="mono">screens/skill/SkillConfigScreen.kt</td><td>SKILLS Tab 子屏幕</td></tr>
+          <tr><td><strong>MCPConfigScreen</strong></td><td class="mono">screens/mcp/MCPConfigScreen.kt</td><td>MCP Tab 子屏幕</td></tr>
+          <tr><td><strong>SkillMarketScreen</strong></td><td class="mono">screens/SkillMarketScreen.kt</td><td>技能市场</td></tr>
+          <tr><td><strong>MCPMarketScreen</strong></td><td class="mono">screens/MCPMarketScreen.kt</td><td>MCP 市场</td></tr>
+          <tr><td><strong>SkillPublishScreen</strong></td><td class="mono">screens/SkillPublishScreen.kt</td><td>技能发布/编辑</td></tr>
+          <tr><td><strong>MCPPublishScreen</strong></td><td class="mono">screens/MCPPublishScreen.kt</td><td>MCP 发布/编辑</td></tr>
+          <tr><td><strong>SkillManageScreen</strong></td><td class="mono">screens/SkillManageScreen.kt</td><td>技能管理</td></tr>
+          <tr><td><strong>MCPManageScreen</strong></td><td class="mono">screens/MCPManageScreen.kt</td><td>MCP 管理</td></tr>
+          <tr><td><strong>SkillDetailScreen</strong></td><td class="mono">screens/SkillDetailScreen.kt</td><td>技能详情</td></tr>
+          <tr><td><strong>MCPPluginDetailScreen</strong></td><td class="mono">screens/MCPPluginDetailScreen.kt</td><td>MCP 插件详情</td></tr>
+          <tr><td><strong>PackageDetailsDialog</strong></td><td class="mono">dialogs/PackageDetailsDialog.kt</td><td>包详情弹窗</td></tr>
+          <tr><td><strong>MCPDeployConfirmDialog</strong></td><td class="mono">dialogs/MCPDeployConfirmDialog.kt</td><td>部署确认弹窗</td></tr>
+          <tr><td><strong>MCPViewModel</strong></td><td class="mono">screens/mcp/viewmodel/MCPViewModel.kt</td><td>MCP 安装/卸载 ViewModel</td></tr>
+          <tr><td><strong>MCPDeployViewModel</strong></td><td class="mono">screens/mcp/viewmodel/MCPDeployViewModel.kt</td><td>MCP 部署 ViewModel</td></tr>
+          <tr><td><strong>SkillMarketViewModel</strong></td><td class="mono">screens/skill/viewmodel/SkillMarketViewModel.kt</td><td>技能市场 ViewModel</td></tr>
+          <tr><td><strong>MCPMarketViewModel</strong></td><td class="mono">screens/mcp/viewmodel/MCPMarketViewModel.kt</td><td>MCP 市场 ViewModel</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      基于 docs/project_overview/06_Screen.Packages页面结构.md · PackageManagerScreen 组件结构
+    </div>
+
+  </div><!-- end detail-packages -->
+
+  <!-- ==================== Toolbox Detail ==================== -->
+  <div id="detail-toolbox" class="detail-content" style="display:none;">
+
+    <div class="hero" style="padding: 16px 0 8px;">
+      <h1 style="font-size: 24px;">🧰 Screen.Toolbox 页面结构</h1>
+      <p class="sub">ToolboxScreen · 工具网格入口 · 18 静态工具 + 动态 ToolPkg 插件</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card"><div class="num">18</div><div class="label">静态工具</div></div>
+      <div class="stat-card"><div class="num">N</div><div class="label">动态工具</div></div>
+      <div class="stat-card"><div class="num">4</div><div class="label">工具类别</div></div>
+      <div class="stat-card"><div class="num">19</div><div class="label">子页面</div></div>
+      <div class="stat-card"><div class="num">50+</div><div class="label">DSL 组件</div></div>
+      <div class="stat-card"><div class="num">6</div><div class="label">核心文件</div></div>
+    </div>
+
+    <!-- ===== 入口链路 ===== -->
+    <div class="section">
+      <div class="section-head blue">🔗 入口链路 <span class="count">从 Activity 到 ToolboxScreen</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="step-num">L1</div><div class="step-name">MainActivity</div><div class="step-cond">NavItem.Toolbox</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L2</div><div class="step-name">OperitApp</div><div class="step-cond">导航状态管理</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L3</div><div class="step-name">AppContent</div><div class="step-cond">TopAppBar + Crossfade</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step final"><div class="step-num">L4</div><div class="step-name">ToolboxScreen</div><div class="step-cond">19 个 onXxxSelected 回调</div></div>
+      </div>
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">📋</div>
+          <div class="kn-title green">导航属性</div>
+          <div class="kn-code">路由: NavItem.Toolbox
+图标: Icons.Default.Build
+导航组: Tools
+叶子节点: 否（18+ 个子页面）
+Crossfade: 参与 (默认)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔧</div>
+          <div class="kn-title blue">架构特点</div>
+          <div class="kn-body"><strong>无 ViewModel</strong>，所有状态为局部 <code style="color:var(--cyan)">remember</code>。通过 19 个回调 lambda 导航，不依赖 Screen 或路由系统。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 组件树 ===== -->
+    <div class="section">
+      <div class="section-head green">🌲 组件树 <span class="count">类别筛选 + 自适应网格</span></div>
+
+      <div class="mermaid">
+graph TD
+    ROOT["ToolboxScreen&lt;br/&gt;(Box fillMaxSize)"]
+
+    ROOT --> MAIN_COL["Column (fillMaxSize)"]
+
+    MAIN_COL --> TOP["TopAppSection&lt;br/&gt;Column (渐变背景)"]
+    TOP --> TITLE["Text: '工具箱' (headlineMedium)"]
+    TOP --> DESC["Text: 描述 (70% opacity)"]
+
+    MAIN_COL --> CAT_SEL["CategorySelector&lt;br/&gt;Row (horizontalScroll)"]
+    CAT_SEL --> CAT_ALL["Surface: 全部工具"]
+    CAT_SEL --> CAT_FILE["Surface: 文件管理"]
+    CAT_SEL --> CAT_DEV["Surface: 开发工具"]
+    CAT_SEL --> CAT_SYS["Surface: 系统工具"]
+
+    MAIN_COL --> GRID["LazyVerticalGrid&lt;br/&gt;(Adaptive 156dp, padding 12dp)"]
+    GRID --> CARD["ToolCard (per tool)&lt;br/&gt;Card (156dp height, 按压缩放动画)"]
+    CARD --> ICON_BOX["Box (48dp 圆形, 类别色背景)"]
+    ICON_BOX --> ICON["Icon (24dp, 类别色)"]
+    CARD --> NAME["Text (名称, 最多2行)"]
+    CARD --> CARD_DESC["Text (描述, 最多2行)"]
+      </div>
+
+      <details style="margin-top:12px;">
+        <summary style="font-size:12px;color:var(--text-dim);cursor:pointer;user-select:none;">📝 文本版组件树</summary>
+        <div class="comp-tree" style="margin-top:8px;">
+<span class="ct-root">ToolboxScreen (Box fillMaxSize)</span>
+<div class="ct-indent">
+└─ <span class="ct-branch">Column (fillMaxSize)</span>
+    ├─ <span class="ct-branch">TopAppSection</span> <span class="ct-dim">(渐变背景)</span>
+    │   ├─ <span class="ct-dim">Text: '工具箱' (headlineMedium)</span>
+    │   └─ <span class="ct-dim">Text: 描述 (70% opacity)</span>
+    ├─ <span class="ct-branch">CategorySelector</span> <span class="ct-dim">(horizontalScroll)</span>
+    │   ├─ Surface: 全部工具
+    │   ├─ Surface: 文件管理
+    │   ├─ Surface: 开发工具
+    │   └─ Surface: 系统工具
+    └─ <span class="ct-branch">LazyVerticalGrid (Adaptive 156dp)</span>
+        └─ <span class="ct-dim">ToolCard (per tool)</span>
+            ├─ Box (48dp 圆形, 类别色背景) → Icon
+            ├─ Text (名称, 最多2行)
+            └─ Text (描述, 最多2行)
+</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- ===== 工具类别 ===== -->
+    <div class="section">
+      <div class="section-head orange">🏷 工具类别 <span class="count">4 个筛选类别</span></div>
+      <table class="act-table">
+        <thead><tr><th>枚举值</th><th>显示名</th><th>背景色</th><th>着色</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">ALL</td><td>全部工具</td><td>primaryContainer</td><td>primary</td></tr>
+          <tr><td class="mono">FILE_MANAGEMENT</td><td>文件管理</td><td>primaryContainer</td><td>primary</td></tr>
+          <tr><td class="mono">DEVELOPMENT</td><td>开发工具</td><td>tertiaryContainer</td><td>tertiary</td></tr>
+          <tr><td class="mono">SYSTEM</td><td>系统工具</td><td>secondaryContainer</td><td>secondary</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:12px;color:var(--text-dim);margin-top:8px;">
+        CategorySelector：水平可滚动药丸形 Chip，选中态 primaryContainer 背景 + 阴影，未选中态 surface 背景 + 70% opacity。
+      </div>
+    </div>
+
+    <!-- ===== 完整工具列表 ===== -->
+    <div class="section">
+      <div class="section-head purple">📋 完整工具列表 <span class="count">18 个静态工具</span></div>
+      <table class="act-table">
+        <thead><tr><th>#</th><th>名称</th><th>图标</th><th>类别</th><th>目标页面</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>工具测试中心</td><td class="mono">BuildCircle</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.ToolTester</td></tr>
+          <tr><td>2</td><td>文件管理器</td><td class="mono">Folder</td><td><span class="tag t-sys">FILE</span></td><td class="mono">Screen.FileManager</td></tr>
+          <tr><td>3</td><td>文本转语音</td><td class="mono">RecordVoiceOver</td><td><span class="tag t-trans">SYS</span></td><td class="mono">Screen.TextToSpeech</td></tr>
+          <tr><td>4</td><td>语音识别</td><td class="mono">Mic</td><td><span class="tag t-trans">SYS</span></td><td class="mono">Screen.SpeechToText</td></tr>
+          <tr><td>5</td><td>应用权限管理</td><td class="mono">Security</td><td><span class="tag t-trans">SYS</span></td><td class="mono">Screen.AppPermissions</td></tr>
+          <tr><td>6</td><td>用户协议</td><td class="mono">Policy</td><td><span class="tag t-trans">SYS</span></td><td class="mono">Screen.Agreement</td></tr>
+          <tr><td>7</td><td>默认助手设置</td><td class="mono">Assistant</td><td><span class="tag t-trans">SYS</span></td><td class="mono">Screen.DefaultAssistantGuide</td></tr>
+          <tr><td>8</td><td>命令终端</td><td class="mono">Terminal</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.Terminal</td></tr>
+          <tr><td>9</td><td>UI调试工具</td><td class="mono">DeviceHub</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.UIDebugger</td></tr>
+          <tr><td>10</td><td>FFmpeg工具箱</td><td class="mono">VideoSettings</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.FFmpegToolbox</td></tr>
+          <tr><td>11</td><td>命令执行器</td><td class="mono">Code</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.ShellExecutor</td></tr>
+          <tr><td>12</td><td>日志查看器</td><td class="mono">DataObject</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.Logcat</td></tr>
+          <tr><td>13</td><td>SQL查看器</td><td class="mono">TableView</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.SqlViewer</td></tr>
+          <tr><td>14</td><td>获取密钥</td><td class="mono">Token</td><td><span class="tag t-trans">SYS</span></td><td class="mono">Screen.TokenConfig</td></tr>
+          <tr><td>15</td><td>解除幻象进程限制</td><td class="mono">LockOpen</td><td><span class="tag t-trans">SYS</span></td><td class="mono">Screen.ProcessLimitRemover</td></tr>
+          <tr><td>16</td><td>HTML打包器</td><td class="mono">Html</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.HtmlPackager</td></tr>
+          <tr><td>17</td><td>AutoGLM 一键配置</td><td class="mono">AutoMode</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.AutoGlmOneClick</td></tr>
+          <tr><td>18</td><td>AutoGLM 执行</td><td class="mono">AutoMode</td><td><span class="tag t-plugin">DEV</span></td><td class="mono">Screen.AutoGlmTool</td></tr>
+        </tbody>
+      </table>
+
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">🔌</div>
+          <div class="kn-title cyan">动态 ToolPkg 工具</div>
+          <div class="kn-body">通过 <code style="color:var(--cyan)">ToolboxScriptPluginRegistry</code> 插件系统动态加载：</div>
+          <div class="kn-code">LaunchedEffect(configuration) → IO 线程
+→ ToolboxScriptPluginRegistry.createDefinitions()
+  → ToolPkgToolboxScriptPlugin.createDefinitions()
+    → PackageManager.getToolPkgToolboxUiModules(
+        runtime = COMPOSE_DSL)
+    → 去重 (containerPackageName:uiModuleId:runtime)
+    → 按 title → containerPackageName → uiModuleId 排序
+
+统一属性:
+  图标: Icons.Default.Extension
+  类别: DEVELOPMENT
+  导航: Screen.ToolPkgComposeDsl(...)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ToolCard 交互 ===== -->
+    <div class="section">
+      <div class="section-head green">👆 ToolCard 交互 <span class="count">按压缩放动画</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">✨</div>
+          <div class="kn-title green">按压动画流程</div>
+          <div class="kn-code">点击 ToolCard
+→ isPressed = true  (scale: 1f → 0.95f, 100ms tween)
+→ delay(100ms) 等待动画
+→ tool.onClick()   (执行导航回调)
+→ isPressed = false (scale: 0.95f → 1f, 200ms tween)</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🃏</div>
+          <div class="kn-title blue">卡片结构</div>
+          <div class="kn-code">Card (fillMaxWidth, 156dp, graphicsLayer scale)
+└─ Column (12dp padding, 居中, 8dp spacing)
+    ├─ Box (48dp 圆形, 类别色背景, 8dp padding)
+    │   └─ Icon (24dp, 类别色着色)
+    ├─ Text (名称, bodyMedium/Bold, 最多2行)
+    └─ Text (描述, bodySmall, onSurfaceVariant, 最多2行)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 子页面导航关系 ===== -->
+    <div class="section">
+      <div class="section-head orange">🗺 子页面导航关系 <span class="count">19 个子页面</span></div>
+
+      <div class="mermaid">
+graph TD
+    TOOLBOX["Screen.Toolbox&lt;br/&gt;(ToolboxScreen)"]
+
+    TOOLBOX --> FM["Screen.FileManager&lt;br/&gt;文件管理器"]
+    TOOLBOX --> TERM["Screen.Terminal&lt;br/&gt;命令终端"]
+    TOOLBOX --> SHELL["Screen.ShellExecutor&lt;br/&gt;命令执行器"]
+    TOOLBOX --> UID["Screen.UIDebugger&lt;br/&gt;UI调试工具"]
+    TOOLBOX --> LOG["Screen.Logcat&lt;br/&gt;日志查看器"]
+    TOOLBOX --> SQL["Screen.SqlViewer&lt;br/&gt;SQL查看器"]
+    TOOLBOX --> FF["Screen.FFmpegToolbox&lt;br/&gt;FFmpeg工具箱"]
+    TOOLBOX --> TTS["Screen.TextToSpeech&lt;br/&gt;文本转语音"]
+    TOOLBOX --> STT["Screen.SpeechToText&lt;br/&gt;语音识别"]
+    TOOLBOX --> TEST["Screen.ToolTester&lt;br/&gt;工具测试中心"]
+    TOOLBOX --> GUIDE["Screen.DefaultAssistantGuide&lt;br/&gt;默认助手设置"]
+    TOOLBOX --> PROC["Screen.ProcessLimitRemover&lt;br/&gt;进程限制解除"]
+    TOOLBOX --> HTML["Screen.HtmlPackager&lt;br/&gt;HTML打包器"]
+    TOOLBOX --> AUTOGLM1["Screen.AutoGlmOneClick&lt;br/&gt;AutoGLM一键配置"]
+    TOOLBOX --> AUTOGLM2["Screen.AutoGlmTool&lt;br/&gt;AutoGLM执行"]
+    TOOLBOX --> PERM["Screen.AppPermissions&lt;br/&gt;应用权限管理"]
+    TOOLBOX --> TOKEN["Screen.TokenConfig&lt;br/&gt;获取密钥"]
+    TOOLBOX --> AGREE["Screen.Agreement&lt;br/&gt;用户协议"]
+    TOOLBOX --> DSL["Screen.ToolPkgComposeDsl&lt;br/&gt;(动态 ToolPkg 工具)"]
+      </div>
+
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">⚠️</div>
+          <div class="kn-title orange">特殊导航情况</div>
+          <div class="kn-code">Screen.TokenConfig
+  parentScreen = AiChat (非 Toolbox)
+  从 Toolbox 进入后返回会到 AiChat
+
+Screen.TerminalSetup / TerminalAutoConfig
+  不在工具网格中
+  仅可通过程序化导航访问
+
+Screen.MarkdownDemo
+  仅定义了 Screen 对象
+  无对应工具卡片</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ToolPkgComposeDsl 动态渲染 ===== -->
+    <div class="section">
+      <div class="section-head cyan">🎨 ToolPkgComposeDsl 动态渲染 <span class="count">JS → DSL → Compose 节点树</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🔄</div>
+          <div class="kn-title blue">渲染流程</div>
+          <div class="kn-code">ToolPkgComposeDslToolScreen
+→ LaunchedEffect(containerPackageName, uiModuleId)
+  → render() [获取 renderMutex]
+    → PackageManager 加载脚本 (IO 线程)
+    → jsEngine.executeComposeDslScript()
+    → ToolPkgComposeDslParser.parseRenderResult()
+    → [根节点有 onLoad action]
+      → dispatchAction() 自动触发</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📊</div>
+          <div class="kn-title green">UI 状态机</div>
+          <div class="kn-code"><strong>Loading</strong>
+  居中 CircularProgressIndicator
+
+<strong>Error</strong>
+  居中错误文字 + "Retry" 按钮
+
+<strong>Success</strong>
+  渲染 DSL 节点树 (renderComposeDslNode)
+
+<strong>Dispatching</strong>
+  顶部 LinearProgressIndicator 叠加层</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🧩</div>
+          <div class="kn-title purple">节点渲染</div>
+          <div class="kn-code">类型标记规范化
+→ 查找 composeDslGeneratedNodeRendererRegistry
+
+"canvas" 类型 → renderCanvasNode() 特殊处理
+未知类型 → Text("Unsupported node: ...")
+
+非 LazyColumn 根节点 → 外层添加 verticalScroll
+
+支持 50+ 种 Material3 组件:
+Column, Row, Box, Spacer, LazyColumn, LazyRow,
+Text, TextField, Switch, Checkbox, Button,
+IconButton, Card, Surface, Icon, Divider,
+FloatingActionButton, Scaffold, Canvas ...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 对话框 ===== -->
+    <div class="section">
+      <div class="section-head gray">📋 对话框清单</div>
+      <div style="font-size:13px;color:var(--text-dim);padding:16px;">
+        ToolboxScreen 本身<strong>无对话框</strong>。所有对话框均在各子页面内部实现。
+      </div>
+    </div>
+
+    <!-- ===== 架构要点 ===== -->
+    <div class="section">
+      <div class="section-head blue">🏗 架构要点</div>
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🚫</div>
+          <div class="kn-title orange">无 ViewModel</div>
+          <div class="kn-body">所有状态为局部 <code style="color:var(--cyan)">remember</code>，工具列表在每次重组时内联构建。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔗</div>
+          <div class="kn-title blue">导航解耦</div>
+          <div class="kn-body"><code style="color:var(--cyan)">ToolboxScreen</code> 通过 19 个回调 lambda 导航，不依赖 Screen 或路由系统。导航知识集中在 <code style="color:var(--cyan)">Screen.Toolbox.Content()</code> 中。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔌</div>
+          <div class="kn-title green">插件式动态工具</div>
+          <div class="kn-body"><code style="color:var(--cyan)">ToolboxScriptPluginRegistry</code> 支持注册任意插件注入工具定义，内置 <code style="color:var(--cyan)">ToolPkgToolboxScriptPlugin</code> 查询已安装 ToolPkg 的 Compose DSL UI 模块。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🎨</div>
+          <div class="kn-title cyan">DSL 渲染引擎</div>
+          <div class="kn-body">ToolPkg 动态工具通过 JS 引擎执行 DSL 脚本，解析为节点树后用自动生成的渲染注册表映射到 Compose 组件。支持 50+ 种 Material3 组件类型。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">✨</div>
+          <div class="kn-title purple">按压动画</div>
+          <div class="kn-body">ToolCard 使用 <code style="color:var(--cyan)">animateFloatAsState</code> + 协程 delay 实现 0.95x 缩放按压反馈，而非 Indication。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 核心文件 ===== -->
+    <div class="section">
+      <div class="section-head blue">📁 核心文件清单 <span class="count">6 文件</span></div>
+      <table class="act-table">
+        <thead><tr><th>文件</th><th>路径</th><th>职责</th></tr></thead>
+        <tbody>
+          <tr><td><strong>ToolboxScreen</strong></td><td class="mono">ui/features/toolbox/screens/ToolboxScreen.kt</td><td>页面入口 + 工具网格 + 子页面包装器</td></tr>
+          <tr><td><strong>OperitScreens</strong></td><td class="mono">ui/main/screens/OperitScreens.kt</td><td>Screen 定义 + 导航回调绑定</td></tr>
+          <tr><td><strong>ToolboxScriptPluginRegistry</strong></td><td class="mono">plugins/toolbox/ToolboxScriptPluginRegistry.kt</td><td>动态工具插件注册表</td></tr>
+          <tr><td><strong>ToolboxPlugin</strong></td><td class="mono">plugins/toolbox/ToolboxPlugin.kt</td><td>内置 ToolPkg 插件注册</td></tr>
+          <tr><td><strong>ToolPkgComposeDslScreen</strong></td><td class="mono">ui/common/composedsl/ToolPkgComposeDslScreen.kt</td><td>DSL 动态渲染引擎</td></tr>
+          <tr><td><strong>ToolPkgComposeDslGeneratedRegistry</strong></td><td class="mono">ui/common/composedsl/ToolPkgComposeDslGeneratedRegistry.kt</td><td>自动生成的节点渲染注册表</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      基于 docs/project_overview/07_Screen.Toolbox页面结构.md · ToolboxScreen 组件结构
+    </div>
+
+  </div><!-- end detail-toolbox -->
+
+  <!-- ==================== Workflow Detail ==================== -->
+  <div id="detail-workflow" class="detail-content" style="display:none;">
+
+    <div class="hero" style="padding: 16px 0 8px;">
+      <h1 style="font-size: 24px;">🔄 Screen.Workflow 页面结构</h1>
+      <p class="sub">WorkflowListScreen + WorkflowDetailScreen · 列表-详情双页面 · 可视化网格画布</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card"><div class="num">2</div><div class="label">页面</div></div>
+      <div class="stat-card"><div class="num">5</div><div class="label">节点类型</div></div>
+      <div class="stat-card"><div class="num">8</div><div class="label">预置模板</div></div>
+      <div class="stat-card"><div class="num">12</div><div class="label">对话框</div></div>
+      <div class="stat-card"><div class="num">4</div><div class="label">执行状态</div></div>
+      <div class="stat-card"><div class="num">10</div><div class="label">核心文件</div></div>
+    </div>
+
+    <!-- ===== 入口链路 ===== -->
+    <div class="section">
+      <div class="section-head blue">🔗 入口链路 <span class="count">列表页 → 详情页 双级结构</span></div>
+      <div class="flow">
+        <div class="flow-step"><div class="step-num">L1</div><div class="step-name">MainActivity</div><div class="step-cond">NavItem.Workflow</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L2</div><div class="step-name">AppContent</div><div class="step-cond">Crossfade</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="step-num">L3</div><div class="step-name">WorkflowListScreen</div><div class="step-cond">列表页</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step final"><div class="step-num">L4</div><div class="step-name">WorkflowDetailScreen</div><div class="step-cond">详情页 (workflowId)</div></div>
+      </div>
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">📋</div>
+          <div class="kn-title green">导航属性</div>
+          <div class="kn-code">Screen.Workflow:
+  路由: NavItem.Workflow
+  图标: Icons.Default.AccountTree
+  导航组: Tools · 主导航
+
+Screen.WorkflowDetail:
+  parentScreen: Workflow
+  参数: workflowId: String</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔧</div>
+          <div class="kn-title blue">共享 ViewModel</div>
+          <div class="kn-body">列表页和详情页<strong>共享同一 WorkflowViewModel 实例</strong>，currentWorkflow、nodeExecutionStates 在两个页面间可见。ViewModel init 订阅 <code style="color:var(--cyan)">WorkflowRepository.workflowUpdateEvents</code> (SharedFlow) 实现实时更新。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 数据模型 ===== -->
+    <div class="section">
+      <div class="section-head gray">📦 数据模型 <span class="count">后续章节依赖，先交代</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">📄</div>
+          <div class="kn-title blue">Workflow</div>
+          <div class="kn-code">id, name, description, enabled
+nodes: List&lt;WorkflowNode&gt;
+connections: List&lt;WorkflowNodeConnection&gt;
+createdAt, updatedAt
+lastExecutionTime, lastExecutionStatus
+totalExecutions, successfulExecutions, failedExecutions</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔗</div>
+          <div class="kn-title green">WorkflowNodeConnection</div>
+          <div class="kn-body">连接条件语义：</div>
+          <div class="kn-code">id, sourceNodeId, targetNodeId, condition
+
+condition 值:
+  null/空     — 无条件 (或 true 分支)
+  "false"     — false 分支
+  "on_success" — 成功分支
+  "on_error"   — 失败分支
+  其他字符串   — 正则匹配源节点结果</div>
+        </div>
+      </div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin:16px 0 8px;">WorkflowNode (sealed class) — 5 种节点类型</div>
+      <table class="act-table">
+        <thead><tr><th>子类型</th><th>type</th><th>关键字段</th><th>颜色</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">TriggerNode</td><td>trigger</td><td>triggerType, triggerConfig</td><td><span style="color:#4CAF50;font-weight:700">绿色 #4CAF50</span></td></tr>
+          <tr><td class="mono">ExecuteNode</td><td>execute</td><td>actionType, actionConfig, jsCode?</td><td><span style="color:#2196F3;font-weight:700">蓝色 #2196F3</span></td></tr>
+          <tr><td class="mono">ConditionNode</td><td>condition</td><td>left, operator, right</td><td><span style="color:#FF9800;font-weight:700">橙色 #FF9800</span></td></tr>
+          <tr><td class="mono">LogicNode</td><td>logic</td><td>operator (AND/OR)</td><td><span style="color:#7E57C2;font-weight:700">紫色 #7E57C2</span></td></tr>
+          <tr><td class="mono">ExtractNode</td><td>extract</td><td>source, mode, expression, ...</td><td><span style="color:#009688;font-weight:700">青色 #009688</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 列表页组件树 ===== -->
+    <div class="section">
+      <div class="section-head green">🌲 WorkflowListScreen 组件树 <span class="count">列表页</span></div>
+
+      <div class="mermaid">
+graph TD
+    LIST_ROOT["WorkflowListScreen&lt;br/&gt;(CustomScaffold)"]
+
+    LIST_ROOT --> LIST_FAB["FAB (旋转45°动画)"]
+    LIST_ROOT --> LIST_CONTENT["Box (fillMaxSize)"]
+    LIST_ROOT --> LIST_DIALOGS["Dialog Layer"]
+
+    LIST_FAB --> FAB_MENU["AnimatedVisibility SpeedDial"]
+    FAB_MENU --> FAB_SEL{"isSelectionMode?"}
+    FAB_SEL -->|是| FAB_DEL_SEL["SpeedDialAction: 删除N个"]
+    FAB_SEL -->|是| FAB_EXIT_SEL["SpeedDialAction: 退出多选"]
+    FAB_SEL -->|否| FAB_CREATE["SpeedDialAction: 新建空白"]
+    FAB_SEL -->|否| FAB_TEMPLATE["SpeedDialAction: 从模板"]
+    FAB_SEL -->|否| FAB_MULTI["SpeedDialAction: 多选"]
+
+    LIST_CONTENT --> LOADING["CircularProgressIndicator"]
+    LIST_CONTENT --> EMPTY["Empty State&lt;br/&gt;(闪电emoji + 创建按钮)"]
+    LIST_CONTENT --> LIST["LazyColumn"]
+    LIST --> SEL_BAR["WorkflowSelectionBar&lt;br/&gt;(多选模式)"]
+    LIST --> CARDS["WorkflowCard (per item)"]
+
+    CARDS --> CARD_TITLE["Row: 名称 + Disabled标签 + Switch/Checkbox"]
+    CARDS --> CARD_DESC["Text: 描述 (2行)"]
+    CARDS --> CARD_STATUS["ExecutionStatusBar&lt;br/&gt;(状态色 + 成功率)"]
+    CARDS --> CARD_FOOTER["Row: 节点数 + 执行次数 + 更新时间"]
+
+    LIST_DIALOGS --> DLG_CREATE["CreateWorkflowDialog"]
+    LIST_DIALOGS --> DLG_TEMPLATE["TemplateTypeDialog (8种模板)"]
+    LIST_DIALOGS --> DLG_DEL_BATCH["批量删除确认"]
+      </div>
+
+      <div class="key-nodes-grid" style="margin-top:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">🃏</div>
+          <div class="kn-title blue">WorkflowCard</div>
+          <div class="kn-code">Card (outline, 选中态 primaryContainer 30%)
+└─ Column (18dp padding)
+    ├─ Row: 名称 + [!enabled]"Disabled" + Switch/Checkbox
+    ├─ [有描述] Text (bodySmall, 2行, 70% alpha)
+    ├─ [有执行记录] ExecutionStatusBar
+    │   └─ Row: 图标 + 状态文本 + 相对时间 + 成功率
+    │       ≥80% tertiary / ≥50% primary / &lt;50% error
+    └─ Row: 节点数 + 执行次数 + 更新日期</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📑</div>
+          <div class="kn-title green">模板选择弹窗</div>
+          <div class="kn-code">8 种预置模板:
+1. Intent 聊天广播 (8 节点)
+2. 聊天模板 (6 节点)
+3. 条件模板 (6 节点)
+4. 逻辑 AND 模板 (8 节点)
+5. 逻辑 OR 模板 (8 节点)
+6. 提取模板 (9 节点)
+7. 错误分支模板 (4 节点)
+8. 语音触发模板 (2 节点)
+
+布局: templateNodePosition(index)
+每列 5 个，列距 720dp，行距 420dp</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 详情页组件树 ===== -->
+    <div class="section">
+      <div class="section-head purple">🌲 WorkflowDetailScreen 组件树 <span class="count">详情页 + 画布</span></div>
+
+      <div class="mermaid">
+graph TD
+    DETAIL_ROOT["WorkflowDetailScreen&lt;br/&gt;(CustomScaffold)"]
+
+    DETAIL_ROOT --> DETAIL_FAB["FAB + SpeedDial"]
+    DETAIL_ROOT --> DETAIL_CONTENT["Box (fillMaxSize)"]
+    DETAIL_ROOT --> DETAIL_DIALOGS["Dialog Layer (10+ 弹窗)"]
+
+    DETAIL_FAB --> SD_TRIGGER["SpeedDialAction: 触发/取消"]
+    DETAIL_FAB --> SD_LOGS["SpeedDialAction: 查看日志"]
+    DETAIL_FAB --> SD_ADD["SpeedDialAction: 添加节点"]
+    DETAIL_FAB --> SD_EDIT["SpeedDialAction: 编辑工作流"]
+    DETAIL_FAB --> SD_DEL["SpeedDialAction: 删除"]
+
+    DETAIL_CONTENT --> EMPTY_NODE["EmptyNodeCard&lt;br/&gt;(无节点时)"]
+    DETAIL_CONTENT --> CANVAS["GridWorkflowCanvas&lt;br/&gt;(4000x3000dp 虚拟画布)"]
+
+    CANVAS --> GRID_BG["点阵网格背景"]
+    CANVAS --> REF_EDGES["参考边 (橙色虚线贝塞尔)&lt;br/&gt;节点参数引用关系"]
+    CANVAS --> CONN_LINES["连接线 (彩色贝塞尔 + 箭头)&lt;br/&gt;执行流程"]
+    CANVAS --> NODE_CARDS["DraggableNodeCard (per node)&lt;br/&gt;可拖拽节点卡片"]
+    CANVAS --> SCALE_IND["缩放指示器 (右上角)"]
+      </div>
+    </div>
+
+    <!-- ===== GridWorkflowCanvas ===== -->
+    <div class="section">
+      <div class="section-head cyan">🎨 GridWorkflowCanvas 详解 <span class="count">4000x3000 虚拟画布</span></div>
+
+      <table class="act-table" style="margin-bottom:16px;">
+        <thead><tr><th>参数</th><th>值</th></tr></thead>
+        <tbody>
+          <tr><td>虚拟画布尺寸</td><td class="mono">4000dp × 3000dp</td></tr>
+          <tr><td>网格单元大小</td><td class="mono">40dp</td></tr>
+          <tr><td>节点尺寸</td><td class="mono">120dp × 80dp</td></tr>
+          <tr><td>缩放范围</td><td class="mono">0.25x ~ 3.0x</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">渲染层次 (从底到顶)</div>
+      <div class="key-nodes-grid">
+        <div class="key-node-card" style="border-left:3px solid var(--text-dimmer);">
+          <div class="kn-title" style="font-size:13px;">1. 点阵网格</div>
+          <div class="kn-body" style="font-size:12px;">灰色圆点，按 cellSizePx 间隔绘制</div>
+        </div>
+        <div class="key-node-card" style="border-left:3px solid var(--orange);">
+          <div class="kn-title orange" style="font-size:13px;">2. 参考边</div>
+          <div class="kn-body" style="font-size:12px;">橙色虚线贝塞尔曲线，表示节点间参数引用关系 (NodeReference)</div>
+        </div>
+        <div class="key-node-card" style="border-left:3px solid var(--blue);">
+          <div class="kn-title blue" style="font-size:13px;">3. 连接线</div>
+          <div class="kn-body" style="font-size:12px;">彩色贝塞尔曲线 + 箭头，表示执行流程</div>
+          <div class="kn-code">蓝色 = 默认/运行中
+绿色 = 成功
+红色 = 失败
+灰色虚线 = 未激活/跳过
+条件标签: 中点绘制 "T"/"F"/正则前缀</div>
+        </div>
+        <div class="key-node-card" style="border-left:3px solid var(--green);">
+          <div class="kn-title green" style="font-size:13px;">4. 节点卡片</div>
+          <div class="kn-body" style="font-size:12px;"><code style="color:var(--cyan)">DraggableNodeCard</code> 通过 <code style="color:var(--cyan)">Modifier.offset</code> 定位</div>
+        </div>
+        <div class="key-node-card" style="border-left:3px solid var(--purple);">
+          <div class="kn-title purple" style="font-size:13px;">5. 缩放指示器</div>
+          <div class="kn-body" style="font-size:12px;">右上角 Card，scale ≠ 1f 或已平移时显示</div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">画布手势交互</div>
+        <table class="act-table">
+          <thead><tr><th>手势</th><th>效果</th></tr></thead>
+          <tbody>
+            <tr><td>捏合/双指拖拽</td><td>缩放 (0.25x~3.0x) + 平移</td></tr>
+            <tr><td>双击</td><td>自动适配所有节点到视口 (fitViewportToNodes)</td></tr>
+            <tr><td>拖拽节点</td><td>移动节点，释放时吸附到 40dp 网格</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== DraggableNodeCard ===== -->
+    <div class="section">
+      <div class="section-head green">🃏 DraggableNodeCard 详解 <span class="count">节点样式 + 执行状态 + 手势逻辑</span></div>
+
+      <div class="key-nodes-grid" style="margin-bottom:16px;">
+        <div class="key-node-card">
+          <div class="kn-icon">🎨</div>
+          <div class="kn-title blue">节点类型样式</div>
+          <div class="kn-code"><span style="color:#4CAF50">■</span> Trigger   — #4CAF50 / #E8F5E9
+<span style="color:#2196F3">■</span> Execute   — #2196F3 / #E3F2FD
+<span style="color:#FF9800">■</span> Condition — #FF9800 / #FFF3E0
+<span style="color:#7E57C2">■</span> Logic     — #7E57C2 / #F3E5F5
+<span style="color:#009688">■</span> Extract   — #009688 / #E0F2F1</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title orange">执行状态视觉反馈</div>
+          <div class="kn-code">Running — 蓝色 3dp 边框 + spinner + "Running"
+Success — 绿色 3dp 边框 + ✓ + "Success"
+Skipped — 灰色 3dp 边框 + ✗ + "Skipped"
+Failed  — 红色 3dp 边框 + ✗ + "Failed"</div>
+        </div>
+      </div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">👆</div>
+          <div class="kn-title purple">手势互斥逻辑</div>
+          <div class="kn-body">两个 <code style="color:var(--cyan)">pointerInput</code> 协同工作：</div>
+          <div class="kn-code">长按检测: 500ms delay → onLongPress()
+  → 打开 NodeActionMenu
+
+拖拽检测: 标记 hasDragged=true
+  → onDrag(amount)
+  → 释放时 100ms 重置
+
+互斥: 拖拽或长按后不触发 onClick</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== NodeDialog ===== -->
+    <div class="section">
+      <div class="section-head orange">📝 NodeDialog 详解 <span class="count">按节点类型动态切换编辑表单</span></div>
+
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🔧</div>
+          <div class="kn-title blue">Execute 节点编辑</div>
+          <div class="kn-code">actionType (工具名, 带自动补全)
+→ LaunchedEffect: 从 AIToolHandler/PackageManager
+  查询工具参数 Schema → 合并到 actionConfigPairs
+
+[forEach 参数]
+Row: 参数名 + 值输入框 + 🔗节点引用 + 删除
+[有 Schema] Text: 类型 + required + 描述 + 默认值
+
+"Add parameter" 按钮</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🎯</div>
+          <div class="kn-title green">Trigger 节点编辑</div>
+          <div class="kn-code">触发类型 → 配置:
+manual   — 无额外配置
+schedule — ScheduleConfigDialog
+           (interval/specific_time/cron)
+tasker   — {"variable_name": "%evtprm()"}
+intent   — {"action": "com.example.MY_ACTION"}
+speech   — {"pattern": "...", "ignore_case": ...}</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">❓</div>
+          <div class="kn-title orange">Condition 节点编辑</div>
+          <div class="kn-code">左值: OutlinedTextField + 🔗节点引用
+运算符: ExposedDropdownMenu
+  EQ / NE / GT / GTE / LT / LTE
+  CONTAINS / NOT_CONTAINS / IN / NOT_IN
+右值: OutlinedTextField + 🔗节点引用</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔍</div>
+          <div class="kn-title cyan">Extract 节点编辑</div>
+          <div class="kn-code">6 种提取模式:
+REGEX      — 表达式 + 组索引 + 默认值
+JSON       — JSON 路径 + 默认值
+SUB        — 起始索引 + 长度
+CONCAT     — 多项拼接列表 (静态/引用)
+RANDOM_INT — useFixed + 固定值/最小最大
+RANDOM_STRING — useFixed + 固定值/长度/字符集</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 对话框清单 ===== -->
+    <div class="section">
+      <div class="section-head purple">📋 对话框清单 <span class="count">12 (按页面分组)</span></div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">WorkflowListScreen (3 个)</div>
+      <table class="act-table" style="margin-bottom:16px;">
+        <thead><tr><th>对话框</th><th>触发</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">CreateWorkflowDialog</td><td>FAB "新建空白"</td><td>名称 + 描述输入</td></tr>
+          <tr><td class="mono">TemplateTypeDialog</td><td>FAB "从模板"</td><td>8 种模板选择卡片</td></tr>
+          <tr><td class="mono">批量删除确认</td><td>多选模式 FAB "删除"</td><td>确认删除 N 个工作流</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">WorkflowDetailScreen (9 个)</div>
+      <table class="act-table">
+        <thead><tr><th>对话框</th><th>触发</th><th>功能</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">EditWorkflowDialog</td><td>FAB "编辑工作流"</td><td>名称 + 描述 + enabled 开关</td></tr>
+          <tr><td class="mono">删除工作流确认</td><td>FAB "删除"</td><td>确认后返回列表</td></tr>
+          <tr><td class="mono">执行结果</td><td>触发/取消完成后</td><td>显示结果消息</td></tr>
+          <tr><td class="mono">WorkflowExecutionLogDialog</td><td>FAB "查看日志" 或节点日志</td><td>时间戳日志列表，可按节点过滤</td></tr>
+          <tr><td class="mono">NodeDialog (创建/编辑)</td><td>FAB "添加节点" / 长按→编辑</td><td>5 种节点类型动态编辑表单</td></tr>
+          <tr><td class="mono">删除节点确认</td><td>节点长按 → "删除"</td><td>确认删除节点及其连接</td></tr>
+          <tr><td class="mono">NodeActionMenuDialog</td><td>节点长按</td><td>编辑/查看日志/创建连接/删除</td></tr>
+          <tr><td class="mono">ConnectionMenuDialog</td><td>长按→"创建连接"</td><td>现有连接管理 + 可连接目标列表</td></tr>
+          <tr><td class="mono">ConnectionConditionDialog</td><td>连接编辑图标</td><td>条件设置：默认/false/自定义正则</td></tr>
+          <tr><td class="mono">ScheduleConfigDialog</td><td>Trigger 选 schedule</td><td>interval/specific_time/cron 配置</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 交互映射 ===== -->
+    <div class="section">
+      <div class="section-head orange">⚡ 用户交互 → 动作映射 <span class="count">按页面分组</span></div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">列表页</div>
+      <table class="act-table" style="margin-bottom:16px;">
+        <thead><tr><th>交互</th><th>执行动作</th></tr></thead>
+        <tbody>
+          <tr><td>工作流卡片点击</td><td class="mono">导航到 Screen.WorkflowDetail(id)</td></tr>
+          <tr><td>Switch 切换</td><td class="mono">viewModel.setWorkflowEnabled(id, enabled) 乐观更新</td></tr>
+          <tr><td>FAB 新建 → 确认</td><td class="mono">viewModel.createWorkflow(name, desc) → 导航到详情</td></tr>
+          <tr><td>FAB 模板 → 选择</td><td class="mono">viewModel.createXxxTemplateWorkflow() → 导航到详情</td></tr>
+          <tr><td>多选 → 删除</td><td class="mono">viewModel.deleteWorkflows(ids)</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:8px;">详情页</div>
+      <table class="act-table">
+        <thead><tr><th>交互</th><th>执行动作</th></tr></thead>
+        <tbody>
+          <tr><td>FAB 触发</td><td class="mono">viewModel.triggerWorkflow(id) → 实时状态更新</td></tr>
+          <tr><td>FAB 取消</td><td class="mono">viewModel.cancelWorkflow(id)</td></tr>
+          <tr><td>节点拖拽释放</td><td class="mono">viewModel.updateNodePosition(wf, nodeId, x, y) 吸附网格</td></tr>
+          <tr><td>节点点击</td><td class="mono">打开 NodeDialog 编辑</td></tr>
+          <tr><td>节点长按</td><td class="mono">打开 NodeActionMenuDialog</td></tr>
+          <tr><td>添加节点确认</td><td class="mono">viewModel.addNode(workflowId, node)</td></tr>
+          <tr><td>创建连接</td><td class="mono">viewModel.createConnection(wf, src, tgt)</td></tr>
+          <tr><td>编辑连接条件</td><td class="mono">viewModel.updateConnectionCondition(wf, connId, cond)</td></tr>
+          <tr><td>双击画布</td><td class="mono">自动适配视口 fitViewportToNodes()</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 架构要点 ===== -->
+    <div class="section">
+      <div class="section-head blue">🏗 架构要点</div>
+      <div class="key-nodes-grid">
+        <div class="key-node-card">
+          <div class="kn-icon">🔄</div>
+          <div class="kn-title orange">共享 ViewModel</div>
+          <div class="kn-body">列表页和详情页共享同一实例，<code style="color:var(--cyan)">currentWorkflow</code>、<code style="color:var(--cyan)">nodeExecutionStates</code> 在两个页面间可见。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title blue">实时执行可视化</div>
+          <div class="kn-body"><code style="color:var(--cyan)">triggerWorkflow</code> 通过回调流式更新 nodeExecutionStates，画布连接线和节点卡片边框实时变色反映执行状态。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔗</div>
+          <div class="kn-title green">双类型边渲染</div>
+          <div class="kn-body">画布同时渲染两种边——蓝色连接线表示执行流程，橙色虚线表示参数引用关系 (NodeReference)。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📐</div>
+          <div class="kn-title purple">网格吸附</div>
+          <div class="kn-body">节点拖拽释放时自动吸附到 40dp 网格，保持视觉整齐。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">🔍</div>
+          <div class="kn-title cyan">工具 Schema 自动补全</div>
+          <div class="kn-body">Execute 节点编辑时从 <code style="color:var(--cyan)">AIToolHandler</code> + <code style="color:var(--cyan)">PackageManager</code> 实时查询工具参数 Schema，自动合并到参数列表。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">⚡</div>
+          <div class="kn-title yellow" style="color:var(--yellow)">乐观更新</div>
+          <div class="kn-body">列表页 enabled Switch 采用乐观更新策略，失败时回滚。</div>
+        </div>
+        <div class="key-node-card">
+          <div class="kn-icon">📏</div>
+          <div class="kn-title" style="color:var(--text-dim)">模板布局算法</div>
+          <div class="kn-body"><code style="color:var(--cyan)">templateNodePosition(index)</code> 按 5 行 × N 列自动排列，列距 720dp、行距 420dp。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 核心文件 ===== -->
+    <div class="section">
+      <div class="section-head blue">📁 核心文件清单 <span class="count">10 文件</span></div>
+      <table class="act-table">
+        <thead><tr><th>文件</th><th>路径 (相对 ui/features/workflow/)</th><th>职责</th></tr></thead>
+        <tbody>
+          <tr><td><strong>WorkflowListScreen</strong></td><td class="mono">screens/WorkflowListScreen.kt</td><td>列表页入口 + 卡片 + 多选</td></tr>
+          <tr><td><strong>WorkflowDetailScreen</strong></td><td class="mono">screens/WorkflowDetailScreen.kt</td><td>详情页 + NodeDialog</td></tr>
+          <tr><td><strong>WorkflowViewModel</strong></td><td class="mono">viewmodel/WorkflowViewModel.kt</td><td>共享 ViewModel + CRUD + 执行 + 模板</td></tr>
+          <tr><td><strong>GridWorkflowCanvas</strong></td><td class="mono">components/GridWorkflowCanvas.kt</td><td>网格画布 + 节点/连接渲染</td></tr>
+          <tr><td><strong>DraggableNodeCard</strong></td><td class="mono">components/DraggableNodeCard.kt</td><td>可拖拽节点卡片</td></tr>
+          <tr><td><strong>NodeActionMenu</strong></td><td class="mono">components/NodeActionMenu.kt</td><td>节点长按上下文菜单</td></tr>
+          <tr><td><strong>ConnectionMenu</strong></td><td class="mono">components/ConnectionMenu.kt</td><td>连接管理弹窗</td></tr>
+          <tr><td><strong>ScheduleConfigDialog</strong></td><td class="mono">components/ScheduleConfigDialog.kt</td><td>定时触发配置</td></tr>
+          <tr><td><strong>Workflow</strong></td><td class="mono">data/model/Workflow.kt</td><td>数据模型 (节点/连接/参数)</td></tr>
+          <tr><td><strong>WorkflowExecutionLog</strong></td><td class="mono">data/model/WorkflowExecutionLog.kt</td><td>执行记录模型</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      基于 docs/project_overview/08_Screen.Workflow页面结构.md · WorkflowListScreen + WorkflowDetailScreen 组件结构
+    </div>
+
+  </div><!-- end detail-workflow -->
+
+  <!-- ==================== ShizukuCommands ==================== -->
+  <div id="detail-shizukucommands" class="detail-content" style="display:none;">
+
+    <!-- Hero Stats -->
+    <div class="stats" style="margin-bottom:24px;">
+      <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">权限等级</span></div>
+      <div class="stat-item"><span class="stat-num">12</span><span class="stat-label">权限状态字段</span></div>
+      <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">设置向导</span></div>
+      <div class="stat-item"><span class="stat-num">1</span><span class="stat-label">对话框</span></div>
+    </div>
+
+    <!-- 入口链路 -->
+    <div class="section-head blue">入口链路</div>
+    <div class="flow">
+      <span class="flow-step">MainActivity (NavItem.ShizukuCommands)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">OperitApp</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">AppContent</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Screen.ShizukuCommands.Content()</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">ShizukuDemoScreen(navigateTo)</span>
+    </div>
+    <p style="margin:8px 0 0 4px;font-size:12px;color:var(--text-dim);">也可从 UserPreferencesGuide 引导页面跳入</p>
+
+    <!-- 导航属性 -->
+    <table class="act-table" style="margin-top:16px;">
+      <tr><th>属性</th><th>值</th></tr>
+      <tr><td>路由</td><td>NavItem.ShizukuCommands</td></tr>
+      <tr><td>图标</td><td>Icons.Default.AdminPanelSettings</td></tr>
+      <tr><td>导航组</td><td>Tools</td></tr>
+      <tr><td>是否叶子节点</td><td>否（可导航到 TerminalSetup）</td></tr>
+    </table>
+
+    <!-- 状态管理 -->
+    <div class="section-head green">状态管理 (ShizukuDemoViewModel)</div>
+    <p style="margin:0 0 12px 4px;font-size:13px;color:var(--text-dim);">AndroidViewModel，持有 DemoStateManager(application, viewModelScope)，暴露 StateFlow&lt;DemoScreenState&gt;</p>
+
+    <div class="section-head" style="background:rgba(76,175,80,0.08);border-left-color:#66BB6A;font-size:13px;">权限状态（12 个布尔值）</div>
+    <table class="act-table">
+      <tr><th>字段</th><th>说明</th></tr>
+      <tr><td>isShizukuInstalled</td><td>Shizuku 是否已安装</td></tr>
+      <tr><td>isShizukuRunning</td><td>Shizuku 服务是否运行</td></tr>
+      <tr><td>hasShizukuPermission</td><td>应用是否获得 Shizuku 权限</td></tr>
+      <tr><td>isOperitTerminalInstalled</td><td>NodeJS+Python 环境是否就绪</td></tr>
+      <tr><td>hasStoragePermission</td><td>存储权限</td></tr>
+      <tr><td>hasOverlayPermission</td><td>悬浮窗权限</td></tr>
+      <tr><td>hasBatteryOptimizationExemption</td><td>电池优化豁免</td></tr>
+      <tr><td>hasAccessibilityServiceEnabled</td><td>无障碍服务启用</td></tr>
+      <tr><td>isAccessibilityProviderInstalled</td><td>无障碍 Provider APK 安装</td></tr>
+      <tr><td>hasLocationPermission</td><td>位置权限</td></tr>
+      <tr><td>isDeviceRooted</td><td>设备是否 Root</td></tr>
+      <tr><td>hasRootAccess</td><td>应用是否获得 Root 权限</td></tr>
+    </table>
+
+    <div class="section-head" style="background:rgba(76,175,80,0.08);border-left-color:#66BB6A;font-size:13px;">UI 控制状态</div>
+    <table class="act-table">
+      <tr><th>字段</th><th>说明</th></tr>
+      <tr><td>isLoading</td><td>初始化加载</td></tr>
+      <tr><td>isRefreshing</td><td>刷新中（旋转图标）</td></tr>
+      <tr><td>showShizukuWizard</td><td>Shizuku 向导展开</td></tr>
+      <tr><td>showAccessibilityWizard</td><td>无障碍向导展开</td></tr>
+      <tr><td>showRootWizard</td><td>Root 向导展开</td></tr>
+      <tr><td>showOperitTerminalWizard</td><td>终端向导展开</td></tr>
+    </table>
+
+    <p style="margin:12px 0 0 4px;font-size:12px;color:var(--text-dim);">
+      本地状态：currentDisplayedPermissionLevel (浏览等级 Tab)、isInitialized、refreshRotation (刷新图标旋转角度)<br/>
+      响应式监听：DisposableEffect 注册 ShizukuAuthorizer.stateChangeListener + DemoStateManager.init 内部监听（双层监听）
+    </p>
+
+    <!-- 组件树 Mermaid -->
+    <div class="section-head purple">组件树</div>
+    <div class="mermaid">
+graph TD
+    ROOT["ShizukuDemoScreen&lt;br/&gt;(Column, verticalScroll, 16dp padding)"]
+
+    ROOT --> LOADING["CircularProgressIndicator&lt;br/&gt;(isLoading 时显示)"]
+    ROOT --> PLC["PermissionLevelCard&lt;br/&gt;(权限等级选择与状态)"]
+    ROOT --> WIZARD_AREA["Setup Wizard Area&lt;br/&gt;(条件显示)"]
+
+    PLC --> TAB_ROW["ScrollableTabRow (5 个等级)"]
+    TAB_ROW --> TAB_STD["STANDARD"]
+    TAB_ROW --> TAB_A11Y["ACCESSIBILITY"]
+    TAB_ROW --> TAB_DBG["DEBUGGER"]
+    TAB_ROW --> TAB_ADM["ADMIN"]
+    TAB_ROW --> TAB_ROOT["ROOT"]
+
+    PLC --> LEVEL_DESC["AnimatedContent: PermissionLevelVisualDescription"]
+    LEVEL_DESC --> FEATURE_GRID["FeatureGrid (3列9项功能矩阵)"]
+
+    PLC --> STATUS_ROW["Box: 状态行"]
+    STATUS_ROW --> SET_BTN["Button: '设为当前等级'&lt;br/&gt;(浏览≠活跃时)"]
+    STATUS_ROW --> CURRENT["CheckCircle: '当前使用等级'&lt;br/&gt;(浏览==活跃时)"]
+    STATUS_ROW --> REFRESH["IconButton: 刷新 (旋转动画)"]
+
+    PLC --> PERM_SECTION["AnimatedContent: 权限状态区"]
+    PERM_SECTION --> SEC_STD["StandardPermissionSection"]
+    PERM_SECTION --> SEC_A11Y["AccessibilityPermissionSection"]
+    PERM_SECTION --> SEC_DBG["DebuggerPermissionSection&lt;br/&gt;(含 Shizuku 状态行)"]
+    PERM_SECTION --> SEC_ADM["AdminPermissionSection&lt;br/&gt;(含'版本不支持'横幅)"]
+    PERM_SECTION --> SEC_ROOT["RootPermissionSection&lt;br/&gt;(含 Root 状态行 + 信息横幅)"]
+
+    WIZARD_AREA --> A11Y_WIZ["AccessibilityWizardCard&lt;br/&gt;(步骤: 安装Provider → 启用服务)"]
+    WIZARD_AREA --> ROOT_WIZ["RootWizardCard&lt;br/&gt;(分支: 已Root/未授权/未Root)"]
+    WIZARD_AREA --> SHIZUKU_WIZ["ShizukuWizardCard&lt;br/&gt;(3步: 安装 → 启动 → 授权)"]
+    WIZARD_AREA --> TERM_WIZ["OperitTerminalWizardCard&lt;br/&gt;(pnpm+pip 状态 → 终端配置)"]
+    </div>
+
+    <!-- 组件树 文本版 -->
+    <div class="comp-tree" style="margin-top:16px;">
+      <div class="ct-node">ShizukuDemoScreen (Column, verticalScroll)</div>
+      <div class="ct-children">
+        <div class="ct-node dim">[isLoading] CircularProgressIndicator</div>
+        <div class="ct-node">PermissionLevelCard</div>
+        <div class="ct-children">
+          <div class="ct-node">ScrollableTabRow (5 个等级 Tab)</div>
+          <div class="ct-node">AnimatedContent → PermissionLevelVisualDescription → FeatureGrid (3列9项)</div>
+          <div class="ct-node">状态行: "设为当前等级" 按钮 / "当前使用等级" 标签 + 刷新按钮</div>
+          <div class="ct-node">AnimatedContent → PermissionSection (按等级切换)</div>
+          <div class="ct-children">
+            <div class="ct-node">StandardPermissionSection (存储/悬浮窗/电池/位置/终端)</div>
+            <div class="ct-node">AccessibilityPermissionSection (+ 无障碍服务状态)</div>
+            <div class="ct-node">DebuggerPermissionSection (+ Shizuku 状态行)</div>
+            <div class="ct-node dim">AdminPermissionSection (显示"版本不支持"横幅)</div>
+            <div class="ct-node">RootPermissionSection (+ Root 状态行 + 信息横幅)</div>
+          </div>
+        </div>
+        <div class="ct-node">Setup Wizard Area (needSetupGuide 时显示)</div>
+        <div class="ct-children">
+          <div class="ct-node">AccessibilityWizardCard (安装Provider → 启用服务)</div>
+          <div class="ct-node">RootWizardCard (分支式：已授权/未授权/未Root)</div>
+          <div class="ct-node">ShizukuWizardCard (3步线性：安装→启动→授权)</div>
+          <div class="ct-node">OperitTerminalWizardCard (pnpm+pip → 终端配置)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 权限等级系统 -->
+    <div class="section-head orange">权限等级系统</div>
+    <table class="act-table">
+      <tr><th>等级</th><th>说明</th><th>特有权限</th></tr>
+      <tr><td><strong>STANDARD</strong></td><td>基础权限</td><td>存储、悬浮窗、电池优化、位置、OperitTerminal</td></tr>
+      <tr><td><strong>ACCESSIBILITY</strong></td><td>无障碍</td><td>+ 无障碍服务</td></tr>
+      <tr><td><strong>DEBUGGER</strong></td><td>调试级</td><td>+ Shizuku 服务</td></tr>
+      <tr><td style="color:var(--text-dim);">ADMIN</td><td style="color:var(--text-dim);">管理级</td><td style="color:var(--text-dim);">当前版本不支持（占位）</td></tr>
+      <tr><td><strong>ROOT</strong></td><td>Root 级</td><td>+ Root 访问权限</td></tr>
+    </table>
+
+    <div style="margin:16px 0;">
+      <strong style="font-size:13px;color:var(--text-sec);">FeatureGrid (3列9项)</strong>
+      <p style="font-size:12px;color:var(--text-dim);margin:4px 0 0 0;">支持: CheckCircle (primary) + 功能名 ｜ 不支持: Cancel (onSurfaceVariant 38%) + 淡色功能名</p>
+    </div>
+
+    <div style="margin:16px 0;">
+      <strong style="font-size:13px;color:var(--text-sec);">权限状态行 (PermissionStatusItem)</strong>
+      <div class="comp-tree" style="margin-top:8px;">
+        <div class="ct-node">Row (clickable)</div>
+        <div class="ct-children">
+          <div class="ct-node">状态点 (12dp 圆形): 已授权 Green / 未授权 Red / 需更新 Amber</div>
+          <div class="ct-node">Column: 权限名 + 描述</div>
+          <div class="ct-node">ChevronRight Icon</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:var(--text-dim);margin:8px 0 0 4px;">
+      <strong>切换等级副作用：</strong>持久化到 androidPermissionPreferences → 触发 AIToolHandler.reset() + registerDefaultTools() 重新注册所有 AI 工具
+    </p>
+
+    <!-- 设置向导详解 -->
+    <div class="section-head cyan">设置向导详解</div>
+    <p style="margin:0 0 12px 4px;font-size:12px;color:var(--text-dim);">向导区域仅在 needSetupGuide 为 true 时显示，每个向导仅在对应条件下渲染</p>
+
+    <!-- Shizuku 向导 -->
+    <div class="section-head" style="background:rgba(33,150,243,0.08);border-left-color:#42A5F5;font-size:13px;">ShizukuWizardCard — 线性 3 步</div>
+    <table class="act-table">
+      <tr><th>步骤</th><th>条件</th><th>UI</th><th>操作</th></tr>
+      <tr>
+        <td>1. 安装</td><td>!isShizukuInstalled</td>
+        <td>"Install Bundled" 按钮</td>
+        <td>从 assets 提取 APK → FileProvider URI → ACTION_VIEW 安装</td>
+      </tr>
+      <tr>
+        <td>2. 启动</td><td>!isShizukuRunning</td>
+        <td>方法1/2 说明 + "Open Docs" + "Open Shizuku"</td>
+        <td>打开文档/Shizuku 应用</td>
+      </tr>
+      <tr>
+        <td>3. 授权</td><td>!hasShizukuPermission</td>
+        <td>"Grant Permission" 按钮</td>
+        <td>ShizukuAuthorizer.requestShizukuPermission()</td>
+      </tr>
+      <tr>
+        <td>完成</td><td>全部就绪</td>
+        <td>成功提示 + [可选]更新区域</td>
+        <td>版本对比 + Update 按钮</td>
+      </tr>
+    </table>
+    <p style="font-size:12px;color:var(--text-dim);margin:4px 0 0 4px;">进度条值：0 → 0.33 → 0.66 → 1.0</p>
+
+    <!-- Accessibility 向导 -->
+    <div class="section-head" style="background:rgba(76,175,80,0.08);border-left-color:#66BB6A;font-size:13px;">AccessibilityWizardCard — 2 步</div>
+    <table class="act-table">
+      <tr><th>步骤</th><th>条件</th><th>UI</th><th>操作</th></tr>
+      <tr>
+        <td>1. 安装 Provider</td><td>!isProviderInstalled</td>
+        <td>"Install" 按钮 → 风险确认弹窗</td>
+        <td>输入确认文字 → UIHierarchyManager.launchProviderInstall()</td>
+      </tr>
+      <tr>
+        <td>2. 启用服务</td><td>!isServiceEnabled</td>
+        <td>"Open Settings" 按钮</td>
+        <td>跳转无障碍设置</td>
+      </tr>
+    </table>
+
+    <!-- Root 向导 -->
+    <div class="section-head" style="background:rgba(244,67,54,0.08);border-left-color:#EF5350;font-size:13px;">RootWizardCard — 分支式</div>
+    <table class="act-table">
+      <tr><th>状态</th><th>UI</th></tr>
+      <tr><td>已授权 Root</td><td>成功提示 + "Test Command" 按钮</td></tr>
+      <tr><td>设备已 Root 但未授权</td><td>说明 + "Request" 按钮 + "Tutorial" 按钮</td></tr>
+      <tr><td>设备未 Root</td><td>风险警告 (errorContainer) + "View Tutorial" → Magisk 网站</td></tr>
+    </table>
+
+    <!-- Terminal 向导 -->
+    <div class="section-head" style="background:rgba(156,39,176,0.08);border-left-color:#AB47BC;font-size:13px;">OperitTerminalWizardCard</div>
+    <table class="act-table">
+      <tr><th>状态</th><th>UI</th></tr>
+      <tr><td>未就绪</td><td>描述 + "Go to Terminal Config" 按钮 → Screen.TerminalSetup</td></tr>
+      <tr><td>已就绪</td><td>确认文字 + "Open Terminal" 按钮</td></tr>
+    </table>
+    <p style="font-size:12px;color:var(--text-dim);margin:4px 0 0 4px;">状态行显示 pnpm 和 pip 各自的安装状态（独立检查）</p>
+
+    <!-- 向导显示条件 -->
+    <div class="section-head" style="background:rgba(255,152,0,0.08);border-left-color:#FFA726;font-size:13px;">向导显示条件</div>
+    <table class="act-table">
+      <tr><th>向导</th><th>显示条件</th></tr>
+      <tr><td>Shizuku</td><td>浏览 DEBUGGER 等级 + (未安装/未运行/未授权/需更新)</td></tr>
+      <tr><td>Accessibility</td><td>浏览 ACCESSIBILITY 等级 + (未安装 Provider/未启用服务)</td></tr>
+      <tr><td>Root</td><td>浏览 ROOT 等级 + (未授权 Root)</td></tr>
+      <tr><td>OperitTerminal</td><td>浏览任意等级 + (终端未就绪)</td></tr>
+    </table>
+
+    <!-- 对话框 -->
+    <div class="section-head red">对话框</div>
+    <table class="act-table">
+      <tr><th>对话框</th><th>触发条件</th><th>功能</th></tr>
+      <tr><td>风险确认 AlertDialog</td><td>无障碍向导 "Install" 按钮</td><td>用户必须输入精确确认文字才能安装 Provider APK，输入错误显示错误状态</td></tr>
+    </table>
+    <p style="font-size:12px;color:var(--text-dim);margin:4px 0 0 4px;">注：CommandResultDialog、SampleCommandsCard 等组件已定义但未使用</p>
+
+    <!-- 交互映射 -->
+    <div class="section-head blue">用户交互 → 动作映射</div>
+    <table class="act-table">
+      <tr><th>交互</th><th>执行动作</th></tr>
+      <tr><td>等级 Tab 切换</td><td>更新 displayedPermissionLevel，AnimatedContent 滑动过渡</td></tr>
+      <tr><td>"Set as current level"</td><td>持久化等级 → AIToolHandler.reset() + 重新注册工具</td></tr>
+      <tr><td>刷新按钮</td><td>清除版本缓存 → viewModel.refreshStatus() + 旋转动画</td></tr>
+      <tr><td>存储权限行点击</td><td>跳转 ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION (API 30+)</td></tr>
+      <tr><td>悬浮窗权限行点击</td><td>跳转 ACTION_MANAGE_OVERLAY_PERMISSION</td></tr>
+      <tr><td>电池优化行点击</td><td>跳转 ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</td></tr>
+      <tr><td>位置权限行点击</td><td>系统权限弹窗 (FINE + COARSE)</td></tr>
+      <tr><td>Shizuku Install Bundled</td><td>从 assets 提取 APK → FileProvider → 系统安装</td></tr>
+      <tr><td>Shizuku Grant Permission</td><td>ShizukuAuthorizer.requestShizukuPermission()</td></tr>
+      <tr><td>Accessibility Install</td><td>风险确认弹窗 → UIHierarchyManager.launchProviderInstall()</td></tr>
+      <tr><td>Root Request</td><td>RootAuthorizer.requestRootPermission()</td></tr>
+      <tr><td>Terminal Config</td><td>导航到 Screen.TerminalSetup</td></tr>
+    </table>
+
+    <!-- 数据模型 -->
+    <div class="section-head purple">数据模型</div>
+    <table class="act-table">
+      <tr><th>模型</th><th>说明</th></tr>
+      <tr><td>AndroidPermissionLevel</td><td>枚举：STANDARD, ACCESSIBILITY, DEBUGGER, ADMIN, ROOT</td></tr>
+      <tr><td>DemoScreenState</td><td>20+ 个 MutableState 字段的数据类（权限布尔值 + UI 控制）</td></tr>
+      <tr><td>ShizukuAuthorizer</td><td>Shizuku 集成层：安装检测、服务运行检测、权限请求、状态监听</td></tr>
+      <tr><td>ShizukuInstaller</td><td>APK 提取与版本对比</td></tr>
+      <tr><td>UIHierarchyManager</td><td>无障碍 Provider 安装与版本管理</td></tr>
+      <tr><td>RootAuthorizer</td><td>Root 权限请求与检测</td></tr>
+    </table>
+
+    <!-- 架构要点 -->
+    <div class="section-head green">架构要点</div>
+    <div class="key-nodes-grid" style="grid-template-columns:1fr;">
+      <div class="key-node-card" style="border-left:3px solid var(--orange);">
+        <strong>双层状态监听</strong>
+        <p>ShizukuAuthorizer 的状态变化同时被 DemoStateManager.init 和 ShizukuDemoScreen 的 DisposableEffect 监听，存在冗余但保证了响应性</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--red);">
+        <strong>MutableState 嵌套反模式</strong>
+        <p>DemoScreenState 内部字段使用 MutableState&lt;T&gt; 包装，同时外层使用 StateFlow&lt;DemoScreenState&gt;。部分代码直接修改内部 MutableState.value，绕过 StateFlow.update {}，造成不一致但功能正常</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--blue);">
+        <strong>权限等级切换副作用</strong>
+        <p>切换等级不仅是 UI 变更，还会触发 AIToolHandler.reset() + registerDefaultTools() 重新注册所有 AI 工具，改变应用的工具能力集</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--green);">
+        <strong>风险确认门控</strong>
+        <p>无障碍 Provider 安装通过输入精确文字确认来门控，防止用户误操作</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--purple);">
+        <strong>ADMIN 等级占位</strong>
+        <p>在 Tab 中可见但显示"当前版本不支持"横幅，为未来预留</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--text-dim);">
+        <strong>未使用的脚手架代码</strong>
+        <p>showAdbCommandExecutor、showSampleCommands、CommandResultDialog 等在状态和 ViewModel 中定义但未在当前 UI 中渲染，疑似早期版本残留</p>
+      </div>
+    </div>
+
+    <!-- 核心文件 -->
+    <div class="section-head">核心文件清单</div>
+    <table class="act-table">
+      <tr><th>文件</th><th>路径</th><th>职责</th></tr>
+      <tr><td>ShizukuDemoScreen</td><td>ui/features/demo/screens/ShizukuDemoScreen.kt</td><td>页面入口，权限行点击处理</td></tr>
+      <tr><td>ShizukuDemoViewModel</td><td>ui/features/demo/viewmodel/ShizukuDemoViewModel.kt</td><td>ViewModel 代理层</td></tr>
+      <tr><td>DemoStateManager</td><td>ui/features/demo/state/DemoStateManager.kt</td><td>状态管理 + 业务逻辑</td></tr>
+      <tr><td>PermissionLevelCard</td><td>ui/features/demo/components/PermissionLevelCard.kt</td><td>权限等级选择器 + 状态展示</td></tr>
+      <tr><td>DialogComponents</td><td>ui/features/demo/components/DialogComponents.kt</td><td>共享组件（部分未使用）</td></tr>
+      <tr><td>ShizukuWizardCard</td><td>ui/features/demo/wizards/ShizukuWizardCard.kt</td><td>Shizuku 设置向导</td></tr>
+      <tr><td>AccessibilityWizardCard</td><td>ui/features/demo/wizards/AccessibilityWizardCard.kt</td><td>无障碍设置向导</td></tr>
+      <tr><td>RootWizardCard</td><td>ui/features/demo/wizards/RootWizardCard.kt</td><td>Root 设置向导</td></tr>
+      <tr><td>OperitTerminalWizardCard</td><td>ui/features/demo/wizards/OperitTerminalWizardCard.kt</td><td>终端环境向导</td></tr>
+    </table>
+
+  </div><!-- end detail-shizukucommands -->
+
+  <!-- ==================== Settings ==================== -->
+  <div id="detail-settings" class="detail-content" style="display:none;">
+
+    <!-- Hero Stats -->
+    <div class="stats" style="margin-bottom:24px;">
+      <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">分组</span></div>
+      <div class="stat-item"><span class="stat-num">18</span><span class="stat-label">设置项</span></div>
+      <div class="stat-item"><span class="stat-num">22</span><span class="stat-label">子页面</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">对话框</span></div>
+    </div>
+
+    <p style="margin:0 0 16px 4px;font-size:13px;color:var(--text-dim);">设置入口页，以分组卡片列表展示所有设置项。各子页面内部结构将在后续文档中逐一梳理。</p>
+
+    <!-- 入口链路 -->
+    <div class="section-head blue">入口链路</div>
+    <div class="flow">
+      <span class="flow-step">MainActivity (NavItem.Settings)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">OperitApp</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">AppContent</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Screen.Settings.Content()</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">SettingsScreen(18个导航回调)</span>
+    </div>
+
+    <table class="act-table" style="margin-top:16px;">
+      <tr><th>属性</th><th>值</th></tr>
+      <tr><td>路由</td><td>NavItem.Settings</td></tr>
+      <tr><td>图标</td><td>Icons.Default.Settings</td></tr>
+      <tr><td>导航组</td><td>System</td></tr>
+      <tr><td>是否叶子节点</td><td>否（22 个子页面）</td></tr>
+    </table>
+
+    <!-- 状态管理 -->
+    <div class="section-head green">状态管理（无 ViewModel）</div>
+    <table class="act-table">
+      <tr><th>状态</th><th>类型</th><th>说明</th></tr>
+      <tr><td>SettingsScreenScrollPosition</td><td>mutableStateOf&lt;Int&gt; (文件级)</td><td>滚动位置持久化，进程存活期间保留</td></tr>
+      <tr><td>isGitHubLoggedIn</td><td>Boolean (StateFlow)</td><td>GitHub 登录状态，控制登录/登出项显示</td></tr>
+      <tr><td>gitHubUser</td><td>GitHubUserInfo? (StateFlow)</td><td>登录用户信息，显示 @{login}</td></tr>
+      <tr><td>hasBackgroundImage</td><td>Boolean (StateFlow)</td><td>控制 Card 颜色：有壁纸用 surface，无壁纸用 surfaceVariant(0.3f)</td></tr>
+    </table>
+    <p style="margin:8px 0 0 4px;font-size:12px;color:var(--text-dim);">
+      内联操作：登出直接执行 githubAuth.logout()（不导航）；登录通过 OAuth URL 打开浏览器
+    </p>
+
+    <!-- 组件树 Mermaid -->
+    <div class="section-head purple">组件树</div>
+    <div class="mermaid">
+graph TD
+    ROOT["SettingsScreen&lt;br/&gt;(Column, verticalScroll, 16dp padding)"]
+
+    ROOT --> SEC_ACCOUNT["SettingsSection: Account&lt;br/&gt;(AccountCircle)"]
+    ROOT --> SEC_PERSONAL["SettingsSection: Personalization&lt;br/&gt;(Person)"]
+    ROOT --> SEC_AI["SettingsSection: AI Model&lt;br/&gt;(Settings)"]
+    ROOT --> SEC_PROMPT["SettingsSection: Prompt&lt;br/&gt;(Message)"]
+    ROOT --> SEC_CONTEXT["SettingsSection: Context &amp; Summary&lt;br/&gt;(Analytics)"]
+    ROOT --> SEC_DATA["SettingsSection: Data &amp; Permissions&lt;br/&gt;(Security)"]
+
+    SEC_ACCOUNT --> ITEM_GITHUB["CompactSettingsItem: GitHub Account"]
+    SEC_ACCOUNT --> ITEM_LOGIN["CompactSettingsItem: Login/Logout&lt;br/&gt;(条件渲染)"]
+
+    SEC_PERSONAL --> ITEM_PREFS["CompactSettingsItem: User Preferences"]
+    SEC_PERSONAL --> ITEM_LANG["CompactSettingsItem: Language"]
+    SEC_PERSONAL --> ITEM_THEME["CompactSettingsItem: Theme"]
+    SEC_PERSONAL --> ITEM_DISPLAY["CompactSettingsItem: Global Display"]
+    SEC_PERSONAL --> ITEM_LAYOUT["CompactSettingsItem: Layout"]
+
+    SEC_AI --> ITEM_MODEL["CompactSettingsItem: Model Parameters"]
+    SEC_AI --> ITEM_FUNC["CompactSettingsItem: Functional Model"]
+    SEC_AI --> ITEM_SPEECH["CompactSettingsItem: Speech Services"]
+
+    SEC_PROMPT --> ITEM_PROMPTS["CompactSettingsItem: System Prompts"]
+    SEC_PROMPT --> ITEM_PERSONA["CompactSettingsItem: Persona Card"]
+    SEC_PROMPT --> ITEM_WAIFU["CompactSettingsItem: Waifu Mode"]
+
+    SEC_CONTEXT --> ITEM_CTX["CompactSettingsItem: Context Summary"]
+
+    SEC_DATA --> ITEM_PERM["CompactSettingsItem: Tool Permissions"]
+    SEC_DATA --> ITEM_HTTP["CompactSettingsItem: External HTTP Chat"]
+    SEC_DATA --> ITEM_BACKUP["CompactSettingsItem: Data Backup"]
+    SEC_DATA --> ITEM_HISTORY["CompactSettingsItem: Chat History"]
+    SEC_DATA --> ITEM_TOKEN["CompactSettingsItem: Token Usage"]
+    </div>
+
+    <!-- 组件结构文本版 -->
+    <div style="margin-top:16px;">
+      <strong style="font-size:13px;color:var(--text-sec);">SettingsSection 结构</strong>
+      <div class="comp-tree" style="margin-top:8px;">
+        <div class="ct-node">Row (Icon + Text(title, Bold)) → 分组标题</div>
+        <div class="ct-node">Card (cardContainerColor, 圆角) → 分组容器</div>
+        <div class="ct-children">
+          <div class="ct-node">Column → 设置项列表</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:12px;">
+      <strong style="font-size:13px;color:var(--text-sec);">CompactSettingsItem 结构</strong>
+      <div class="comp-tree" style="margin-top:8px;">
+        <div class="ct-node">Row (clickable, padding 12dp h / 10dp v)</div>
+        <div class="ct-children">
+          <div class="ct-node">Icon (20dp, 40% alpha)</div>
+          <div class="ct-node">Column (weight=1f): title (bodyMedium) + subtitle (bodySmall, 60% alpha, 2行)</div>
+          <div class="ct-node">Icon (ChevronRight, 16dp, 30% alpha)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 完整设置项列表 -->
+    <div class="section-head orange">完整设置项列表</div>
+
+    <div class="section-head" style="background:rgba(33,150,243,0.08);border-left-color:#42A5F5;font-size:13px;">Account (账户)</div>
+    <table class="act-table">
+      <tr><th>设置项</th><th>图标</th><th>目标页面</th><th>说明</th></tr>
+      <tr><td>GitHub Account</td><td>Person</td><td>Screen.GitHubAccount</td><td>显示 @{login} 或"未登录"</td></tr>
+      <tr><td>Logout</td><td>Logout</td><td>内联操作</td><td>仅已登录时显示</td></tr>
+      <tr><td>Login with GitHub</td><td>Login</td><td>内联操作</td><td>仅未登录时显示</td></tr>
+    </table>
+
+    <div class="section-head" style="background:rgba(76,175,80,0.08);border-left-color:#66BB6A;font-size:13px;">Personalization (个性化)</div>
+    <table class="act-table">
+      <tr><th>设置项</th><th>图标</th><th>目标页面</th></tr>
+      <tr><td>User Preferences</td><td>Face</td><td>Screen.UserPreferencesSettings</td></tr>
+      <tr><td>Language Settings</td><td>Language</td><td>Screen.LanguageSettings</td></tr>
+      <tr><td>Theme &amp; Appearance</td><td>Palette</td><td>Screen.ThemeSettings</td></tr>
+      <tr><td>Global Display</td><td>Visibility</td><td>Screen.GlobalDisplaySettings</td></tr>
+      <tr><td>Layout Adjustment</td><td>AspectRatio</td><td>Screen.LayoutAdjustmentSettings</td></tr>
+    </table>
+
+    <div class="section-head" style="background:rgba(156,39,176,0.08);border-left-color:#AB47BC;font-size:13px;">AI Model Configuration (AI 模型配置)</div>
+    <table class="act-table">
+      <tr><th>设置项</th><th>图标</th><th>目标页面</th></tr>
+      <tr><td>Model Parameters</td><td>Api</td><td>Screen.ModelConfig</td></tr>
+      <tr><td>Functional Model</td><td>Tune</td><td>Screen.FunctionalConfig</td></tr>
+      <tr><td>Speech Services</td><td>RecordVoiceOver</td><td>Screen.SpeechServicesSettings</td></tr>
+    </table>
+
+    <div class="section-head" style="background:rgba(255,152,0,0.08);border-left-color:#FFA726;font-size:13px;">Prompt Configuration (提示词配置)</div>
+    <table class="act-table">
+      <tr><th>设置项</th><th>图标</th><th>目标页面</th></tr>
+      <tr><td>System Prompts</td><td>ChatBubble</td><td>Screen.ModelPromptsSettings</td></tr>
+      <tr><td>Persona Card Generation</td><td>Face</td><td>Screen.PersonaCardGeneration</td></tr>
+      <tr><td>Waifu Mode Settings</td><td>EmojiEmotions</td><td>Screen.WaifuModeSettings</td></tr>
+    </table>
+
+    <div class="section-head" style="background:rgba(0,150,136,0.08);border-left-color:#26A69A;font-size:13px;">Context &amp; Summary Settings (上下文与总结)</div>
+    <table class="act-table">
+      <tr><th>设置项</th><th>图标</th><th>目标页面</th></tr>
+      <tr><td>Context Summary</td><td>Tune</td><td>Screen.ContextSummarySettings</td></tr>
+    </table>
+
+    <div class="section-head" style="background:rgba(244,67,54,0.08);border-left-color:#EF5350;font-size:13px;">Data &amp; Permissions (数据与权限)</div>
+    <table class="act-table">
+      <tr><th>设置项</th><th>图标</th><th>目标页面</th></tr>
+      <tr><td>Tool Permissions</td><td>AdminPanelSettings</td><td>Screen.ToolPermission</td></tr>
+      <tr><td>External HTTP Chat</td><td>SettingsEthernet</td><td>Screen.ExternalHttpChatSettings</td></tr>
+      <tr><td>Data Backup</td><td>CloudUpload</td><td>Screen.ChatBackupSettings</td></tr>
+      <tr><td>Chat History Management</td><td>ManageHistory</td><td>Screen.ChatHistorySettings</td></tr>
+      <tr><td>Token Usage Statistics</td><td>Analytics</td><td>Screen.TokenUsageStatistics</td></tr>
+    </table>
+
+    <!-- 子页面导航关系 -->
+    <div class="section-head cyan">子页面导航关系</div>
+    <div class="mermaid">
+graph TD
+    SETTINGS["Screen.Settings&lt;br/&gt;(入口页)"]
+
+    SETTINGS --> GITHUB["Screen.GitHubAccount"]
+    SETTINGS --> USER_PREFS["Screen.UserPreferencesSettings"]
+    USER_PREFS --> USER_GUIDE["Screen.UserPreferencesGuide&lt;br/&gt;(profileName, profileId)"]
+    USER_GUIDE -.-> SHIZUKU["Screen.ShizukuCommands&lt;br/&gt;(跨导航树)"]
+    SETTINGS --> LANG["Screen.LanguageSettings"]
+    SETTINGS --> THEME["Screen.ThemeSettings"]
+    SETTINGS --> GLOBAL_DISP["Screen.GlobalDisplaySettings"]
+    SETTINGS --> LAYOUT["Screen.LayoutAdjustmentSettings"]
+
+    SETTINGS --> MODEL_CFG["Screen.ModelConfig"]
+    MODEL_CFG --> MNN["Screen.MnnModelDownload"]
+    SETTINGS --> FUNC_CFG["Screen.FunctionalConfig"]
+    FUNC_CFG -.-> MODEL_CFG
+    SETTINGS --> SPEECH["Screen.SpeechServicesSettings"]
+    SPEECH -.-> TTS["Screen.TextToSpeech&lt;br/&gt;(parentScreen=Toolbox)"]
+
+    SETTINGS --> PROMPTS["Screen.ModelPromptsSettings"]
+    PROMPTS --> TAG_MKT["Screen.TagMarket"]
+    PROMPTS -.-> PERSONA["Screen.PersonaCardGeneration"]
+    PROMPTS -.-> CHAT_HIST["Screen.ChatHistorySettings"]
+    SETTINGS --> PERSONA
+    PERSONA -.-> SETTINGS
+    PERSONA -.-> USER_PREFS
+    PERSONA -.-> MODEL_CFG
+    PERSONA -.-> PROMPTS
+    SETTINGS --> WAIFU["Screen.WaifuModeSettings"]
+    WAIFU --> EMOJI["Screen.CustomEmojiManagement"]
+
+    SETTINGS --> CTX_SUM["Screen.ContextSummarySettings"]
+    SETTINGS --> TOOL_PERM["Screen.ToolPermission"]
+    SETTINGS --> EXT_HTTP["Screen.ExternalHttpChatSettings"]
+    SETTINGS --> BACKUP["Screen.ChatBackupSettings"]
+    SETTINGS --> CHAT_HIST
+    SETTINGS --> TOKEN_USAGE["Screen.TokenUsageStatistics"]
+    </div>
+    <p style="margin:8px 0 0 4px;font-size:12px;color:var(--text-dim);">实线 = 标准父子导航 (parentScreen 关系)，虚线 = 交叉导航 (跨分支或跨导航树)</p>
+
+    <!-- 非直达子页面 -->
+    <div class="section-head" style="background:rgba(255,152,0,0.08);border-left-color:#FFA726;font-size:13px;">非直达子页面（从入口页无法直接到达）</div>
+    <table class="act-table">
+      <tr><th>子页面</th><th>需经过</th></tr>
+      <tr><td>Screen.UserPreferencesGuide</td><td>UserPreferencesSettings</td></tr>
+      <tr><td>Screen.TagMarket</td><td>ModelPromptsSettings</td></tr>
+      <tr><td>Screen.MnnModelDownload</td><td>ModelConfig</td></tr>
+      <tr><td>Screen.CustomEmojiManagement</td><td>WaifuModeSettings</td></tr>
+    </table>
+
+    <!-- 交叉导航 -->
+    <div class="section-head" style="background:rgba(244,67,54,0.08);border-left-color:#EF5350;font-size:13px;">交叉导航（跨分支或跨导航树）</div>
+    <table class="act-table">
+      <tr><th>源页面</th><th>目标页面</th><th>说明</th></tr>
+      <tr><td>FunctionalConfig</td><td>ModelConfig</td><td>同级跨链接</td></tr>
+      <tr><td>SpeechServicesSettings</td><td>TextToSpeech</td><td>跨到 Toolbox 导航树 (parentScreen=Toolbox)</td></tr>
+      <tr><td>PersonaCardGeneration</td><td>Settings / UserPreferences / ModelConfig / ModelPrompts</td><td>多向交叉</td></tr>
+      <tr><td>ModelPromptsSettings</td><td>PersonaCardGeneration / ChatHistorySettings</td><td>同级跨链接</td></tr>
+      <tr><td>UserPreferencesGuide</td><td>ShizukuCommands</td><td>跨到 ShizukuCommands 导航树</td></tr>
+    </table>
+
+    <!-- 返回导航规则 -->
+    <div class="section-head" style="background:rgba(0,150,136,0.08);border-left-color:#26A69A;font-size:13px;">返回导航规则</div>
+    <p style="margin:0 0 8px 4px;font-size:13px;color:var(--text-dim);">大部分子页面 parentScreen = Settings，返回键直接回入口页。例外：</p>
+    <table class="act-table">
+      <tr><th>子页面</th><th>返回目标</th></tr>
+      <tr><td>TagMarket</td><td>ModelPromptsSettings</td></tr>
+      <tr><td>CustomEmojiManagement</td><td>WaifuModeSettings</td></tr>
+      <tr><td>UserPreferencesGuide</td><td>Settings（跳过 UserPreferencesSettings）</td></tr>
+    </table>
+
+    <!-- 架构要点 -->
+    <div class="section-head green">架构要点</div>
+    <div class="key-nodes-grid" style="grid-template-columns:1fr;">
+      <div class="key-node-card" style="border-left:3px solid var(--blue);">
+        <strong>无 ViewModel</strong>
+        <p>入口页仅作导航枢纽，所有状态为局部 remember 或 DataStore Flow</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--green);">
+        <strong>文件级滚动持久化</strong>
+        <p>SettingsScreenScrollPosition 定义为文件级 mutableStateOf，在进程存活期间跨导航保留滚动位置（比 rememberSaveable 更持久但不跨进程）</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--purple);">
+        <strong>导航解耦</strong>
+        <p>SettingsScreen 通过 18 个回调 lambda 导航，不依赖 Screen 或路由系统</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--orange);">
+        <strong>Card 透明度自适应</strong>
+        <p>根据 hasBackgroundImage 切换 Card 颜色——有壁纸时不透明 (surface)，无壁纸时半透明 (surfaceVariant 0.3f)</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--cyan);">
+        <strong>GitHub OAuth 内联</strong>
+        <p>登录/登出操作直接在入口页执行（OAuth URL → 浏览器 / githubAuth.logout()），不需要导航到子页面</p>
+      </div>
+      <div class="key-node-card" style="border-left:3px solid var(--red);">
+        <strong>交叉导航网络</strong>
+        <p>子页面之间存在大量交叉链接（PersonaCardGeneration 可到 4 个不同页面），导航图不是简单的树形结构而是有向图</p>
+      </div>
+    </div>
+
+    <!-- 核心文件 -->
+    <div class="section-head">核心文件清单</div>
+    <table class="act-table">
+      <tr><th>文件</th><th>路径</th><th>职责</th></tr>
+      <tr><td>SettingsScreen</td><td>ui/features/settings/screens/SettingsScreen.kt</td><td>入口页 + CompactSettingsItem/SettingsSection 组件</td></tr>
+      <tr><td>OperitScreens</td><td>ui/main/screens/OperitScreens.kt</td><td>22 个 Settings 子 Screen 定义 + 导航回调绑定</td></tr>
+    </table>
+
+    <!-- 子页面文件索引 -->
+    <div class="section-head" style="background:rgba(156,39,176,0.08);border-left-color:#AB47BC;font-size:13px;">22 个子页面文件索引</div>
+    <table class="act-table">
+      <tr><th>子页面</th><th>文件 (ui/features/settings/screens/)</th></tr>
+      <tr><td>GitHubAccountScreen</td><td>GitHubAccountScreen.kt</td></tr>
+      <tr><td>UserPreferencesSettingsScreen</td><td>UserPreferencesSettingsScreen.kt</td></tr>
+      <tr><td>UserPreferencesGuideScreen</td><td>UserPreferencesGuideScreen.kt</td></tr>
+      <tr><td>LanguageSettingsScreen</td><td>LanguageSettingsScreen.kt</td></tr>
+      <tr><td>ThemeSettingsScreen</td><td>ThemeSettingsScreen.kt</td></tr>
+      <tr><td>GlobalDisplaySettingsScreen</td><td>GlobalDisplaySettingsScreen.kt</td></tr>
+      <tr><td>LayoutAdjustmentSettingsScreen</td><td>LayoutAdjustmentSettingsScreen.kt</td></tr>
+      <tr><td>ModelConfigScreen</td><td>ModelConfigScreen.kt</td></tr>
+      <tr><td>FunctionalConfigScreen</td><td>FunctionalConfigScreen.kt</td></tr>
+      <tr><td>SpeechServicesSettingsScreen</td><td>SpeechServicesSettingsScreen.kt</td></tr>
+      <tr><td>ModelPromptsSettingsScreen</td><td>ModelPromptsSettingsScreen.kt</td></tr>
+      <tr><td>TagMarketScreen</td><td>TagMarketScreen.kt</td></tr>
+      <tr><td>PersonaCardGenerationScreen</td><td>PersonaCardGenerationScreen.kt</td></tr>
+      <tr><td>WaifuModeSettingsScreen</td><td>WaifuModeSettingsScreen.kt</td></tr>
+      <tr><td>CustomEmojiManagementScreen</td><td>CustomEmojiManagementScreen.kt</td></tr>
+      <tr><td>ContextSummarySettingsScreen</td><td>ContextSummarySettingsScreen.kt</td></tr>
+      <tr><td>ToolPermissionSettingsScreen</td><td>ToolPermissionSettingsScreen.kt</td></tr>
+      <tr><td>ExternalHttpChatSettingsScreen</td><td>ExternalHttpChatSettingsScreen.kt</td></tr>
+      <tr><td>ChatBackupSettingsScreen</td><td>ChatBackupSettingsScreen.kt</td></tr>
+      <tr><td>ChatHistorySettingsScreen</td><td>ChatHistorySettingsScreen.kt</td></tr>
+      <tr><td>TokenUsageStatisticsScreen</td><td>TokenUsageStatisticsScreen.kt</td></tr>
+      <tr><td>MnnModelDownloadScreen</td><td>MnnModelDownloadScreen.kt</td></tr>
+    </table>
+
+  </div><!-- end detail-settings -->
+
+  <!-- ==================== Help / About / UpdateHistory ==================== -->
+  <div id="detail-help-about-updatehistory" class="detail-content" style="display:none;">
+
+    <p style="margin:0 0 16px 4px;font-size:13px;color:var(--text-dim);">三个信息类主导航页面合并文档：Help（帮助）、About（关于）、UpdateHistory（更新历史）</p>
+
+    <!-- ===== Help ===== -->
+    <div class="section-head blue" style="font-size:16px;">Screen.Help (帮助)</div>
+
+    <div class="stats" style="margin-bottom:16px;">
+      <div class="stat-item"><span class="stat-num">~113</span><span class="stat-label">行代码</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">对话框</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">ViewModel</span></div>
+    </div>
+
+    <div class="flow">
+      <span class="flow-step">NavItem.Help</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Screen.Help.Content()</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">HelpScreen()</span>
+    </div>
+    <p style="margin:8px 0 0 4px;font-size:12px;color:var(--text-dim);">主导航页面，无 parentScreen，无子页面导航</p>
+
+    <div class="comp-tree" style="margin-top:16px;">
+      <div class="ct-node">HelpScreen</div>
+      <div class="ct-children">
+        <div class="ct-node">Box (fillMaxSize)</div>
+        <div class="ct-children">
+          <div class="ct-node">AndroidView (WebView, 通过 WebViewConfig.createWebView 创建)</div>
+          <div class="ct-node dim">[isLoading] Box (白色遮罩 80% alpha, 居中)</div>
+          <div class="ct-children">
+            <div class="ct-node">CircularProgressIndicator (48dp) + Text (加载提示)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="act-table" style="margin-top:16px;">
+      <tr><th>状态</th><th>类型</th><th>说明</th></tr>
+      <tr><td>isLoading</td><td>mutableStateOf(true)</td><td>WebView 页面加载状态</td></tr>
+      <tr><td>webView</td><td>remember</td><td>跨重组保留的 WebView 实例</td></tr>
+      <tr><td>focusRequester</td><td>remember</td><td>确保 WebView 获得焦点处理触摸滚动</td></tr>
+    </table>
+
+    <div class="key-nodes-grid" style="grid-template-columns:1fr 1fr;margin-top:16px;">
+      <div class="key-node-card">
+        <strong>共享 WebView 配置</strong>
+        <p>使用 WebViewConfig.createWebView() 统一配置</p>
+      </div>
+      <div class="key-node-card">
+        <strong>双重焦点管理</strong>
+        <p>DisposableEffect + LaunchedEffect 防止父容器拦截触摸事件</p>
+      </div>
+    </div>
+
+    <!-- ===== About ===== -->
+    <div class="section-head orange" style="font-size:16px;margin-top:32px;">Screen.About (关于)</div>
+
+    <div class="stats" style="margin-bottom:16px;">
+      <div class="stat-item"><span class="stat-num">~1872</span><span class="stat-label">行代码</span></div>
+      <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">对话框</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">ViewModel</span></div>
+      <div class="stat-item"><span class="stat-num">10</span><span class="stat-label">阶段更新器</span></div>
+    </div>
+
+    <div class="flow">
+      <span class="flow-step">NavItem.About</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Screen.About.Content()</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">AboutScreen(navigateToUpdateHistory)</span>
+    </div>
+    <p style="margin:8px 0 0 4px;font-size:12px;color:var(--text-dim);">主导航页面，可导航到 Screen.UpdateHistory</p>
+
+    <!-- About 组件树 Mermaid -->
+    <div class="mermaid" style="margin-top:16px;">
+graph TD
+    ABOUT_ROOT["AboutScreen&lt;br/&gt;(CustomScaffold)"]
+
+    ABOUT_ROOT --> DIALOGS["Dialog Chain (8个弹窗)"]
+    ABOUT_ROOT --> CONTENT["LazyColumn (16dp padding, 12dp spacing)"]
+
+    CONTENT --> LOGO["App Logo Header&lt;br/&gt;80dp 圆形图标 + 应用名 + 版本号"]
+    CONTENT --> UPDATES_GROUP["SettingsGroup: Updates"]
+    UPDATES_GROUP --> CHECK_UPDATE["SettingsRow: Check for Updates&lt;br/&gt;(trailing: Loading/Arrow)"]
+    UPDATES_GROUP --> BETA_TOGGLE["SettingsRow: Beta Plan&lt;br/&gt;(trailing: Switch)"]
+
+    CONTENT --> PROJECT_GROUP["SettingsGroup: Project"]
+    PROJECT_GROUP --> PROJECT_URL["SettingsRow: Project URL → 浏览器"]
+    PROJECT_GROUP --> STAR["SettingsRow: Star on GitHub → 浏览器"]
+    PROJECT_GROUP --> UPDATE_LOG["SettingsRow: Update Log → UpdateHistory"]
+    PROJECT_GROUP --> LICENSE["SettingsRow: Open Source Licenses → 弹窗"]
+
+    CONTENT --> CONTACT_GROUP["SettingsGroup: Contact"]
+    CONTACT_GROUP --> EMAIL["SettingsRow: Email"]
+    CONTACT_GROUP --> DEV["SettingsRow: Developer (HtmlText)"]
+
+    CONTENT --> COPYRIGHT["Text: Copyright"]
+
+    DIALOGS --> DLG_UPDATE["UpdateDialog"]
+    DIALOGS --> DLG_PATCH_PROG["PatchUpdateProgressDialog"]
+    DIALOGS --> DLG_FULL_PROG["FullUpdateProgressDialog"]
+    DIALOGS --> DLG_METHOD["FullUpdateMethodDialog"]
+    DIALOGS --> DLG_DL_SRC["DownloadSourceDialog (浏览器路径)"]
+    DIALOGS --> DLG_DL_SRC_APP["DownloadSourceDialog (应用内路径)"]
+    DIALOGS --> DLG_PATCH_SRC["PatchDownloadSourceDialog"]
+    DIALOGS --> DLG_LICENSE["LicenseDialog"]
+    </div>
+
+    <!-- About 状态 -->
+    <div class="section-head" style="background:rgba(255,152,0,0.08);border-left-color:#FFA726;font-size:13px;">状态管理（无 ViewModel，协程 scope）</div>
+    <table class="act-table">
+      <tr><th>状态</th><th>类型</th><th>说明</th></tr>
+      <tr><td>updateStatus</td><td>UpdateStatus (LiveData)</td><td>更新检查结果状态</td></tr>
+      <tr><td>showUpdateDialog</td><td>Boolean</td><td>更新弹窗</td></tr>
+      <tr><td>patchUpdateStateFlow</td><td>MutableStateFlow</td><td>增量更新进度</td></tr>
+      <tr><td>fullUpdateStateFlow</td><td>MutableStateFlow</td><td>全量更新进度</td></tr>
+      <tr><td>pendingFullUpdateMethod</td><td>UpdateStatus.Available?</td><td>等待选择更新方式</td></tr>
+      <tr><td>showLicenseDialog</td><td>Boolean</td><td>开源许可证弹窗</td></tr>
+      <tr><td>betaEnabled</td><td>Boolean (Flow)</td><td>Beta 计划开关</td></tr>
+    </table>
+
+    <!-- 更新安装流程 -->
+    <div class="section-head" style="background:rgba(255,152,0,0.08);border-left-color:#FFA726;font-size:13px;">更新安装流程</div>
+    <div class="comp-tree">
+      <div class="ct-node">检查更新 → UpdateDialog</div>
+      <div class="ct-children">
+        <div class="ct-node" style="border-left:3px solid var(--green);">[PatchAvailable] → PatchDownloadSourceDialog (镜像源选择)</div>
+        <div class="ct-children">
+          <div class="ct-node">自动/手动选镜像 → startPatchUpdateWithMirror()</div>
+          <div class="ct-node">PatchUpdateProgressDialog (7 阶段)</div>
+          <div class="ct-children">
+            <div class="ct-node dim">SELECTING_MIRROR → DOWNLOADING_META → DOWNLOADING_PATCH → APPLYING_PATCH → VERIFYING_APK → READY_TO_INSTALL → [ERROR]</div>
+          </div>
+        </div>
+        <div class="ct-node" style="border-left:3px solid var(--blue);">[Available] → FullUpdateMethodDialog (更新方式选择)</div>
+        <div class="ct-children">
+          <div class="ct-node">"In App" → DownloadSourceDialog → FullUpdateProgressDialog (3 阶段)</div>
+          <div class="ct-children">
+            <div class="ct-node dim">DOWNLOADING_APK → READY_TO_INSTALL → [ERROR]</div>
+          </div>
+          <div class="ct-node">"Browser" → DownloadSourceDialog → 浏览器打开下载链接</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 镜像源选择 -->
+    <div class="section-head" style="background:rgba(0,150,136,0.08);border-left-color:#26A69A;font-size:13px;">镜像源选择 (并发探测)</div>
+    <div class="flow">
+      <span class="flow-step">LaunchedEffect</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">GithubReleaseUtil.probeMirrorUrls(urls)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">MirrorProbeSummary (latency, speed, status)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">按速度排序，OK 优先</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">"Auto Select" 选最快</span>
+    </div>
+    <p style="margin:4px 0 0 4px;font-size:12px;color:var(--text-dim);">每个镜像行实时显示探测结果：延迟 + 速度，探测中显示 16dp 加载指示器</p>
+
+    <!-- About 对话框 -->
+    <div class="section-head red">对话框清单 (8个)</div>
+    <table class="act-table">
+      <tr><th>对话框</th><th>触发</th><th>功能</th></tr>
+      <tr><td>UpdateDialog</td><td>检查更新完成</td><td>显示更新状态 + 下载/更新按钮</td></tr>
+      <tr><td>PatchUpdateProgressDialog</td><td>开始增量更新</td><td>7 阶段进度（不可关闭，仅 Cancel/Close）</td></tr>
+      <tr><td>FullUpdateProgressDialog</td><td>开始全量更新</td><td>3 阶段进度</td></tr>
+      <tr><td>FullUpdateMethodDialog</td><td>全量更新可用</td><td>选择"应用内更新"或"浏览器下载"</td></tr>
+      <tr><td>DownloadSourceDialog (浏览器)</td><td>选择浏览器路径</td><td>镜像源探测 + 选择</td></tr>
+      <tr><td>DownloadSourceDialog (应用内)</td><td>选择应用内路径</td><td>镜像源探测 + 选择</td></tr>
+      <tr><td>PatchDownloadSourceDialog</td><td>增量更新选源</td><td>增量镜像源探测 (patchUrl + metaUrl)</td></tr>
+      <tr><td>LicenseDialog</td><td>点击"开源许可证"</td><td>~55 个开源库列表 (名称+描述+许可类型+链接)</td></tr>
+    </table>
+
+    <!-- About 私有组件 -->
+    <div class="section-head" style="background:rgba(33,150,243,0.08);border-left-color:#42A5F5;font-size:13px;">私有组件</div>
+    <table class="act-table">
+      <tr><th>组件</th><th>说明</th></tr>
+      <tr><td>SettingsGroup</td><td>Surface(圆角18dp, surfaceContainerLow) 包裹 Column</td></tr>
+      <tr><td>SettingsRow</td><td>可点击行：38dp 圆形图标 + 标题 + 副标题 + trailing 内容</td></tr>
+      <tr><td>HtmlText</td><td>AndroidView 包裹 TextView，支持 HTML 渲染 + 可点击链接</td></tr>
+    </table>
+
+    <!-- ===== UpdateHistory ===== -->
+    <div class="section-head purple" style="font-size:16px;margin-top:32px;">Screen.UpdateHistory (更新历史)</div>
+
+    <div class="stats" style="margin-bottom:16px;">
+      <div class="stat-item"><span class="stat-num">~350</span><span class="stat-label">行代码</span></div>
+      <div class="stat-item"><span class="stat-num">0</span><span class="stat-label">对话框</span></div>
+      <div class="stat-item"><span class="stat-num">1</span><span class="stat-label">ViewModel</span></div>
+      <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">UI 状态</span></div>
+    </div>
+
+    <div class="flow">
+      <span class="flow-step">NavItem.UpdateHistory</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">Screen.UpdateHistory.Content()</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">UpdateScreen()</span>
+    </div>
+    <p style="margin:8px 0 0 4px;font-size:12px;color:var(--text-dim);">也可从 AboutScreen "Update Log" 导航到达。主导航页面，无子页面导航</p>
+
+    <!-- UpdateHistory 组件树 -->
+    <div class="comp-tree" style="margin-top:16px;">
+      <div class="ct-node">UpdateScreen</div>
+      <div class="ct-children">
+        <div class="ct-node dim">[Loading] CircularProgressIndicator (居中)</div>
+        <div class="ct-node dim">[Error] ErrorState</div>
+        <div class="ct-children">
+          <div class="ct-node">Column: Error图标(64dp) + 标题 + 错误信息 + Retry按钮</div>
+        </div>
+        <div class="ct-node">[Success] UpdateList → LazyColumn</div>
+        <div class="ct-children">
+          <div class="ct-node">UpdateCard (latest: primaryContainer/4dp, 其他: surfaceVariant/2dp)</div>
+          <div class="ct-children">
+            <div class="ct-node">Row: 版本标签 Chip + [isLatest] "LATEST" 绿色徽章 + 日期</div>
+            <div class="ct-node">Text (标题, titleLarge, Bold)</div>
+            <div class="ct-node">Text (描述, 可展开: &gt;5行或&gt;200字符)</div>
+            <div class="ct-node dim">[有 releaseUrl] OutlinedButton ("View Release") + Button ("Download")</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UpdateHistory 状态 -->
+    <div class="section-head" style="background:rgba(156,39,176,0.08);border-left-color:#AB47BC;font-size:13px;">状态管理 (UpdateViewModel)</div>
+    <table class="act-table">
+      <tr><th>状态</th><th>类型</th><th>说明</th></tr>
+      <tr><td>uiState</td><td>StateFlow&lt;UpdateUiState&gt;</td><td>Loading / Success(updates) / Error(message)</td></tr>
+    </table>
+    <p style="margin:4px 0 0 4px;font-size:12px;color:var(--text-dim);">
+      Init 自动加载：GitHubApiService.getRepositoryReleases → 过滤 draft/prerelease → 解析日期 → 首条标记 isLatest。无分页（仅第 1 页 20 条）
+    </p>
+
+    <!-- UpdateHistory 交互 -->
+    <div class="section-head" style="background:rgba(156,39,176,0.08);border-left-color:#AB47BC;font-size:13px;">用户交互</div>
+    <table class="act-table">
+      <tr><th>交互</th><th>执行动作</th></tr>
+      <tr><td>Error → Retry</td><td>viewModel.loadUpdates()</td></tr>
+      <tr><td>展开/折叠描述</td><td>切换 isDescriptionExpanded（阈值：&gt;5行 或 &gt;200字符）</td></tr>
+      <tr><td>View Release</td><td>Intent(ACTION_VIEW, releaseUrl) → 浏览器</td></tr>
+      <tr><td>Download</td><td>Intent(ACTION_VIEW, downloadUrl) → 浏览器</td></tr>
+    </table>
+
+    <!-- 三页面对比 -->
+    <div class="section-head cyan" style="margin-top:24px;">三页面对比总结</div>
+    <table class="act-table">
+      <tr><th>维度</th><th>Help</th><th>About</th><th>UpdateHistory</th></tr>
+      <tr><td>核心功能</td><td>内嵌 Web 帮助</td><td>应用信息 + 更新管理</td><td>Release 历史</td></tr>
+      <tr><td>代码量</td><td>~113 行</td><td>~1872 行</td><td>~350 行</td></tr>
+      <tr><td>对话框</td><td>0</td><td>8 个</td><td>0</td></tr>
+      <tr><td>ViewModel</td><td>无</td><td>无 (协程 scope)</td><td>UpdateViewModel</td></tr>
+      <tr><td>外部数据</td><td>远程 URL</td><td>PackageManager + UpdateManager</td><td>GitHub REST API</td></tr>
+      <tr><td>导航输出</td><td>无</td><td>→ UpdateHistory</td><td>无</td></tr>
+      <tr><td>特殊关注</td><td>WebView 焦点管理</td><td>多阶段更新安装器 + 镜像测速</td><td>Draft/Prerelease 过滤</td></tr>
+    </table>
+
+    <!-- 核心文件 -->
+    <div class="section-head">核心文件清单</div>
+    <table class="act-table">
+      <tr><th>文件</th><th>路径</th><th>职责</th></tr>
+      <tr><td>HelpScreen</td><td>ui/features/help/screens/HelpScreen.kt</td><td>WebView 帮助页</td></tr>
+      <tr><td>AboutScreen</td><td>ui/features/about/screens/AboutScreen.kt</td><td>关于页 + 更新管理 + 8 个弹窗</td></tr>
+      <tr><td>OpenSourceLicenses</td><td>ui/features/about/screens/OpenSourceLicenses.kt</td><td>LicenseDialog + 许可证数据</td></tr>
+      <tr><td>UpdateScreen</td><td>ui/features/update/screens/UpdateScreen.kt</td><td>更新历史列表</td></tr>
+      <tr><td>UpdateViewModel</td><td>ui/features/update/screens/UpdateViewModel.kt</td><td>GitHub Release 数据加载</td></tr>
+      <tr><td>UpdateInfo</td><td>ui/features/update/screens/UpdateInfo.kt</td><td>UpdateInfo 数据类 + 解析</td></tr>
+    </table>
+
+  </div><!-- end detail-help-about-updatehistory -->
 
 </div><!-- end pageDetailView -->
 
