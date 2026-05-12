@@ -53,6 +53,7 @@ mermaid.initialize({
    To add a new tab: add an entry here + a <button data-tab="ID"> + a <div id="panel-ID" class="tab-panel">
    If the tab contains Mermaid diagrams, set mermaid:true and mermaidSelector. */
 var TABS = [
+  { id: 'roadmap',  mermaid: true, mermaidSelector: '#panel-roadmap .mermaid' },
   { id: 'pages',    mermaid: false },
   { id: 'flow',     mermaid: false },
   { id: 'assembly', mermaid: true, mermaidSelector: '#panel-assembly .mermaid' },
@@ -273,6 +274,26 @@ function hidePageDetail() {
 
 /* ===== DOM-Ready Init ===== */
 document.addEventListener('DOMContentLoaded', function() {
+  // Inject content for the default active tab (roadmap)
+  var activeBtn = document.querySelector('.tab-btn.active');
+  if (activeBtn) {
+    var activeTabId = activeBtn.dataset.tab;
+    var activePanel = document.getElementById('panel-' + activeTabId);
+    if (activePanel && tabContents[activeTabId] && !activePanel.dataset.loaded) {
+      activePanel.innerHTML = tabContents[activeTabId];
+      activePanel.dataset.loaded = '1';
+    }
+    var tabDef = TABS.find(function(t) { return t.id === activeTabId; });
+    if (tabDef && tabDef.mermaid && !mermaidRenderedSet.has(activeTabId)) {
+      mermaidRenderedSet.add(activeTabId);
+      requestAnimationFrame(function() {
+        mermaid.run({ querySelector: tabDef.mermaidSelector }).then(function() {
+          setTimeout(function() { fixMermaidSvgColors(activeTabId); }, 200);
+        });
+      });
+    }
+  }
+
   document.getElementById('mainTabBar').addEventListener('click', function(e) {
     var btn = e.target.closest('.tab-btn');
     if (!btn) return;

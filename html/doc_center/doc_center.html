@@ -56,6 +56,7 @@
 <script src="details/settings-token-mnn-github.js"></script>
 <script src="details/runtime-boot.js"></script>
 <script src="details/runtime-chat.js"></script>
+<script src="details/roadmap.js"></script>
 </head>
 <body>
 
@@ -68,7 +69,8 @@
 <!-- ===== TAB NAVIGATION ===== -->
 <div class="tab-bar-wrapper">
   <div class="tab-bar" id="mainTabBar">
-    <button class="tab-btn active" data-tab="pages">📱 页面结构</button>
+    <button class="tab-btn active" data-tab="roadmap">🗺 学习路线图</button>
+    <button class="tab-btn" data-tab="pages">📱 页面结构</button>
     <button class="tab-btn" data-tab="flow">🔗 请求调用链</button>
     <button class="tab-btn" data-tab="assembly">🏗 屏幕装配流程</button>
     <button class="tab-btn" data-tab="runtime-boot">🚀 冷启动全链路</button>
@@ -76,8 +78,12 @@
   </div>
 </div>
 
+<!-- ===== TAB 0: 学习路线图 ===== -->
+<div id="panel-roadmap" class="tab-panel active">
+</div><!-- end panel-roadmap -->
+
 <!-- ===== TAB 1: 页面结构 ===== -->
-<div id="panel-pages" class="tab-panel active">
+<div id="panel-pages" class="tab-panel">
 <div id="pageMapView" class="page-map-view">
 
 <div class="stats">
