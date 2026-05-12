@@ -27,14 +27,14 @@ graph TD
     L5 --> L7
     L6 --> L7
 
-    style L0 fill:#e8f5e9,color:#000
-    style L1 fill:#e8f5e9,color:#000
-    style L2 fill:#e3f2fd,color:#000
-    style L3 fill:#fff3e0,color:#000
-    style L4 fill:#f3e5f5,color:#000
-    style L5 fill:#fce4ec,color:#000
-    style L6 fill:#e0f2f1,color:#000
-    style L7 fill:#f5f5f5,color:#000
+    style L0 fill:#1a472a,color:#a3d9a5,stroke:#3fb950
+    style L1 fill:#1a472a,color:#a3d9a5,stroke:#3fb950
+    style L2 fill:#0d3868,color:#79c0ff,stroke:#58a6ff
+    style L3 fill:#5a3600,color:#ffa657,stroke:#f0883e
+    style L4 fill:#3b1f5e,color:#d2a8ff,stroke:#bc8cff
+    style L5 fill:#5a1a2a,color:#ff9baa,stroke:#f85149
+    style L6 fill:#0a3d3d,color:#7ee8e8,stroke:#39d1d1
+    style L7 fill:#2d333b,color:#8b949e,stroke:#484f58
   </div>
 
   <!-- 路径说明 -->
