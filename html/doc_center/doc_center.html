@@ -22,6 +22,7 @@
 <script src="details/mcpmarket.js"></script>
 <script src="details/shellexecutor.js"></script>
 <script src="details/uidebugger.js"></script>
+<script src="details/mcpmanage.js"></script>
 </head>
 <body>
 
@@ -314,14 +315,14 @@
             <div style="padding:4px 12px 4px 36px;"><span style="font-size:11px;color:var(--cyan);">内部标签页：</span>
               <span class="t-node" style="display:inline-flex;margin:0 2px;"><span class="n-dot" style="background:var(--cyan)"></span><span class="n-name" data-searchable>Packages</span><span class="n-type tab">标签</span></span>
               <span class="t-node" style="display:inline-flex;margin:0 2px;"><span class="n-dot" style="background:var(--cyan)"></span><span class="n-name" data-searchable>Skills</span><span class="n-type tab">标签</span></span>
-              <span class="t-node" style="display:inline-flex;margin:0 2px;"><span class="n-dot" style="background:var(--cyan)"></span><span class="n-name" data-searchable>MCP</span><span class="n-type tab">标签</span></span>
+              <span class="t-node" style="display:inline-flex;margin:0 2px;"><span class="n-dot" style="background:var(--cyan)"></span><span class="n-name" data-searchable>MCP</span><span class="n-type tab">标签</span><span class="detail-link" data-detail="mcpmanage" data-title="MCP管理/发布/配置">查看页面结构 →</span></span>
             </div>
 
             <div class="t-sub-cat">MCP 分支</div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 市场</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPMarket → MCPMarketScreen</span><span class="detail-link" data-detail="mcpmarket" data-title="MCP 市场">查看页面结构 →</span></span>
               <div class="t-sub-tree">
-                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 发布</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPPublish → MCPPublishScreen</span></span></div>
-                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 管理</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPManage → MCPManageScreen</span></span>
+                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 发布</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPPublish → MCPPublishScreen</span><span class="detail-link" data-detail="mcpmanage" data-title="MCP管理/发布/配置">查看页面结构 →</span></span></div>
+                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 管理</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.MCPManage → MCPManageScreen</span><span class="detail-link" data-detail="mcpmanage" data-title="MCP管理/发布/配置">查看页面结构 →</span></span>
                   <div class="t-sub-tree">
                     <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--blue)"></span><span class="n-name" data-searchable>MCP 编辑插件</span><span class="n-type sub">L3</span><span class="n-cls">Screen.MCPEditPlugin → MCPPublishScreen</span></span></div>
                   </div>
@@ -809,6 +810,10 @@
   <!-- ==================== MCPMarket ==================== -->
   <div id="detail-mcpmarket" class="detail-content" style="display:none;">
   </div><!-- end detail-mcpmarket -->
+
+  <!-- ==================== MCPManage/Publish/Config ==================== -->
+  <div id="detail-mcpmanage" class="detail-content" style="display:none;">
+  </div><!-- end detail-mcpmanage -->
 
   <!-- ==================== ShellExecutor ==================== -->
   <div id="detail-shellexecutor" class="detail-content" style="display:none;">
