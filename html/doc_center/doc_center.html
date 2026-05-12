@@ -4,7 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Operit App - 项目文档中心</title>
-<link rel="stylesheet" href="doc_center.css">
+<link rel="stylesheet" href="doc_center.css?v=3">
+<style>
+.tree{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;font-size:12px;line-height:1.9;font-family:'SF Mono',Monaco,Consolas,monospace;color:var(--text-dim)}
+.tree>.tree-node:first-child{color:var(--text);font-weight:700;font-size:13px}
+.tree-node{padding:2px 0}
+.tree-children{padding-left:20px;border-left:2px solid var(--text-dim);margin-left:8px}
+.tree-children .tree-node::before{content:'├ ';color:var(--text-dim)}
+.tree-children .tree-node:last-child::before{content:'└ ';color:var(--text-dim)}
+.tree-children .tree-children{border-left-color:var(--text-dimmer)}
+.stat-item{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 28px;text-align:center;min-width:100px}
+.stat-item .stat-num{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1;display:block}
+.stat-item .stat-label{font-size:11px;color:var(--text-dim);margin-top:4px;letter-spacing:.5px;display:block}
+</style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script src="doc_center.js"></script>
 <script src="details/aichat.js"></script>
@@ -32,6 +44,16 @@
 <script src="details/agreement-tokenconfig.js"></script>
 <script src="details/toolpkgpluginconfig.js"></script>
 <script src="details/autoglm.js"></script>
+<script src="details/settings-userpreferences.js"></script>
+<script src="details/settings-language-display.js"></script>
+<script src="details/settings-theme.js"></script>
+<script src="details/settings-modelconfig.js"></script>
+<script src="details/settings-speech.js"></script>
+<script src="details/settings-prompts.js"></script>
+<script src="details/settings-persona.js"></script>
+<script src="details/settings-context-permission.js"></script>
+<script src="details/settings-backup-history.js"></script>
+<script src="details/settings-token-mnn-github.js"></script>
 </head>
 <body>
 
@@ -491,52 +513,52 @@
           </div>
           <div class="t-children">
             <div class="t-sub-cat">账户</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>GitHub 账户</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.GitHubAccount → GitHubAccountScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>GitHub 账户</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.GitHubAccount → GitHubAccountScreen</span><span class="detail-link" data-detail="settings-token-mnn-github" data-title="Token用量统计 + MNN模型下载 + GitHub账户">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">个性化</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>用户偏好设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.UserPreferencesSettings → UserPreferencesSettingsScreen</span></span>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>用户偏好设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.UserPreferencesSettings → UserPreferencesSettingsScreen</span><span class="detail-link" data-detail="settings-userpreferences" data-title="用户偏好设置 + 偏好配置向导">查看页面结构 →</span></span>
               <div class="t-sub-tree">
-                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>用户偏好引导</span><span class="n-type sub">L2</span><span class="n-cls">Screen.UserPreferencesGuide → UserPreferencesGuideScreen</span></span></div>
+                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>用户偏好引导</span><span class="n-type sub">L2</span><span class="n-cls">Screen.UserPreferencesGuide → UserPreferencesGuideScreen</span><span class="detail-link" data-detail="settings-userpreferences" data-title="用户偏好设置 + 偏好配置向导">查看页面结构 →</span></span></div>
               </div>
             </div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>语言设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.LanguageSettings → LanguageSettingsScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>主题设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ThemeSettings → ThemeSettingsScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>全局显示设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.GlobalDisplaySettings → GlobalDisplaySettingsScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>布局调整设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.LayoutAdjustmentSettings → LayoutAdjustmentSettingsScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>语言设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.LanguageSettings → LanguageSettingsScreen</span><span class="detail-link" data-detail="settings-language-display" data-title="外观与显示 (语言+全局显示+布局调整)">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>主题设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ThemeSettings → ThemeSettingsScreen</span><span class="detail-link" data-detail="settings-theme" data-title="主题与外观设置">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>全局显示设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.GlobalDisplaySettings → GlobalDisplaySettingsScreen</span><span class="detail-link" data-detail="settings-language-display" data-title="外观与显示 (语言+全局显示+布局调整)">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>布局调整设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.LayoutAdjustmentSettings → LayoutAdjustmentSettingsScreen</span><span class="detail-link" data-detail="settings-language-display" data-title="外观与显示 (语言+全局显示+布局调整)">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">AI 模型配置</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>模型配置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ModelConfig → ModelConfigScreen</span></span>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>模型配置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ModelConfig → ModelConfigScreen</span><span class="detail-link" data-detail="settings-modelconfig" data-title="AI 模型配置 (ModelConfig + FunctionalConfig)">查看页面结构 →</span></span>
               <div class="t-sub-tree">
-                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>MNN 模型下载</span><span class="n-type sub">L2</span><span class="n-cls">Screen.MnnModelDownload → MnnModelDownloadScreen</span></span></div>
+                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>MNN 模型下载</span><span class="n-type sub">L2</span><span class="n-cls">Screen.MnnModelDownload → MnnModelDownloadScreen</span><span class="detail-link" data-detail="settings-token-mnn-github" data-title="Token用量统计 + MNN模型下载 + GitHub账户">查看页面结构 →</span></span></div>
               </div>
             </div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>功能配置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.FunctionalConfig → FunctionalConfigScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>语音服务设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.SpeechServicesSettings → SpeechServicesSettingsScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>功能配置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.FunctionalConfig → FunctionalConfigScreen</span><span class="detail-link" data-detail="settings-modelconfig" data-title="AI 模型配置 (ModelConfig + FunctionalConfig)">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>语音服务设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.SpeechServicesSettings → SpeechServicesSettingsScreen</span><span class="detail-link" data-detail="settings-speech" data-title="语音服务设置 (TTS+STT)">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">提示词配置</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>模型提示词设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ModelPromptsSettings → ModelPromptsSettingsScreen</span></span>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>模型提示词设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ModelPromptsSettings → ModelPromptsSettingsScreen</span><span class="detail-link" data-detail="settings-prompts" data-title="提示词配置 (ModelPrompts + TagMarket)">查看页面结构 →</span></span>
               <div class="t-sub-tree">
-                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>标签市场</span><span class="n-type sub">L2</span><span class="n-cls">Screen.TagMarket → TagMarketScreen</span></span></div>
+                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>标签市场</span><span class="n-type sub">L2</span><span class="n-cls">Screen.TagMarket → TagMarketScreen</span><span class="detail-link" data-detail="settings-prompts" data-title="提示词配置 (ModelPrompts + TagMarket)">查看页面结构 →</span></span></div>
               </div>
             </div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>人设卡生成</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.PersonaCardGeneration → PersonaCardGenerationScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>Waifu 模式设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.WaifuModeSettings → WaifuModeSettingsScreen</span></span>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>人设卡生成</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.PersonaCardGeneration → PersonaCardGenerationScreen</span><span class="detail-link" data-detail="settings-persona" data-title="角色扮演 (PersonaCard + WaifuMode + CustomEmoji)">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>Waifu 模式设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.WaifuModeSettings → WaifuModeSettingsScreen</span><span class="detail-link" data-detail="settings-persona" data-title="角色扮演 (PersonaCard + WaifuMode + CustomEmoji)">查看页面结构 →</span></span>
               <div class="t-sub-tree">
-                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--pink)"></span><span class="n-name" data-searchable>自定义表情管理</span><span class="n-type sub">L2</span><span class="n-cls">Screen.CustomEmojiManagement → CustomEmojiManagementScreen</span></span></div>
+                <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--pink)"></span><span class="n-name" data-searchable>自定义表情管理</span><span class="n-type sub">L2</span><span class="n-cls">Screen.CustomEmojiManagement → CustomEmojiManagementScreen</span><span class="detail-link" data-detail="settings-persona" data-title="角色扮演 (PersonaCard + WaifuMode + CustomEmoji)">查看页面结构 →</span></span></div>
               </div>
             </div>
 
             <div class="t-sub-cat">上下文与数据</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>上下文摘要设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ContextSummarySettings → ContextSummarySettingsScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>聊天记录设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ChatHistorySettings → ChatHistorySettingsScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>聊天备份设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ChatBackupSettings → ChatBackupSettingsScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>上下文摘要设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ContextSummarySettings → ContextSummarySettingsScreen</span><span class="detail-link" data-detail="settings-context-permission" data-title="AI 运行时配置 (上下文截断 + 工具权限 + 外部 HTTP)">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>聊天记录设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ChatHistorySettings → ChatHistorySettingsScreen</span><span class="detail-link" data-detail="settings-backup-history" data-title="数据备份与恢复 &amp; 聊天历史管理">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>聊天备份设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ChatBackupSettings → ChatBackupSettingsScreen</span><span class="detail-link" data-detail="settings-backup-history" data-title="数据备份与恢复 &amp; 聊天历史管理">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">权限与网络</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>工具权限</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ToolPermission → ToolPermissionSettingsScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>外部 HTTP 聊天设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ExternalHttpChatSettings → ExternalHttpChatSettingsScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>工具权限</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ToolPermission → ToolPermissionSettingsScreen</span><span class="detail-link" data-detail="settings-context-permission" data-title="AI 运行时配置 (上下文截断 + 工具权限 + 外部 HTTP)">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>外部 HTTP 聊天设置</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.ExternalHttpChatSettings → ExternalHttpChatSettingsScreen</span><span class="detail-link" data-detail="settings-context-permission" data-title="AI 运行时配置 (上下文截断 + 工具权限 + 外部 HTTP)">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">统计</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>Token 用量统计</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.TokenUsageStatistics → TokenUsageStatisticsScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--purple)"></span><span class="n-name" data-searchable>Token 用量统计</span><span class="n-type sub">子页面</span><span class="n-cls">Screen.TokenUsageStatistics → TokenUsageStatisticsScreen</span><span class="detail-link" data-detail="settings-token-mnn-github" data-title="Token用量统计 + MNN模型下载 + GitHub账户">查看页面结构 →</span></span></div>
           </div>
         </div>
 
@@ -856,6 +878,10 @@
   <div id="detail-toolpkgpluginconfig" class="detail-content" style="display:none;">
   </div><!-- end detail-toolpkgpluginconfig -->
 
+  <!-- ==================== ModelConfig + FunctionalConfig ==================== -->
+  <div id="detail-settings-modelconfig" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-modelconfig -->
+
   <!-- ==================== ShellExecutor ==================== -->
   <div id="detail-shellexecutor" class="detail-content" style="display:none;">
   </div><!-- end detail-shellexecutor -->
@@ -867,6 +893,42 @@
   <!-- ==================== UIDebugger ==================== -->
   <div id="detail-uidebugger" class="detail-content" style="display:none;">
   </div><!-- end detail-uidebugger -->
+
+  <!-- ==================== SpeechServicesSettings ==================== -->
+  <div id="detail-settings-speech" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-speech -->
+
+  <!-- ==================== ChatBackup + ChatHistory ==================== -->
+  <div id="detail-settings-backup-history" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-backup-history -->
+
+  <!-- ==================== TokenUsageStatistics + MnnModelDownload + GitHubAccount ==================== -->
+  <div id="detail-settings-token-mnn-github" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-token-mnn-github -->
+
+  <!-- ==================== UserPreferences + Guide ==================== -->
+  <div id="detail-settings-userpreferences" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-userpreferences -->
+
+  <!-- ==================== Language + GlobalDisplay + LayoutAdjustment ==================== -->
+  <div id="detail-settings-language-display" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-language-display -->
+
+  <!-- ==================== ThemeSettings ==================== -->
+  <div id="detail-settings-theme" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-theme -->
+
+  <!-- ==================== ModelPrompts + TagMarket ==================== -->
+  <div id="detail-settings-prompts" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-prompts -->
+
+  <!-- ==================== PersonaCard + WaifuMode + CustomEmoji ==================== -->
+  <div id="detail-settings-persona" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-persona -->
+
+  <!-- ==================== ContextSummary + ToolPermission + ExternalHttpChat ==================== -->
+  <div id="detail-settings-context-permission" class="detail-content" style="display:none;">
+  </div><!-- end detail-settings-context-permission -->
 
 </div><!-- end pageDetailView -->
 
