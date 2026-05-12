@@ -28,6 +28,9 @@
 <script src="details/processlimit.js"></script>
 <script src="details/speechtotext.js"></script>
 <script src="details/sqlviewer.js"></script>
+<script src="details/tooltester.js"></script>
+<script src="details/agreement-tokenconfig.js"></script>
+<script src="details/toolpkgpluginconfig.js"></script>
 <script src="details/autoglm.js"></script>
 </head>
 <body>
@@ -351,7 +354,7 @@
             </div>
 
             <div class="t-sub-cat">插件配置</div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--yellow)"></span><span class="n-name" data-searchable>工具包插件配置</span><span class="n-type dynamic">动态</span><span class="n-cls">Screen.ToolPkgPluginConfig → ToolPkgComposeDslScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--yellow)"></span><span class="n-name" data-searchable>工具包插件配置</span><span class="n-type dynamic">动态</span><span class="n-cls">Screen.ToolPkgPluginConfig → ToolPkgComposeDslScreen</span><span class="detail-link" data-detail="toolpkgpluginconfig" data-title="工具包插件配置 (DSL引擎)">查看页面结构 →</span></span></div>
           </div>
         </div>
 
@@ -415,10 +418,10 @@
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>SQL 查看器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.SqlViewer → SqlViewerToolScreen</span><span class="detail-link" data-detail="sqlviewer" data-title="SQL查看器 &amp; HTML打包器">查看页面结构 →</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>FFmpeg 工具箱</span><span class="n-type sub">工具</span><span class="n-cls">Screen.FFmpegToolbox → FFmpegToolboxScreen</span><span class="detail-link" data-detail="ffmpegtoolbox" data-title="FFmpeg工具箱 & Logcat">查看页面结构 →</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>Markdown 演示</span><span class="n-type sub">工具</span><span class="n-cls">Screen.MarkdownDemo → StreamMarkdownDemoScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>工具测试器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.ToolTester → ToolTesterScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>工具测试器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.ToolTester → ToolTesterScreen</span><span class="detail-link" data-detail="tooltester" data-title="工具测试器">查看页面结构 →</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>HTML 打包器</span><span class="n-type sub">工具</span><span class="n-cls">Screen.HtmlPackager → HtmlPackagerScreen</span><span class="detail-link" data-detail="sqlviewer" data-title="SQL查看器 &amp; HTML打包器">查看页面结构 →</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>AutoGLM 一键</span><span class="n-type sub">工具</span><span class="n-cls">Screen.AutoGlmOneClick → AutoGlmOneClickToolScreen</span><span class="detail-link" data-detail="autoglm" data-title="AutoGLM一键配置 &amp; 默认助手引导">查看页面结构 →</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>AutoGLM 工具</span><span class="n-type sub">工具</span><span class="n-cls">Screen.AutoGlmTool → AutoGlmToolScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>AutoGLM 工具</span><span class="n-type sub">工具</span><span class="n-cls">Screen.AutoGlmTool → AutoGlmToolScreen</span><span class="detail-link" data-detail="autoglm" data-title="AutoGLM一键配置 &amp; 默认助手引导">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">系统工具</div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>应用权限管理</span><span class="n-type sub">工具</span><span class="n-cls">Screen.AppPermissions → AppPermissionsToolScreen</span><span class="detail-link" data-detail="apppermissions" data-title="应用权限管理">查看页面结构 →</span></span></div>
@@ -426,8 +429,8 @@
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>语音转文字 (STT)</span><span class="n-type sub">工具</span><span class="n-cls">Screen.SpeechToText → SpeechToTextToolScreen</span><span class="detail-link" data-detail="speechtotext" data-title="语音识别 &amp; 文字转语音">查看页面结构 →</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>默认助手引导</span><span class="n-type sub">工具</span><span class="n-cls">Screen.DefaultAssistantGuide → DefaultAssistantGuideToolScreen</span><span class="detail-link" data-detail="autoglm" data-title="AutoGLM一键配置 &amp; 默认助手引导">查看页面结构 →</span></span></div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>进程限制解除</span><span class="n-type sub">工具</span><span class="n-cls">Screen.ProcessLimitRemover → ProcessLimitRemoverToolScreen</span><span class="detail-link" data-detail="processlimit" data-title="进程限制解除">查看页面结构 →</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>用户协议</span><span class="n-type sub">工具</span><span class="n-cls">Screen.Agreement → AgreementScreen</span></span></div>
-            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>Token 配置</span><span class="n-type sub">工具</span><span class="n-cls">Screen.TokenConfig → TokenConfigWebViewScreen</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>用户协议</span><span class="n-type sub">工具</span><span class="n-cls">Screen.Agreement → AgreementScreen</span><span class="detail-link" data-detail="agreement-tokenconfig" data-title="用户协议 &amp; Token配置">查看页面结构 →</span></span></div>
+            <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--green)"></span><span class="n-name" data-searchable>Token 配置</span><span class="n-type sub">工具</span><span class="n-cls">Screen.TokenConfig → TokenConfigWebViewScreen</span><span class="detail-link" data-detail="agreement-tokenconfig" data-title="用户协议 &amp; Token配置">查看页面结构 →</span></span></div>
 
             <div class="t-sub-cat">动态插件</div>
             <div class="t-item"><span class="t-node"><span class="n-dot" style="background:var(--yellow)"></span><span class="n-name" data-searchable>工具包 DSL 页面</span><span class="n-type dynamic">动态</span><span class="n-cls">Screen.ToolPkgComposeDsl → ToolPkgComposeDslToolScreen</span></span></div>
@@ -845,9 +848,21 @@
   <div id="detail-autoglm" class="detail-content" style="display:none;">
   </div><!-- end detail-autoglm -->
 
+  <!-- ==================== Agreement / TokenConfig ==================== -->
+  <div id="detail-agreement-tokenconfig" class="detail-content" style="display:none;">
+  </div><!-- end detail-agreement-tokenconfig -->
+
+  <!-- ==================== ToolPkgPluginConfig (DSL Engine) ==================== -->
+  <div id="detail-toolpkgpluginconfig" class="detail-content" style="display:none;">
+  </div><!-- end detail-toolpkgpluginconfig -->
+
   <!-- ==================== ShellExecutor ==================== -->
   <div id="detail-shellexecutor" class="detail-content" style="display:none;">
   </div><!-- end detail-shellexecutor -->
+
+  <!-- ==================== ToolTester ==================== -->
+  <div id="detail-tooltester" class="detail-content" style="display:none;">
+  </div><!-- end detail-tooltester -->
 
   <!-- ==================== UIDebugger ==================== -->
   <div id="detail-uidebugger" class="detail-content" style="display:none;">

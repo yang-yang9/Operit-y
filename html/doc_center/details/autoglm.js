@@ -1,10 +1,10 @@
 registerDetail('autoglm', `
     <!-- Hero Stats -->
     <div class="stats" style="margin-bottom:24px;">
-      <div class="stat-item"><span class="stat-num">461</span><span class="stat-label">AutoGLM 源码行数</span></div>
-      <div class="stat-item"><span class="stat-num">465</span><span class="stat-label">DefaultAssistant 源码行数</span></div>
-      <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">AutoGLM 向导步骤</span></div>
-      <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">助手引导步骤</span></div>
+      <div class="stat-item"><span class="stat-num">461</span><span class="stat-label">OneClick 行数</span></div>
+      <div class="stat-item"><span class="stat-num">122</span><span class="stat-label">AutoGlmTool 行数</span></div>
+      <div class="stat-item"><span class="stat-num">465</span><span class="stat-label">DefaultAssistant 行数</span></div>
+      <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">页面</span></div>
     </div>
 
     <!-- AutoGLM -->
@@ -52,6 +52,54 @@ graph TD
       <tr><td>isAdvancedExpanded</td><td>Boolean</td><td>高级设置折叠/展开</td></tr>
       <tr><td>advancedEndpoint</td><td>String</td><td>自定义 API 端点</td></tr>
       <tr><td>advancedModelName</td><td>String</td><td>自定义模型名</td></tr>
+    </table>
+
+    <!-- AutoGlmTool -->
+    <div class="section-head purple" style="margin-top:28px;">AutoGlmToolScreen — AutoGLM UI 自动化执行</div>
+    <p style="margin:0 0 12px 4px;font-size:13px;color:var(--text-dim);">AutoGLM 的实际执行界面（122 行 + ViewModel）。用户输入自然语言任务描述，可选虚拟屏幕，启动 PhoneAgent 逐步执行 UI 自动化操作，日志面板实时流式展示。</p>
+
+    <div class="section-head" style="margin-top:12px;background:var(--surface-2);color:var(--text);">组件结构</div>
+    <div class="tree" style="margin:8px 0;">
+      <div class="tree-node">AutoGlmToolScreen → AutoGlmToolContent (stateless)</div>
+      <div class="tree-children">
+        <div class="tree-node">Column (fillMaxSize)</div>
+        <div class="tree-children">
+          <div class="tree-node">OutlinedTextField (task, maxLines=5)</div>
+          <div class="tree-node">Row: Text "虚拟屏幕" + Switch (执行中禁用)</div>
+          <div class="tree-node">Button (双模式: "执行" / "取消", 颜色切换 primary ↔ error)</div>
+          <div class="tree-node">Text "Execution Log" (titleMedium)</div>
+          <div class="tree-node">Box (weight=1f, surfaceVariant) → Text (uiState.log, verticalScroll, 自动滚到底部)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:12px;background:var(--surface-2);color:var(--text);">执行流程（PhoneAgent）</div>
+    <div class="flow" style="margin:8px 0;flex-wrap:wrap;gap:4px;">
+      <span class="flow-step">executeTask(task)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">[虚拟屏幕] ShowerServerManager.ensureStarted()</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">获取 EnhancedAIService (UI_CONTROLLER)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">PhoneAgent(maxSteps=25).run()</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">每步回调: 💭思考 + 🎯动作</span>
+    </div>
+
+    <div class="section-head" style="margin-top:12px;background:var(--surface-2);color:var(--text);">AutoGlmViewModel</div>
+    <table class="act-table">
+      <tr><th>StateFlow</th><th>类型</th><th>说明</th></tr>
+      <tr><td>isLoading</td><td>Boolean</td><td>Agent 协程执行中</td></tr>
+      <tr><td>log</td><td>String</td><td>带时间戳的完整执行日志</td></tr>
+    </table>
+
+    <div class="section-head" style="margin-top:12px;background:var(--surface-2);color:var(--text);">与 AutoGlmOneClick 对比</div>
+    <table class="act-table">
+      <tr><th>对比</th><th>AutoGlmOneClick</th><th>AutoGlmTool</th></tr>
+      <tr><td>用途</td><td>配置向导（设置 API Key + 模型绑定）</td><td>实际任务执行界面</td></tr>
+      <tr><td>状态</td><td>纯局部状态，无 ViewModel</td><td>有 AutoGlmViewModel</td></tr>
+      <tr><td>复杂度</td><td>461 行，4 步 Card 表单</td><td>122 行，输入 + 日志</td></tr>
+      <tr><td>AI 交互</td><td>无（仅配置 Manager）</td><td>PhoneAgent 逐步执行</td></tr>
     </table>
 
     <!-- DefaultAssistantGuide -->

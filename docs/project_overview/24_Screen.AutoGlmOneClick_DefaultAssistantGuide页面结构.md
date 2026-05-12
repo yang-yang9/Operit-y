@@ -1,6 +1,6 @@
-# Screen.AutoGlmOneClick & Screen.DefaultAssistantGuide 页面结构
+# Screen.AutoGlm 族 & Screen.DefaultAssistantGuide 页面结构
 
-本文档描述工具箱中两个向导类页面：**AutoGLM 一键配置**（AutoGlmOneClickToolScreen）与**默认助手设置引导**（DefaultAssistantGuideScreen）。
+本文档描述工具箱中三个相关页面：**AutoGLM 一键配置**（AutoGlmOneClickToolScreen）、**AutoGLM 工具**（AutoGlmToolScreen）与**默认助手设置引导**（DefaultAssistantGuideScreen）。
 
 ## 一、AutoGlmOneClickToolScreen（AutoGLM 一键配置）
 
@@ -80,7 +80,80 @@ packageManager.removePackage("Automatic_ui_subagent")
 
 ---
 
-## 二、DefaultAssistantGuideScreen（默认助手设置引导）
+## 二、AutoGlmToolScreen（AutoGLM UI 自动化工具）
+
+**源码规模：** `AutoGlmToolScreen.kt` 122 行 + `AutoGlmViewModel.kt`
+
+### 2.1 定位与背景
+
+AutoGLM 的实际执行界面。用户输入自然语言任务描述，可选启用虚拟屏幕，然后启动 `PhoneAgent` 通过 AI 服务逐步执行 UI 自动化操作。执行日志面板实时流式展示进度。
+
+### 2.2 组件树
+
+```
+AutoGlmToolScreen
+└── AutoGlmToolContent (stateless)
+    └── Column (fillMaxSize)
+        ├── Column (padding 16dp)
+        │   ├── OutlinedTextField (task, maxLines=5)
+        │   ├── Row (SpaceBetween)
+        │   │   ├── Text (虚拟屏幕标签)
+        │   │   └── Switch (useVirtualScreen, 执行中禁用)
+        │   ├── Button (双模式: 执行/取消, 颜色切换)
+        │   ├── Text "Execution Log" (titleMedium)
+        └── Box (weight=1f, surfaceVariant 背景)
+            └── Text (uiState.log, verticalScroll, 自动滚动到底部)
+```
+
+### 2.3 状态管理
+
+**AutoGlmViewModel**（通过 `AutoGlmViewModelFactory(context)` 创建）：
+
+| StateFlow 字段 | 类型 | 说明 |
+|---------------|------|------|
+| `isLoading` | `Boolean` | Agent 协程执行中 |
+| `log` | `String` | 完整的带时间戳执行日志 |
+
+**局部状态**：
+
+| 状态 | 类型 | 说明 |
+|------|------|------|
+| `task` | `String` | 任务输入 |
+| `useVirtualScreen` | `Boolean` | 虚拟屏幕开关 |
+
+### 2.4 执行流程
+
+```
+executeTask(task, useVirtualScreen)
+  → 取消之前的 executionJob
+  → isLoading = true, log = "Initializing agent..."
+  → [useVirtualScreen] ShowerServerManager.ensureServerStarted()
+    → ShowerController.ensureDisplay(agentId, width, height, dpi)
+  → 获取 EnhancedAIService (FunctionType.UI_CONTROLLER)
+  → 构建本地化系统提示 (FunctionalPrompts.buildUiAutomationAgentPrompt)
+  → ActionHandler + ToolGetter.getUITools() (Tap/Swipe/PressKey/Screenshot)
+  → PhoneAgent(maxSteps=25).run(task, systemPrompt, onStep)
+    → 每步回调追加日志: 💭思考过程 + 🎯执行动作 (JSON)
+  → isLoading = false
+
+cancelTask()
+  → 取消 executionJob
+  → 追加 "[Execution Cancelled by User]"
+  → isLoading = false
+```
+
+### 2.5 与 AutoGlmOneClick 的关系
+
+| 对比 | AutoGlmOneClick | AutoGlmTool |
+|------|----------------|-------------|
+| 用途 | 配置向导（设置 API Key + 模型绑定） | 实际任务执行界面 |
+| 状态 | 纯局部状态，无 ViewModel | 有 AutoGlmViewModel |
+| 复杂度 | 461 行，4 步 Card 表单 | 122 行，输入+日志 |
+| AI 交互 | 无（仅配置 Manager） | PhoneAgent 逐步执行 |
+
+---
+
+## 三、DefaultAssistantGuideScreen（默认助手设置引导）
 
 **源码规模：** `DefaultAssistantGuideScreen.kt` 465 行（含 `DefaultAssistantGuideContent`、`HeaderSection`、`IntroductionCard`、`GuideStepCard`、`TroubleshootingCard` 共 5 个私有 composable）
 
