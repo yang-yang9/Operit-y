@@ -213,7 +213,7 @@ val tools = packageMetadata.tools.map { tool -&gt;
 
     // L2241-2246: 注册每个工具，名称格式：packageName:toolName
     executableTools.forEach { packageTool -&gt;
-        val toolName = "${toolPackage.name}:${packageTool.name}"  // "translator:translate"
+        val toolName = "\${toolPackage.name}:\${packageTool.name}"  // "translator:translate"
         aiToolHandler.registerTool(toolName) { tool -&gt;
             packageToolExecutor.invoke(tool)
         }

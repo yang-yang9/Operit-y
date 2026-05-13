@@ -272,7 +272,7 @@ oneway interface IAccessibilityEventCallback {
         val apkFile = extractProviderApkFromAssets(context)
 
         // 2. 用 FileProvider 生成临时 URI（Android 7+ 要求）
-        val apkUri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", apkFile)
+        val apkUri = FileProvider.getUriForFile(context, "\${context.packageName}.fileprovider", apkFile)
 
         // 3. 弹出系统安装界面
         val installIntent = Intent(Intent.ACTION_VIEW).apply {

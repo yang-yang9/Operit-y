@@ -211,14 +211,14 @@ data class ExternalChatHttpRequest(
 
     // 步骤 4：将 jar 从 /sdcard 复制到 /data/local/tmp（用 SHELL 身份，使文件归属 shell 用户）
     val copyResult = runner.run(
-        "cp ${jarFile.absolutePath} /data/local/tmp/shower-server.jar",
+        "cp \${jarFile.absolutePath} /data/local/tmp/shower-server.jar",
         ShellIdentity.SHELL   // &lt;-- 注意：必须是 SHELL 身份，不能是 DEFAULT
     )
 
     // 步骤 5：用 app_process 启动 jar，在后台运行
     val startCmd = "CLASSPATH=/data/local/tmp/shower-server.jar " +
                    "app_process / com.ai.assistance.shower.Main " +
-                   "${appContext.packageName} &amp;"
+                   "\${appContext.packageName} &amp;"
     runner.run(startCmd, ShellIdentity.SHELL)
 
     // 步骤 6：轮询最多 10 秒（50 次 × 200ms），等待 Binder 广播到达

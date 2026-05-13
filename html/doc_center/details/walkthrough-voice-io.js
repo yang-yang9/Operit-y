@@ -165,7 +165,7 @@ registerWalkthroughSection('voice-io', '语音输入到输出', `<div style="max
     )
 
     // L165-166: 创建临时 WAV 文件，先写 44 字节空白头（后续回填）
-    val file = File(context.cacheDir, "openai_stt_${UUID.randomUUID()}.wav")
+    val file = File(context.cacheDir, "openai_stt_\${UUID.randomUUID()}.wav")
     val stream = FileOutputStream(file)
     stream.write(ByteArray(WAV_HEADER_SIZE))  // 44 字节占位
 
