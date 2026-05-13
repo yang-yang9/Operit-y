@@ -95,8 +95,10 @@ function registerWalkthroughSection(id, title, html) {
 function buildWalkthroughContent() {
   if (walkthroughSections.length === 0) return '';
   var coreCount = 6;
+  var configCount = 5;
   var core = walkthroughSections.slice(0, coreCount);
-  var config = walkthroughSections.slice(coreCount);
+  var config = walkthroughSections.slice(coreCount, coreCount + configCount);
+  var advanced = walkthroughSections.slice(coreCount + configCount);
 
   var nav = '<div class="wt-nav">';
   nav += '<div class="wt-nav-group"><span class="wt-nav-label">核心链路</span>';
@@ -107,6 +109,13 @@ function buildWalkthroughContent() {
   if (config.length > 0) {
     nav += '<div class="wt-nav-group"><span class="wt-nav-label">功能配置</span>';
     config.forEach(function(s) {
+      nav += '<button class="tutorial-nav-btn" onclick="document.getElementById(\'wt-' + s.id + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">' + s.title + '</button>';
+    });
+    nav += '</div>';
+  }
+  if (advanced.length > 0) {
+    nav += '<div class="wt-nav-group"><span class="wt-nav-label">进阶模块</span>';
+    advanced.forEach(function(s) {
       nav += '<button class="tutorial-nav-btn" onclick="document.getElementById(\'wt-' + s.id + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">' + s.title + '</button>';
     });
     nav += '</div>';
