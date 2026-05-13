@@ -59,7 +59,8 @@ var TABS = [
   { id: 'flow',     mermaid: false },
   { id: 'assembly', mermaid: true, mermaidSelector: '#panel-assembly .mermaid' },
   { id: 'runtime-boot', mermaid: true, mermaidSelector: '#panel-runtime-boot .mermaid' },
-  { id: 'runtime-chat', mermaid: true, mermaidSelector: '#panel-runtime-chat .mermaid' }
+  { id: 'runtime-chat', mermaid: true, mermaidSelector: '#panel-runtime-chat .mermaid' },
+  { id: 'walkthroughs', mermaid: true, mermaidSelector: '#panel-walkthroughs .mermaid' }
 ];
 
 var mermaidRenderedSet = new Set();
@@ -83,6 +84,38 @@ function buildTutorialContent() {
   var body = '';
   tutorialSections.forEach(function(s) {
     body += '<div id="tut-' + s.id + '" style="scroll-margin-top:100px;">' + s.html + '</div>';
+  });
+  return nav + body;
+}
+
+var walkthroughSections = [];
+function registerWalkthroughSection(id, title, html) {
+  walkthroughSections.push({ id: id, title: title, html: html });
+}
+function buildWalkthroughContent() {
+  if (walkthroughSections.length === 0) return '';
+  var coreCount = 6;
+  var core = walkthroughSections.slice(0, coreCount);
+  var config = walkthroughSections.slice(coreCount);
+
+  var nav = '<div class="wt-nav">';
+  nav += '<div class="wt-nav-group"><span class="wt-nav-label">核心链路</span>';
+  core.forEach(function(s) {
+    nav += '<button class="tutorial-nav-btn" onclick="document.getElementById(\'wt-' + s.id + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">' + s.title + '</button>';
+  });
+  nav += '</div>';
+  if (config.length > 0) {
+    nav += '<div class="wt-nav-group"><span class="wt-nav-label">功能配置</span>';
+    config.forEach(function(s) {
+      nav += '<button class="tutorial-nav-btn" onclick="document.getElementById(\'wt-' + s.id + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">' + s.title + '</button>';
+    });
+    nav += '</div>';
+  }
+  nav += '</div>';
+
+  var body = '';
+  walkthroughSections.forEach(function(s) {
+    body += '<div id="wt-' + s.id + '" style="scroll-margin-top:100px;">' + s.html + '</div>';
   });
   return nav + body;
 }
@@ -124,6 +157,9 @@ function switchTab(tabId, btn) {
   if (!panel.dataset.loaded) {
     if (tabId === 'tutorials') {
       panel.innerHTML = buildTutorialContent();
+      panel.dataset.loaded = '1';
+    } else if (tabId === 'walkthroughs') {
+      panel.innerHTML = buildWalkthroughContent();
       panel.dataset.loaded = '1';
     } else if (tabContents[tabId]) {
       panel.innerHTML = tabContents[tabId];

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Operit App - 项目文档中心</title>
-<link rel="stylesheet" href="doc_center.css?v=4">
+<link rel="stylesheet" href="doc_center.css?v=5">
 <style>
 .tree{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:16px 20px;font-size:12px;line-height:1.9;font-family:'SF Mono',Monaco,Consolas,monospace;color:var(--text-dim)}
 .tree>.tree-node:first-child{color:var(--text);font-weight:700;font-size:13px}
@@ -32,6 +32,15 @@
 #panel-tutorials code{font-family:'SF Mono',Monaco,Consolas,monospace;font-size:12px;color:var(--cyan);background:var(--bg-node);padding:2px 6px;border-radius:4px}
 #panel-tutorials pre{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;margin:16px 0;overflow-x:auto}
 #panel-tutorials pre code{background:none;padding:0;font-size:12px;color:var(--text-dim);line-height:1.7;display:block;white-space:pre}
+#panel-walkthroughs p{font-size:14px;line-height:1.8;color:var(--text-dim);margin:12px 0}
+#panel-walkthroughs h3{font-size:16px;font-weight:600;color:var(--text);margin:24px 0 12px}
+#panel-walkthroughs ul,#panel-walkthroughs ol{font-size:13px;color:var(--text-dim);line-height:1.8;padding-left:24px;margin:12px 0}
+#panel-walkthroughs code{font-family:'SF Mono',Monaco,Consolas,monospace;font-size:12px;color:var(--cyan);background:var(--bg-node);padding:2px 6px;border-radius:4px}
+#panel-walkthroughs pre{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;margin:16px 0;overflow-x:auto}
+#panel-walkthroughs pre code{background:none;padding:0;font-size:12px;color:var(--text-dim);line-height:1.7;display:block;white-space:pre}
+.wt-nav{position:sticky;top:41px;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);padding:10px 0;margin-bottom:24px;display:flex;flex-direction:column;gap:10px}
+.wt-nav-group{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wt-nav-label{font-size:11px;font-weight:700;color:var(--text-dimmer);text-transform:uppercase;letter-spacing:1px;min-width:60px;flex-shrink:0}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script src="doc_center.js"></script>
@@ -76,6 +85,17 @@
 <script src="details/tutorial-boot.js"></script>
 <script src="details/tutorial-chat.js"></script>
 <script src="details/tutorial-tools.js"></script>
+<script src="details/walkthrough-cold-start.js"></script>
+<script src="details/walkthrough-chat-message-flow.js"></script>
+<script src="details/walkthrough-tool-execution.js"></script>
+<script src="details/walkthrough-shell-permission.js"></script>
+<script src="details/walkthrough-context-summary.js"></script>
+<script src="details/walkthrough-memory-system.js"></script>
+<script src="details/walkthrough-model-config.js"></script>
+<script src="details/walkthrough-character-card.js"></script>
+<script src="details/walkthrough-theme-settings.js"></script>
+<script src="details/walkthrough-mcp-plugin-lifecycle.js"></script>
+<script src="details/walkthrough-workflow-execution.js"></script>
 </head>
 <body>
 
@@ -95,6 +115,7 @@
     <button class="tab-btn" data-tab="assembly">🏗 屏幕装配流程</button>
     <button class="tab-btn" data-tab="runtime-boot">🚀 冷启动全链路</button>
     <button class="tab-btn" data-tab="runtime-chat">💬 对话生命周期</button>
+    <button class="tab-btn" data-tab="walkthroughs">🔍 代码导读</button>
   </div>
 </div>
 
@@ -1804,6 +1825,9 @@ graph TD
 <!-- ===== TAB 5: 对话生命周期 ===== -->
 <div id="panel-runtime-chat" class="tab-panel">
 </div><!-- end panel-runtime-chat -->
+
+<div id="panel-walkthroughs" class="tab-panel">
+</div><!-- end panel-walkthroughs -->
 
 <!--
   ============================================================
